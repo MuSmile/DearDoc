@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>editor.common.logger &mdash; Welcome to DearDoc!</title>
+      <link rel="stylesheet" href="../../../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../../../_static/graphviz.css" type="text/css" />
+    <link rel="shortcut icon" href="../../../../_static/favicon.ico"/>
+  <!--[if lt IE 9]>
+    <script src="../../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script data-url_root="../../../../" id="documentation_options" src="../../../../_static/documentation_options.js"></script>
+        <script src="../../../../_static/doctools.js"></script>
+        <script src="../../../../_static/sphinx_highlight.js"></script>
+    <script src="../../../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../search.html" />
+    <link rel="next" title="editor.common.math" href="../math/index.html" />
+    <link rel="prev" title="editor.common.icon_cache" href="../icon_cache/index.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../../../index.html" class="icon icon-home">
+            DearDoc
+          </a>
+              <div class="version">
+                dev
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../../_docs/about.html">About</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../_docs/about/introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../_docs/about/frequently_asked_questions.html">Frequently asked questions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../_docs/about/troubleshooting.html">Troubleshooting</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../_docs/about/license.html">License</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../_docs/manual.html">Manual</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../_docs/manual/introduction.html">Introduction</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../_docs/contributing.html">Contributing</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../_docs/contributing/introduction.html">Introduction</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../../index.html">API Reference</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="../../index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor</span></code></a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="../index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.common</span></code></a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="../database/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.common.database</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../dispatcher/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.common.dispatcher</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../ease/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.common.ease</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../file_watcher/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.common.file_watcher</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../icon_cache/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.common.icon_cache</span></code></a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.common.logger</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../math/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.common.math</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../native/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.common.native</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../util/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.common.util</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../models/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.models</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../models/asset/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.models.asset</span></code></a><ul>
+<li class="toctree-l5"><a class="reference internal" href="../../models/asset/asset/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.models.asset.asset</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../models/asset/importer/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.models.asset.importer</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../models/asset/meta/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.models.asset.meta</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="../../models/editor/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.models.editor</span></code></a><ul>
+<li class="toctree-l5"><a class="reference internal" href="../../models/editor/form/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.models.editor.form</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../models/editor/menu_tree/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.models.editor.menu_tree</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="../../models/gameplay/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.models.gameplay</span></code></a><ul>
+<li class="toctree-l5"><a class="reference internal" href="../../models/gameplay/component/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.models.gameplay.component</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../models/gameplay/entity/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.models.gameplay.entity</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../models/gameplay/scene/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.models.gameplay.scene</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="../../models/graph/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.models.graph</span></code></a><ul>
+<li class="toctree-l5"><a class="reference internal" href="../../models/graph/base/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.models.graph.base</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../models/graph/fsm/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.models.graph.fsm</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../models/graph/shader/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.models.graph.shader</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../pipeline/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.pipeline</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../pipeline/build/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.pipeline.build</span></code></a><ul>
+<li class="toctree-l5"><a class="reference internal" href="../../pipeline/build/targets/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.pipeline.build.targets</span></code></a><ul>
+<li class="toctree-l6"><a class="reference internal" href="../../pipeline/build/targets/default/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.pipeline.build.targets.default</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l5"><a class="reference internal" href="../../pipeline/build/registry/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.pipeline.build.registry</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../pipeline/build/shared_task/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.pipeline.build.shared_task</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="../../pipeline/run/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.pipeline.run</span></code></a><ul>
+<li class="toctree-l5"><a class="reference internal" href="../../pipeline/run/targets/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.pipeline.run.targets</span></code></a><ul>
+<li class="toctree-l6"><a class="reference internal" href="../../pipeline/run/targets/editor/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.pipeline.run.targets.editor</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="../../pipeline/run/targets/external/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.pipeline.run.targets.external</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l5"><a class="reference internal" href="../../pipeline/run/registry/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.pipeline.run.registry</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../pipeline/run/shared_task/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.pipeline.run.shared_task</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="../../pipeline/core/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.pipeline.core</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../views/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.views</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../views/animation/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.views.animation</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../views/build/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.views.build</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../views/console/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.views.console</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../views/fsm_graph/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.views.fsm_graph</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../views/gallery/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.views.gallery</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../views/game/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.views.game</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../views/hierarchy/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.views.hierarchy</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../views/inspector/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.views.inspector</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../views/preference/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.views.preference</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../views/preview/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.views.preview</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../views/profiler/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.views.profiler</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../views/project/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.views.project</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../views/project_setting/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.views.project_setting</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../views/scene/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.views.scene</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../views/shader_graph/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.views.shader_graph</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../widgets/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.widgets</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../widgets/basic/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.widgets.basic</span></code></a><ul>
+<li class="toctree-l5"><a class="reference internal" href="../../widgets/basic/button/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.widgets.basic.button</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../widgets/basic/line_edit/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.widgets.basic.line_edit</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../widgets/basic/search_edit/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.widgets.basic.search_edit</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../widgets/basic/slider/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.widgets.basic.slider</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="../../widgets/complex/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.widgets.complex</span></code></a><ul>
+<li class="toctree-l5"><a class="reference internal" href="../../widgets/complex/advanced_menu/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.widgets.complex.advanced_menu</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../widgets/complex/color_picker/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.widgets.complex.color_picker</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../widgets/complex/form_view/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.widgets.complex.form_view</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../widgets/complex/tree_stacked/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.widgets.complex.tree_stacked</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../widgets/complex/tree_view/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.widgets.complex.tree_view</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="../../widgets/container/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.widgets.container</span></code></a><ul>
+<li class="toctree-l5"><a class="reference internal" href="../../widgets/container/collapsible/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.widgets.container.collapsible</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../widgets/container/sliding_stacked/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.widgets.container.sliding_stacked</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="../../widgets/misc/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.widgets.misc</span></code></a><ul>
+<li class="toctree-l5"><a class="reference internal" href="../../widgets/misc/flow_layout/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.widgets.misc.flow_layout</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../widgets/misc/line/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.widgets.misc.line</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../widgets/misc/pixmap_icon/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.widgets.misc.pixmap_icon</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../widgets/misc/toast/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.widgets.misc.toast</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../widgets/misc/waiting_spinner/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.widgets.misc.waiting_spinner</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="../../widgets/menubar/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.widgets.menubar</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../widgets/statusbar/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.widgets.statusbar</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../widgets/toolbar/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.widgets.toolbar</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../asset_db/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.asset_db</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../editor_prefs/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.editor_prefs</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../main_window/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.main_window</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../theme_manager/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.theme_manager</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../view_manager/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.view_manager</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../engine/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">engine</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../engine/bridge/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">engine.bridge</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../engine/runtime/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">engine.runtime</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../engine/standalone/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">engine.standalone</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../launcher/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">launcher</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../tools/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">tools</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../tools/doc/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">tools.doc</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../tools/hello/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">tools.hello</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../tools/ide/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">tools.ide</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../tools/python/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">tools.python</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../tools/report/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">tools.report</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../../index.html">DearDoc</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../../../index.html">API Reference</a></li>
+          <li class="breadcrumb-item"><a href="../../index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor</span></code></a></li>
+          <li class="breadcrumb-item"><a href="../index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.common</span></code></a></li>
+      <li class="breadcrumb-item active"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.common.logger</span></code></li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="module-editor.common.logger">
+<span id="editor-common-logger"></span><h1><a class="reference internal" href="#module-editor.common.logger" title="editor.common.logger"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.common.logger</span></code></a><a class="headerlink" href="#module-editor.common.logger" title="Permalink to this heading"></a></h1>
+<section id="module-contents">
+<h2>Module Contents<a class="headerlink" href="#module-contents" title="Permalink to this heading"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="editor.common.logger.StdFilter">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">editor.common.logger.</span></span><span class="sig-name descname"><span class="pre">StdFilter</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../../../_modules/editor/common/logger.html#StdFilter"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#editor.common.logger.StdFilter" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-obj docutils literal notranslate"><span class="pre">logging.Filter</span></code></p>
+<p>Filter instances are used to perform arbitrary filtering of LogRecords.</p>
+<p>Loggers and Handlers can optionally use Filter instances to filter
+records as desired. The base filter class only allows events which are
+below a certain point in the logger hierarchy. For example, a filter
+initialized with “A.B” will allow events logged by loggers “A.B”,
+“A.B.C”, “A.B.C.D”, “A.B.D” etc. but not “A.BB”, “B.A.B” etc. If
+initialized with the empty string, all events are passed.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="editor.common.logger.StdFilter.filter">
+<span class="sig-name descname"><span class="pre">filter</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">record</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../../../_modules/editor/common/logger.html#StdFilter.filter"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#editor.common.logger.StdFilter.filter" title="Permalink to this definition"></a></dt>
+<dd><p>Determine if the specified record is to be logged.</p>
+<p>Returns True if the record should be logged, or False otherwise.
+If deemed appropriate, the record may be modified in-place.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="editor.common.logger.stdLogger">
+<span class="sig-prename descclassname"><span class="pre">editor.common.logger.</span></span><span class="sig-name descname"><span class="pre">stdLogger</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../../../_modules/editor/common/logger.html#stdLogger"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#editor.common.logger.stdLogger" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="editor.common.logger.IdeLogHandler">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">editor.common.logger.</span></span><span class="sig-name descname"><span class="pre">IdeLogHandler</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">level</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">NOTSET</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../../../_modules/editor/common/logger.html#IdeLogHandler"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#editor.common.logger.IdeLogHandler" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-obj docutils literal notranslate"><span class="pre">logging.Handler</span></code></p>
+<p>Handler instances dispatch logging events to specific destinations.</p>
+<p>The base handler class. Acts as a placeholder which defines the Handler
+interface. Handlers can optionally use Formatter instances to format
+records as desired. By default, no formatter is specified; in this case,
+the ‘raw’ message as determined by record.message is logged.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="editor.common.logger.IdeLogHandler.emit">
+<span class="sig-name descname"><span class="pre">emit</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">record</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../../../_modules/editor/common/logger.html#IdeLogHandler.emit"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#editor.common.logger.IdeLogHandler.emit" title="Permalink to this definition"></a></dt>
+<dd><p>Do whatever it takes to actually log the specified logging record.</p>
+<p>This version is intended to be implemented by subclasses and so
+raises a NotImplementedError.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="editor.common.logger.ideLogger">
+<span class="sig-prename descclassname"><span class="pre">editor.common.logger.</span></span><span class="sig-name descname"><span class="pre">ideLogger</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../../../_modules/editor/common/logger.html#ideLogger"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#editor.common.logger.ideLogger" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="editor.common.logger.log">
+<span class="sig-prename descclassname"><span class="pre">editor.common.logger.</span></span><span class="sig-name descname"><span class="pre">log</span></span><a class="reference internal" href="../../../../_modules/editor/common/logger.html#log"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#editor.common.logger.log" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="editor.common.logger.warn">
+<span class="sig-prename descclassname"><span class="pre">editor.common.logger.</span></span><span class="sig-name descname"><span class="pre">warn</span></span><a class="reference internal" href="../../../../_modules/editor/common/logger.html#warn"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#editor.common.logger.warn" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="editor.common.logger.error">
+<span class="sig-prename descclassname"><span class="pre">editor.common.logger.</span></span><span class="sig-name descname"><span class="pre">error</span></span><a class="reference internal" href="../../../../_modules/editor/common/logger.html#error"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#editor.common.logger.error" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="editor.common.logger.ilog">
+<span class="sig-prename descclassname"><span class="pre">editor.common.logger.</span></span><span class="sig-name descname"><span class="pre">ilog</span></span><a class="reference internal" href="../../../../_modules/editor/common/logger.html#ilog"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#editor.common.logger.ilog" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="editor.common.logger.iwarn">
+<span class="sig-prename descclassname"><span class="pre">editor.common.logger.</span></span><span class="sig-name descname"><span class="pre">iwarn</span></span><a class="reference internal" href="../../../../_modules/editor/common/logger.html#iwarn"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#editor.common.logger.iwarn" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="editor.common.logger.ierror">
+<span class="sig-prename descclassname"><span class="pre">editor.common.logger.</span></span><span class="sig-name descname"><span class="pre">ierror</span></span><a class="reference internal" href="../../../../_modules/editor/common/logger.html#ierror"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#editor.common.logger.ierror" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../icon_cache/index.html" class="btn btn-neutral float-left" title="editor.common.icon_cache" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../math/index.html" class="btn btn-neutral float-right" title="editor.common.math" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023, kakako.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

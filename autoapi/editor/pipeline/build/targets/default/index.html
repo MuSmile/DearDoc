@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>editor.pipeline.build.targets.default &mdash; Welcome to DearDoc!</title>
+      <link rel="stylesheet" href="../../../../../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../../../../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../../../../../_static/graphviz.css" type="text/css" />
+    <link rel="shortcut icon" href="../../../../../../_static/favicon.ico"/>
+  <!--[if lt IE 9]>
+    <script src="../../../../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script data-url_root="../../../../../../" id="documentation_options" src="../../../../../../_static/documentation_options.js"></script>
+        <script src="../../../../../../_static/doctools.js"></script>
+        <script src="../../../../../../_static/sphinx_highlight.js"></script>
+    <script src="../../../../../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../../../search.html" />
+    <link rel="next" title="editor.pipeline.build.registry" href="../../registry/index.html" />
+    <link rel="prev" title="editor.pipeline.build.targets" href="../index.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../../../../../index.html" class="icon icon-home">
+            DearDoc
+          </a>
+              <div class="version">
+                dev
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../_docs/about.html">About</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../../_docs/about/introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../../_docs/about/frequently_asked_questions.html">Frequently asked questions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../../_docs/about/troubleshooting.html">Troubleshooting</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../../_docs/about/license.html">License</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../_docs/manual.html">Manual</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../../_docs/manual/introduction.html">Introduction</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../_docs/contributing.html">Contributing</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../../_docs/contributing/introduction.html">Introduction</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../../../../index.html">API Reference</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="../../../../index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor</span></code></a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../../../../common/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.common</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../../common/database/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.common.database</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../common/dispatcher/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.common.dispatcher</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../common/ease/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.common.ease</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../common/file_watcher/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.common.file_watcher</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../common/icon_cache/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.common.icon_cache</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../common/logger/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.common.logger</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../common/math/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.common.math</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../common/native/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.common.native</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../common/util/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.common.util</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../models/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.models</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../../models/asset/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.models.asset</span></code></a><ul>
+<li class="toctree-l5"><a class="reference internal" href="../../../../models/asset/asset/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.models.asset.asset</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../../../models/asset/importer/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.models.asset.importer</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../../../models/asset/meta/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.models.asset.meta</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../models/editor/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.models.editor</span></code></a><ul>
+<li class="toctree-l5"><a class="reference internal" href="../../../../models/editor/form/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.models.editor.form</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../../../models/editor/menu_tree/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.models.editor.menu_tree</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../models/gameplay/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.models.gameplay</span></code></a><ul>
+<li class="toctree-l5"><a class="reference internal" href="../../../../models/gameplay/component/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.models.gameplay.component</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../../../models/gameplay/entity/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.models.gameplay.entity</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../../../models/gameplay/scene/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.models.gameplay.scene</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../models/graph/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.models.graph</span></code></a><ul>
+<li class="toctree-l5"><a class="reference internal" href="../../../../models/graph/base/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.models.graph.base</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../../../models/graph/fsm/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.models.graph.fsm</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../../../models/graph/shader/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.models.graph.shader</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l3 current"><a class="reference internal" href="../../../index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.pipeline</span></code></a><ul class="current">
+<li class="toctree-l4 current"><a class="reference internal" href="../../index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.pipeline.build</span></code></a><ul class="current">
+<li class="toctree-l5 current"><a class="reference internal" href="../index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.pipeline.build.targets</span></code></a><ul class="current">
+<li class="toctree-l6 current"><a class="current reference internal" href="#"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.pipeline.build.targets.default</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l5"><a class="reference internal" href="../../registry/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.pipeline.build.registry</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../shared_task/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.pipeline.build.shared_task</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="../../../run/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.pipeline.run</span></code></a><ul>
+<li class="toctree-l5"><a class="reference internal" href="../../../run/targets/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.pipeline.run.targets</span></code></a><ul>
+<li class="toctree-l6"><a class="reference internal" href="../../../run/targets/editor/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.pipeline.run.targets.editor</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="../../../run/targets/external/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.pipeline.run.targets.external</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l5"><a class="reference internal" href="../../../run/registry/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.pipeline.run.registry</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../../run/shared_task/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.pipeline.run.shared_task</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="../../../core/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.pipeline.core</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../views/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.views</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../../views/animation/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.views.animation</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../views/build/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.views.build</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../views/console/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.views.console</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../views/fsm_graph/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.views.fsm_graph</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../views/gallery/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.views.gallery</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../views/game/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.views.game</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../views/hierarchy/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.views.hierarchy</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../views/inspector/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.views.inspector</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../views/preference/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.views.preference</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../views/preview/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.views.preview</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../views/profiler/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.views.profiler</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../views/project/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.views.project</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../views/project_setting/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.views.project_setting</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../views/scene/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.views.scene</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../views/shader_graph/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.views.shader_graph</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../widgets/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.widgets</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../../widgets/basic/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.widgets.basic</span></code></a><ul>
+<li class="toctree-l5"><a class="reference internal" href="../../../../widgets/basic/button/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.widgets.basic.button</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../../../widgets/basic/line_edit/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.widgets.basic.line_edit</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../../../widgets/basic/search_edit/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.widgets.basic.search_edit</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../../../widgets/basic/slider/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.widgets.basic.slider</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../widgets/complex/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.widgets.complex</span></code></a><ul>
+<li class="toctree-l5"><a class="reference internal" href="../../../../widgets/complex/advanced_menu/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.widgets.complex.advanced_menu</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../../../widgets/complex/color_picker/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.widgets.complex.color_picker</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../../../widgets/complex/form_view/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.widgets.complex.form_view</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../../../widgets/complex/tree_stacked/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.widgets.complex.tree_stacked</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../../../widgets/complex/tree_view/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.widgets.complex.tree_view</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../widgets/container/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.widgets.container</span></code></a><ul>
+<li class="toctree-l5"><a class="reference internal" href="../../../../widgets/container/collapsible/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.widgets.container.collapsible</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../../../widgets/container/sliding_stacked/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.widgets.container.sliding_stacked</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../widgets/misc/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.widgets.misc</span></code></a><ul>
+<li class="toctree-l5"><a class="reference internal" href="../../../../widgets/misc/flow_layout/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.widgets.misc.flow_layout</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../../../widgets/misc/line/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.widgets.misc.line</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../../../widgets/misc/pixmap_icon/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.widgets.misc.pixmap_icon</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../../../widgets/misc/toast/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.widgets.misc.toast</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../../../widgets/misc/waiting_spinner/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.widgets.misc.waiting_spinner</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../widgets/menubar/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.widgets.menubar</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../widgets/statusbar/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.widgets.statusbar</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../widgets/toolbar/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.widgets.toolbar</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../asset_db/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.asset_db</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../editor_prefs/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.editor_prefs</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../main_window/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.main_window</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../theme_manager/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.theme_manager</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../view_manager/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.view_manager</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../engine/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">engine</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../../../engine/bridge/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">engine.bridge</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../../engine/runtime/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">engine.runtime</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../../engine/standalone/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">engine.standalone</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../launcher/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">launcher</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../tools/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">tools</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../../../tools/doc/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">tools.doc</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../../tools/hello/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">tools.hello</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../../tools/ide/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">tools.ide</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../../tools/python/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">tools.python</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../../tools/report/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">tools.report</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../../../../index.html">DearDoc</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../../../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../../../../../index.html">API Reference</a></li>
+          <li class="breadcrumb-item"><a href="../../../../index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor</span></code></a></li>
+          <li class="breadcrumb-item"><a href="../../../index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.pipeline</span></code></a></li>
+          <li class="breadcrumb-item"><a href="../../index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.pipeline.build</span></code></a></li>
+          <li class="breadcrumb-item"><a href="../index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.pipeline.build.targets</span></code></a></li>
+      <li class="breadcrumb-item active"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.pipeline.build.targets.default</span></code></li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="module-editor.pipeline.build.targets.default">
+<span id="editor-pipeline-build-targets-default"></span><h1><a class="reference internal" href="#module-editor.pipeline.build.targets.default" title="editor.pipeline.build.targets.default"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.pipeline.build.targets.default</span></code></a><a class="headerlink" href="#module-editor.pipeline.build.targets.default" title="Permalink to this heading"></a></h1>
+<section id="module-contents">
+<h2>Module Contents<a class="headerlink" href="#module-contents" title="Permalink to this heading"></a></h2>
+<dl class="py data">
+<dt class="sig sig-object py" id="editor.pipeline.build.targets.default.buildPipeline">
+<span class="sig-prename descclassname"><span class="pre">editor.pipeline.build.targets.default.</span></span><span class="sig-name descname"><span class="pre">buildPipeline</span></span><a class="reference internal" href="../../../../../../_modules/editor/pipeline/build/targets/default.html#buildPipeline"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#editor.pipeline.build.targets.default.buildPipeline" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../index.html" class="btn btn-neutral float-left" title="editor.pipeline.build.targets" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../../registry/index.html" class="btn btn-neutral float-right" title="editor.pipeline.build.registry" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023, kakako.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

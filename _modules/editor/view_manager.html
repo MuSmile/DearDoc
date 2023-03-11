@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>editor.view_manager &mdash; Welcome to DearDoc!</title>
+      <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/graphviz.css" type="text/css" />
+    <link rel="shortcut icon" href="../../_static/favicon.ico"/>
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/sphinx_highlight.js"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../index.html" class="icon icon-home">
+            DearDoc
+          </a>
+              <div class="version">
+                dev
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../_docs/about.html">About</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../_docs/about/introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../_docs/about/frequently_asked_questions.html">Frequently asked questions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../_docs/about/troubleshooting.html">Troubleshooting</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../_docs/about/license.html">License</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../_docs/manual.html">Manual</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../_docs/manual/introduction.html">Introduction</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../_docs/contributing.html">Contributing</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../_docs/contributing/introduction.html">Introduction</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../autoapi/index.html">API Reference</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../autoapi/editor/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../autoapi/editor/common/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.common</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../autoapi/editor/common/database/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.common.database</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../autoapi/editor/common/dispatcher/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.common.dispatcher</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../autoapi/editor/common/ease/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.common.ease</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../autoapi/editor/common/file_watcher/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.common.file_watcher</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../autoapi/editor/common/icon_cache/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.common.icon_cache</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../autoapi/editor/common/logger/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.common.logger</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../autoapi/editor/common/math/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.common.math</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../autoapi/editor/common/native/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.common.native</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../autoapi/editor/common/util/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.common.util</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../autoapi/editor/models/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.models</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../autoapi/editor/models/asset/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.models.asset</span></code></a><ul>
+<li class="toctree-l5"><a class="reference internal" href="../../autoapi/editor/models/asset/asset/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.models.asset.asset</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../autoapi/editor/models/asset/importer/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.models.asset.importer</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../autoapi/editor/models/asset/meta/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.models.asset.meta</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="../../autoapi/editor/models/editor/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.models.editor</span></code></a><ul>
+<li class="toctree-l5"><a class="reference internal" href="../../autoapi/editor/models/editor/form/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.models.editor.form</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../autoapi/editor/models/editor/menu_tree/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.models.editor.menu_tree</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="../../autoapi/editor/models/gameplay/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.models.gameplay</span></code></a><ul>
+<li class="toctree-l5"><a class="reference internal" href="../../autoapi/editor/models/gameplay/component/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.models.gameplay.component</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../autoapi/editor/models/gameplay/entity/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.models.gameplay.entity</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../autoapi/editor/models/gameplay/scene/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.models.gameplay.scene</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="../../autoapi/editor/models/graph/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.models.graph</span></code></a><ul>
+<li class="toctree-l5"><a class="reference internal" href="../../autoapi/editor/models/graph/base/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.models.graph.base</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../autoapi/editor/models/graph/fsm/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.models.graph.fsm</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../autoapi/editor/models/graph/shader/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.models.graph.shader</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../autoapi/editor/pipeline/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.pipeline</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../autoapi/editor/pipeline/build/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.pipeline.build</span></code></a><ul>
+<li class="toctree-l5"><a class="reference internal" href="../../autoapi/editor/pipeline/build/targets/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.pipeline.build.targets</span></code></a><ul>
+<li class="toctree-l6"><a class="reference internal" href="../../autoapi/editor/pipeline/build/targets/default/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.pipeline.build.targets.default</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l5"><a class="reference internal" href="../../autoapi/editor/pipeline/build/registry/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.pipeline.build.registry</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../autoapi/editor/pipeline/build/shared_task/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.pipeline.build.shared_task</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="../../autoapi/editor/pipeline/run/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.pipeline.run</span></code></a><ul>
+<li class="toctree-l5"><a class="reference internal" href="../../autoapi/editor/pipeline/run/targets/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.pipeline.run.targets</span></code></a><ul>
+<li class="toctree-l6"><a class="reference internal" href="../../autoapi/editor/pipeline/run/targets/editor/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.pipeline.run.targets.editor</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="../../autoapi/editor/pipeline/run/targets/external/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.pipeline.run.targets.external</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l5"><a class="reference internal" href="../../autoapi/editor/pipeline/run/registry/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.pipeline.run.registry</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../autoapi/editor/pipeline/run/shared_task/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.pipeline.run.shared_task</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="../../autoapi/editor/pipeline/core/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.pipeline.core</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../autoapi/editor/views/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.views</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../autoapi/editor/views/animation/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.views.animation</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../autoapi/editor/views/build/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.views.build</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../autoapi/editor/views/console/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.views.console</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../autoapi/editor/views/fsm_graph/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.views.fsm_graph</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../autoapi/editor/views/gallery/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.views.gallery</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../autoapi/editor/views/game/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.views.game</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../autoapi/editor/views/hierarchy/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.views.hierarchy</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../autoapi/editor/views/inspector/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.views.inspector</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../autoapi/editor/views/preference/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.views.preference</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../autoapi/editor/views/preview/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.views.preview</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../autoapi/editor/views/profiler/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.views.profiler</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../autoapi/editor/views/project/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.views.project</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../autoapi/editor/views/project_setting/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.views.project_setting</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../autoapi/editor/views/scene/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.views.scene</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../autoapi/editor/views/shader_graph/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.views.shader_graph</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../autoapi/editor/widgets/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.widgets</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../autoapi/editor/widgets/basic/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.widgets.basic</span></code></a><ul>
+<li class="toctree-l5"><a class="reference internal" href="../../autoapi/editor/widgets/basic/button/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.widgets.basic.button</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../autoapi/editor/widgets/basic/line_edit/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.widgets.basic.line_edit</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../autoapi/editor/widgets/basic/search_edit/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.widgets.basic.search_edit</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../autoapi/editor/widgets/basic/slider/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.widgets.basic.slider</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="../../autoapi/editor/widgets/complex/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.widgets.complex</span></code></a><ul>
+<li class="toctree-l5"><a class="reference internal" href="../../autoapi/editor/widgets/complex/advanced_menu/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.widgets.complex.advanced_menu</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../autoapi/editor/widgets/complex/color_picker/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.widgets.complex.color_picker</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../autoapi/editor/widgets/complex/form_view/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.widgets.complex.form_view</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../autoapi/editor/widgets/complex/tree_stacked/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.widgets.complex.tree_stacked</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../autoapi/editor/widgets/complex/tree_view/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.widgets.complex.tree_view</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="../../autoapi/editor/widgets/container/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.widgets.container</span></code></a><ul>
+<li class="toctree-l5"><a class="reference internal" href="../../autoapi/editor/widgets/container/collapsible/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.widgets.container.collapsible</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../autoapi/editor/widgets/container/sliding_stacked/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.widgets.container.sliding_stacked</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="../../autoapi/editor/widgets/misc/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.widgets.misc</span></code></a><ul>
+<li class="toctree-l5"><a class="reference internal" href="../../autoapi/editor/widgets/misc/flow_layout/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.widgets.misc.flow_layout</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../autoapi/editor/widgets/misc/line/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.widgets.misc.line</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../autoapi/editor/widgets/misc/pixmap_icon/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.widgets.misc.pixmap_icon</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../autoapi/editor/widgets/misc/toast/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.widgets.misc.toast</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../autoapi/editor/widgets/misc/waiting_spinner/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.widgets.misc.waiting_spinner</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="../../autoapi/editor/widgets/menubar/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.widgets.menubar</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../autoapi/editor/widgets/statusbar/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.widgets.statusbar</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../autoapi/editor/widgets/toolbar/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.widgets.toolbar</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../autoapi/editor/asset_db/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.asset_db</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../autoapi/editor/editor_prefs/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.editor_prefs</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../autoapi/editor/main_window/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.main_window</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../autoapi/editor/theme_manager/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.theme_manager</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../autoapi/editor/view_manager/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.view_manager</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../autoapi/engine/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">engine</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../autoapi/engine/bridge/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">engine.bridge</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../autoapi/engine/runtime/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">engine.runtime</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../autoapi/engine/standalone/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">engine.standalone</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../autoapi/launcher/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">launcher</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../autoapi/tools/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">tools</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../autoapi/tools/doc/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">tools.doc</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../autoapi/tools/hello/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">tools.hello</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../autoapi/tools/ide/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">tools.ide</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../autoapi/tools/python/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">tools.python</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../autoapi/tools/report/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">tools.report</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">DearDoc</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../index.html">Module code</a></li>
+      <li class="breadcrumb-item active">editor.view_manager</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <h1>Source code for editor.view_manager</h1><div class="highlight"><pre>
+<span></span><span class="kn">import</span> <span class="nn">os</span><span class="o">,</span> <span class="nn">json</span><span class="o">,</span> <span class="nn">platform</span><span class="o">,</span> <span class="nn">uuid</span>
+<span class="kn">import</span> <span class="nn">xml.etree.ElementTree</span> <span class="k">as</span> <span class="nn">ET</span>
+<span class="kn">from</span> <span class="nn">PySide6.QtCore</span> <span class="kn">import</span> <span class="n">Qt</span><span class="p">,</span> <span class="n">QSize</span>
+<span class="kn">from</span> <span class="nn">PySide6.QtGui</span> <span class="kn">import</span> <span class="n">QAction</span>
+<span class="kn">from</span> <span class="nn">editor.common.pyqtads</span> <span class="kn">import</span> <span class="n">CDockManager</span><span class="p">,</span> <span class="n">CDockWidget</span><span class="p">,</span> <span class="n">DockWidgetArea</span>
+<span class="kn">from</span> <span class="nn">editor.common.logger</span> <span class="kn">import</span> <span class="n">warn</span><span class="p">,</span> <span class="n">error</span>
+<span class="kn">from</span> <span class="nn">editor.common.icon_cache</span> <span class="kn">import</span> <span class="n">getThemeIcon</span>
+<span class="kn">from</span> <span class="nn">editor.common.util</span> <span class="kn">import</span> <span class="n">getIde</span><span class="p">,</span> <span class="n">isParentOfWidget</span>
+<span class="kn">from</span> <span class="nn">editor.widgets.misc.toast</span> <span class="kn">import</span> <span class="n">notifyToast</span>
+
+
+<span class="c1">#######################  INTERNALS  #######################</span>
+<span class="n">_dockManager</span> <span class="o">=</span> <span class="kc">None</span>
+<span class="n">_viewRegistry</span> <span class="o">=</span> <span class="p">{}</span>
+<span class="n">_dockAreaTable</span> <span class="o">=</span> <span class="p">{</span>
+	<span class="s1">&#39;left&#39;</span>   <span class="p">:</span> <span class="n">DockWidgetArea</span><span class="o">.</span><span class="n">LeftDockWidgetArea</span><span class="p">,</span>
+	<span class="s1">&#39;right&#39;</span>  <span class="p">:</span> <span class="n">DockWidgetArea</span><span class="o">.</span><span class="n">RightDockWidgetArea</span><span class="p">,</span>
+	<span class="s1">&#39;top&#39;</span>    <span class="p">:</span> <span class="n">DockWidgetArea</span><span class="o">.</span><span class="n">TopDockWidgetArea</span><span class="p">,</span>
+	<span class="s1">&#39;bottom&#39;</span> <span class="p">:</span> <span class="n">DockWidgetArea</span><span class="o">.</span><span class="n">BottomDockWidgetArea</span><span class="p">,</span>
+	<span class="s1">&#39;center&#39;</span> <span class="p">:</span> <span class="n">DockWidgetArea</span><span class="o">.</span><span class="n">CenterDockWidgetArea</span><span class="p">,</span>
+<span class="p">}</span>
+
+
+<span class="c1">#######################  INTERFACE  #######################</span>
+<div class="viewcode-block" id="DockView"><a class="viewcode-back" href="../../autoapi/editor/view_manager/index.html#editor.view_manager.DockView">[docs]</a><span class="k">class</span> <span class="nc">DockView</span><span class="p">(</span><span class="n">CDockWidget</span><span class="p">):</span>
+	<span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">parent</span><span class="p">,</span> <span class="o">**</span><span class="n">data</span><span class="p">):</span>
+		<span class="bp">cls</span>       <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="vm">__class__</span><span class="o">.</span><span class="vm">__name__</span>
+		<span class="n">name</span>      <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;name&#39;</span>     <span class="p">]</span> <span class="k">if</span> <span class="s1">&#39;name&#39;</span>      <span class="ow">in</span> <span class="n">data</span> <span class="k">else</span> <span class="bp">cls</span>
+		<span class="n">icon</span>      <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;icon&#39;</span>     <span class="p">]</span> <span class="k">if</span> <span class="s1">&#39;icon&#39;</span>      <span class="ow">in</span> <span class="n">data</span> <span class="k">else</span> <span class="kc">None</span>
+		<span class="n">title</span>     <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;title&#39;</span>    <span class="p">]</span> <span class="k">if</span> <span class="s1">&#39;title&#39;</span>     <span class="ow">in</span> <span class="n">data</span> <span class="k">else</span> <span class="n">name</span>
+		<span class="n">tooltip</span>   <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;tooltip&#39;</span>  <span class="p">]</span> <span class="k">if</span> <span class="s1">&#39;tooltip&#39;</span>   <span class="ow">in</span> <span class="n">data</span> <span class="k">else</span> <span class="kc">None</span>
+		<span class="n">keepAlive</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;keepAlive&#39;</span><span class="p">]</span> <span class="k">if</span> <span class="s1">&#39;keepAlive&#39;</span> <span class="ow">in</span> <span class="n">data</span> <span class="k">else</span> <span class="kc">False</span>
+
+		<span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">title</span><span class="p">,</span> <span class="n">parent</span><span class="p">)</span>
+		<span class="bp">self</span><span class="o">.</span><span class="n">guid</span> <span class="o">=</span> <span class="n">uuid</span><span class="o">.</span><span class="n">uuid1</span><span class="p">()</span><span class="o">.</span><span class="n">hex</span>
+		<span class="bp">self</span><span class="o">.</span><span class="n">setObjectName</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s1">::</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">guid</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+
+		<span class="k">if</span> <span class="n">icon</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">setIcon</span><span class="p">(</span><span class="n">getThemeIcon</span><span class="p">(</span><span class="n">icon</span><span class="p">))</span>
+		<span class="bp">self</span><span class="o">.</span><span class="n">setFeature</span><span class="p">(</span><span class="n">CDockWidget</span><span class="o">.</span><span class="n">DockWidgetForceCloseWithArea</span><span class="p">,</span> <span class="kc">True</span><span class="p">)</span>
+		<span class="bp">self</span><span class="o">.</span><span class="n">setFeature</span><span class="p">(</span><span class="n">CDockWidget</span><span class="o">.</span><span class="n">DockWidgetDeleteOnClose</span><span class="p">,</span> <span class="ow">not</span> <span class="n">keepAlive</span><span class="p">)</span>
+		<span class="bp">self</span><span class="o">.</span><span class="n">setTabToolTip</span><span class="p">(</span><span class="n">tooltip</span><span class="p">)</span>
+
+		<span class="bp">self</span><span class="o">.</span><span class="n">setupTitleActions</span><span class="p">()</span>
+
+<div class="viewcode-block" id="DockView.createTitleAction"><a class="viewcode-back" href="../../autoapi/editor/view_manager/index.html#editor.view_manager.DockView.createTitleAction">[docs]</a>	<span class="k">def</span> <span class="nf">createTitleAction</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">icon</span><span class="p">,</span> <span class="n">func</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">shortcut</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span> <span class="n">checkable</span> <span class="o">=</span> <span class="kc">False</span><span class="p">):</span>
+		<span class="n">action</span> <span class="o">=</span> <span class="n">QAction</span><span class="p">()</span>
+		<span class="n">action</span><span class="o">.</span><span class="n">setAutoRepeat</span><span class="p">(</span><span class="kc">False</span><span class="p">)</span>
+		<span class="n">action</span><span class="o">.</span><span class="n">setToolTip</span><span class="p">(</span><span class="s1">&#39;foo&#39;</span><span class="p">)</span>
+		<span class="k">if</span> <span class="n">func</span><span class="p">:</span> <span class="n">action</span><span class="o">.</span><span class="n">triggered</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="n">func</span><span class="p">)</span>
+		<span class="k">if</span> <span class="n">icon</span><span class="p">:</span> <span class="n">action</span><span class="o">.</span><span class="n">setIcon</span><span class="p">(</span><span class="n">getThemeIcon</span><span class="p">(</span><span class="n">icon</span><span class="p">))</span>
+		<span class="k">if</span> <span class="n">shortcut</span><span class="p">:</span>
+			<span class="n">action</span><span class="o">.</span><span class="n">setShortcut</span><span class="p">(</span><span class="n">shortcut</span><span class="p">)</span>
+			<span class="n">action</span><span class="o">.</span><span class="n">setShortcutContext</span><span class="p">(</span><span class="n">Qt</span><span class="o">.</span><span class="n">WidgetWithChildrenShortcut</span><span class="p">)</span>
+		<span class="k">if</span> <span class="n">checkable</span><span class="p">:</span>
+			<span class="n">action</span><span class="o">.</span><span class="n">setCheckable</span><span class="p">(</span><span class="kc">True</span><span class="p">)</span>
+			<span class="n">action</span><span class="o">.</span><span class="n">setChecked</span><span class="p">(</span><span class="kc">True</span><span class="p">)</span>
+		<span class="bp">self</span><span class="o">.</span><span class="n">titleActions</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">action</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="DockView.setupTitleActions"><a class="viewcode-back" href="../../autoapi/editor/view_manager/index.html#editor.view_manager.DockView.setupTitleActions">[docs]</a>	<span class="k">def</span> <span class="nf">setupTitleActions</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+		<span class="bp">self</span><span class="o">.</span><span class="n">titleActions</span> <span class="o">=</span> <span class="p">[]</span>
+		<span class="bp">self</span><span class="o">.</span><span class="n">createTitleAction</span><span class="p">(</span><span class="s1">&#39;menu_d.png&#39;</span><span class="p">)</span>
+		<span class="bp">self</span><span class="o">.</span><span class="n">setTitleBarActions</span><span class="p">(</span> <span class="bp">self</span><span class="o">.</span><span class="n">titleActions</span> <span class="p">)</span></div>
+
+<div class="viewcode-block" id="DockView.showNotification"><a class="viewcode-back" href="../../autoapi/editor/view_manager/index.html#editor.view_manager.DockView.showNotification">[docs]</a>	<span class="k">def</span> <span class="nf">showNotification</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">msg</span><span class="p">):</span>
+		<span class="n">notifyToast</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">msg</span><span class="p">,</span> <span class="mi">1500</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="DockView.addIntoEditor"><a class="viewcode-back" href="../../autoapi/editor/view_manager/index.html#editor.view_manager.DockView.addIntoEditor">[docs]</a>	<span class="k">def</span> <span class="nf">addIntoEditor</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">area</span> <span class="o">=</span> <span class="s1">&#39;center&#39;</span><span class="p">,</span> <span class="n">anchor</span> <span class="o">=</span> <span class="kc">None</span><span class="p">):</span>
+		<span class="n">anchor</span> <span class="o">=</span> <span class="n">anchor</span> <span class="ow">or</span> <span class="n">focusedDockView</span><span class="p">()</span>
+		<span class="k">if</span> <span class="n">anchor</span><span class="p">:</span>
+			<span class="n">_dockManager</span><span class="o">.</span><span class="n">addDockWidget</span><span class="p">(</span><span class="n">_dockAreaTable</span><span class="p">[</span><span class="n">area</span><span class="p">],</span> <span class="bp">self</span><span class="p">,</span> <span class="n">anchor</span><span class="o">.</span><span class="n">dockAreaWidget</span><span class="p">())</span>
+		<span class="k">else</span><span class="p">:</span>
+			<span class="n">_dockManager</span><span class="o">.</span><span class="n">addDockWidget</span><span class="p">(</span><span class="n">_dockAreaTable</span><span class="p">[</span><span class="n">area</span><span class="p">],</span> <span class="bp">self</span><span class="p">)</span></div>
+<div class="viewcode-block" id="DockView.addIntoEditorAsFloating"><a class="viewcode-back" href="../../autoapi/editor/view_manager/index.html#editor.view_manager.DockView.addIntoEditorAsFloating">[docs]</a>	<span class="k">def</span> <span class="nf">addIntoEditorAsFloating</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+		<span class="n">_dockManager</span><span class="o">.</span><span class="n">addDockWidgetFloating</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="DockView.minimumSizeHint"><a class="viewcode-back" href="../../autoapi/editor/view_manager/index.html#editor.view_manager.DockView.minimumSizeHint">[docs]</a>	<span class="k">def</span> <span class="nf">minimumSizeHint</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+		<span class="k">return</span> <span class="n">QSize</span><span class="p">(</span><span class="mi">150</span><span class="p">,</span> <span class="mi">100</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="DockView.onLoadLayout"><a class="viewcode-back" href="../../autoapi/editor/view_manager/index.html#editor.view_manager.DockView.onLoadLayout">[docs]</a>	<span class="k">def</span> <span class="nf">onLoadLayout</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+		<span class="c1"># print(&#39;dump data: &#39;, self.serializedData())</span>
+		<span class="k">pass</span></div></div>
+
+
+<span class="c1">#######################  REGISTERS  #######################</span>
+<div class="viewcode-block" id="registerDockView"><a class="viewcode-back" href="../../autoapi/editor/view_manager/index.html#editor.view_manager.registerDockView">[docs]</a><span class="k">def</span> <span class="nf">registerDockView</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">icon</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="o">**</span><span class="n">data</span><span class="p">):</span>
+	<span class="k">if</span> <span class="n">name</span> <span class="ow">in</span> <span class="n">_viewRegistry</span><span class="p">:</span> <span class="n">warn</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;editor view </span><span class="se">\&#39;</span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="se">\&#39;</span><span class="s1"> has registered!&#39;</span><span class="p">)</span>
+	
+	<span class="n">data</span><span class="p">[</span><span class="s1">&#39;icon&#39;</span> <span class="p">]</span> <span class="o">=</span> <span class="n">icon</span>
+	<span class="n">data</span><span class="p">[</span><span class="s1">&#39;name&#39;</span> <span class="p">]</span> <span class="o">=</span> <span class="n">name</span>
+	<span class="n">data</span><span class="p">[</span><span class="s1">&#39;class&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="bp">cls</span>
+	<span class="n">_viewRegistry</span><span class="p">[</span><span class="n">name</span><span class="p">]</span> <span class="o">=</span> <span class="n">data</span></div>
+
+<div class="viewcode-block" id="dockView"><a class="viewcode-back" href="../../autoapi/editor/view_manager/index.html#editor.view_manager.dockView">[docs]</a><span class="k">def</span> <span class="nf">dockView</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">icon</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="o">**</span><span class="n">data</span><span class="p">):</span>
+	<span class="k">def</span> <span class="nf">wrapper</span><span class="p">(</span><span class="bp">cls</span><span class="p">):</span>
+		<span class="n">registerDockView</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">icon</span><span class="p">,</span> <span class="o">**</span><span class="n">data</span><span class="p">)</span>
+		<span class="k">return</span> <span class="bp">cls</span>
+	<span class="k">return</span> <span class="n">wrapper</span></div>
+
+
+<span class="n">registerDockView</span><span class="p">(</span><span class="n">DockView</span><span class="p">,</span> <span class="s1">&#39;Dummy&#39;</span><span class="p">)</span>
+
+
+<span class="c1">#########################  API  ##########################</span>
+<div class="viewcode-block" id="findDockView"><a class="viewcode-back" href="../../autoapi/editor/view_manager/index.html#editor.view_manager.findDockView">[docs]</a><span class="k">def</span> <span class="nf">findDockView</span><span class="p">(</span><span class="n">name</span><span class="p">):</span>
+	<span class="n">dockMap</span> <span class="o">=</span> <span class="n">_dockManager</span><span class="o">.</span><span class="n">dockWidgetsMap</span><span class="p">()</span>
+	<span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="n">dockMap</span><span class="p">:</span>
+		<span class="k">if</span> <span class="n">k</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="n">name</span> <span class="o">+</span> <span class="s1">&#39;::&#39;</span><span class="p">):</span>
+			<span class="k">return</span> <span class="n">dockMap</span><span class="p">[</span><span class="n">k</span><span class="p">]</span></div>
+<div class="viewcode-block" id="findDockViewList"><a class="viewcode-back" href="../../autoapi/editor/view_manager/index.html#editor.view_manager.findDockViewList">[docs]</a><span class="k">def</span> <span class="nf">findDockViewList</span><span class="p">(</span><span class="n">name</span><span class="p">):</span>
+	<span class="n">dockMap</span> <span class="o">=</span> <span class="n">_dockManager</span><span class="o">.</span><span class="n">dockWidgetsMap</span><span class="p">()</span>
+	<span class="nb">list</span> <span class="o">=</span> <span class="p">[]</span>
+	<span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="n">dockMap</span><span class="p">:</span>
+		<span class="k">if</span> <span class="n">k</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="n">name</span> <span class="o">+</span> <span class="s1">&#39;::&#39;</span><span class="p">):</span>
+			<span class="nb">list</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">dockMap</span><span class="p">[</span><span class="n">k</span><span class="p">])</span>
+	<span class="k">return</span> <span class="nb">list</span></div>
+
+<div class="viewcode-block" id="createDockView"><a class="viewcode-back" href="../../autoapi/editor/view_manager/index.html#editor.view_manager.createDockView">[docs]</a><span class="k">def</span> <span class="nf">createDockView</span><span class="p">(</span><span class="n">name</span><span class="p">):</span>
+	<span class="n">data</span> <span class="o">=</span> <span class="n">_viewRegistry</span><span class="p">[</span><span class="n">name</span><span class="p">]</span>
+	<span class="bp">cls</span>  <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;class&#39;</span><span class="p">]</span>
+	<span class="k">return</span> <span class="bp">cls</span><span class="p">(</span><span class="n">_dockManager</span><span class="p">,</span> <span class="o">**</span><span class="n">data</span><span class="p">)</span></div>
+<div class="viewcode-block" id="affirmDockView"><a class="viewcode-back" href="../../autoapi/editor/view_manager/index.html#editor.view_manager.affirmDockView">[docs]</a><span class="k">def</span> <span class="nf">affirmDockView</span><span class="p">(</span><span class="n">name</span><span class="p">):</span>
+	<span class="n">dock</span> <span class="o">=</span> <span class="n">findDockView</span><span class="p">(</span><span class="n">name</span><span class="p">)</span>
+	<span class="k">if</span> <span class="ow">not</span> <span class="n">dock</span><span class="p">:</span> <span class="n">dock</span> <span class="o">=</span> <span class="n">createDockView</span><span class="p">(</span><span class="n">name</span><span class="p">)</span>
+	<span class="k">return</span> <span class="n">dock</span></div>
+
+<div class="viewcode-block" id="focusedDockView"><a class="viewcode-back" href="../../autoapi/editor/view_manager/index.html#editor.view_manager.focusedDockView">[docs]</a><span class="k">def</span> <span class="nf">focusedDockView</span><span class="p">():</span>
+	<span class="k">return</span> <span class="n">_dockManager</span><span class="o">.</span><span class="n">focusedDockWidget</span><span class="p">()</span></div>
+<div class="viewcode-block" id="setDockViewFocused"><a class="viewcode-back" href="../../autoapi/editor/view_manager/index.html#editor.view_manager.setDockViewFocused">[docs]</a><span class="k">def</span> <span class="nf">setDockViewFocused</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">focused</span><span class="p">):</span>
+	<span class="n">dock</span> <span class="o">=</span> <span class="n">findDockView</span><span class="p">(</span><span class="n">name</span><span class="p">)</span>
+	<span class="n">_dockManager</span><span class="o">.</span><span class="n">setDockWidgetFocused</span><span class="p">(</span><span class="n">focused</span><span class="p">)</span>
+	<span class="n">dock</span><span class="o">.</span><span class="n">setAsCurrentTab</span><span class="p">()</span></div>
+<div class="viewcode-block" id="closeFocusedDockView"><a class="viewcode-back" href="../../autoapi/editor/view_manager/index.html#editor.view_manager.closeFocusedDockView">[docs]</a><span class="k">def</span> <span class="nf">closeFocusedDockView</span><span class="p">():</span>
+	<span class="n">focused</span> <span class="o">=</span> <span class="n">_dockManager</span><span class="o">.</span><span class="n">focusedDockWidget</span><span class="p">()</span>
+	<span class="k">if</span> <span class="n">focused</span><span class="p">:</span> <span class="n">focused</span><span class="o">.</span><span class="n">closeDockWidget</span><span class="p">()</span></div>
+
+<div class="viewcode-block" id="setDockSplitterSizes"><a class="viewcode-back" href="../../autoapi/editor/view_manager/index.html#editor.view_manager.setDockSplitterSizes">[docs]</a><span class="k">def</span> <span class="nf">setDockSplitterSizes</span><span class="p">(</span><span class="n">dockArea</span><span class="p">,</span> <span class="n">sizes</span><span class="p">):</span>
+	<span class="n">_dockManager</span><span class="o">.</span><span class="n">setSplitterSizes</span><span class="p">(</span><span class="n">dockArea</span><span class="p">,</span> <span class="n">sizes</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="createDockManager"><a class="viewcode-back" href="../../autoapi/editor/view_manager/index.html#editor.view_manager.createDockManager">[docs]</a><span class="k">def</span> <span class="nf">createDockManager</span><span class="p">(</span><span class="n">mainWin</span><span class="p">):</span>
+	<span class="n">CDockManager</span><span class="o">.</span><span class="n">setConfigFlag</span><span class="p">(</span><span class="n">CDockManager</span><span class="o">.</span><span class="n">RetainTabSizeWhenCloseButtonHidden</span><span class="p">,</span> <span class="kc">True</span><span class="p">)</span>
+	<span class="n">CDockManager</span><span class="o">.</span><span class="n">setConfigFlag</span><span class="p">(</span><span class="n">CDockManager</span><span class="o">.</span><span class="n">FloatingContainerHasWidgetIcon</span><span class="p">,</span> <span class="kc">False</span><span class="p">)</span>
+	<span class="n">CDockManager</span><span class="o">.</span><span class="n">setConfigFlag</span><span class="p">(</span><span class="n">CDockManager</span><span class="o">.</span><span class="n">FloatingContainerHasWidgetTitle</span><span class="p">,</span> <span class="kc">False</span><span class="p">)</span>
+	<span class="n">CDockManager</span><span class="o">.</span><span class="n">setConfigFlag</span><span class="p">(</span><span class="n">CDockManager</span><span class="o">.</span><span class="n">OpaqueSplitterResize</span><span class="p">,</span> <span class="kc">True</span><span class="p">)</span>
+	<span class="n">CDockManager</span><span class="o">.</span><span class="n">setConfigFlag</span><span class="p">(</span><span class="n">CDockManager</span><span class="o">.</span><span class="n">TabCloseButtonIsToolButton</span><span class="p">,</span> <span class="kc">False</span><span class="p">)</span>
+	<span class="n">CDockManager</span><span class="o">.</span><span class="n">setConfigFlag</span><span class="p">(</span><span class="n">CDockManager</span><span class="o">.</span><span class="n">DockAreaHasUndockButton</span><span class="p">,</span> <span class="kc">False</span><span class="p">)</span>
+	<span class="n">CDockManager</span><span class="o">.</span><span class="n">setConfigFlag</span><span class="p">(</span><span class="n">CDockManager</span><span class="o">.</span><span class="n">DockAreaHasCloseButton</span><span class="p">,</span> <span class="kc">False</span><span class="p">)</span>
+	<span class="n">CDockManager</span><span class="o">.</span><span class="n">setConfigFlag</span><span class="p">(</span><span class="n">CDockManager</span><span class="o">.</span><span class="n">DockAreaHasTabsMenuButton</span><span class="p">,</span> <span class="kc">False</span><span class="p">)</span>
+	<span class="n">CDockManager</span><span class="o">.</span><span class="n">setConfigFlag</span><span class="p">(</span><span class="n">CDockManager</span><span class="o">.</span><span class="n">ActiveTabHasCloseButton</span><span class="p">,</span> <span class="kc">False</span><span class="p">)</span>
+	<span class="n">CDockManager</span><span class="o">.</span><span class="n">setConfigFlag</span><span class="p">(</span><span class="n">CDockManager</span><span class="o">.</span><span class="n">XmlAutoFormattingEnabled</span><span class="p">,</span> <span class="kc">True</span><span class="p">)</span>
+	<span class="n">CDockManager</span><span class="o">.</span><span class="n">setConfigFlag</span><span class="p">(</span><span class="n">CDockManager</span><span class="o">.</span><span class="n">XmlCompressionEnabled</span><span class="p">,</span> <span class="kc">False</span><span class="p">)</span>
+	<span class="n">CDockManager</span><span class="o">.</span><span class="n">setConfigFlag</span><span class="p">(</span><span class="n">CDockManager</span><span class="o">.</span><span class="n">AlwaysShowTabs</span><span class="p">,</span> <span class="kc">True</span><span class="p">)</span>
+	<span class="n">CDockManager</span><span class="o">.</span><span class="n">setConfigFlag</span><span class="p">(</span><span class="n">CDockManager</span><span class="o">.</span><span class="n">FocusHighlighting</span><span class="p">,</span> <span class="kc">True</span><span class="p">)</span>
+	<span class="n">CDockManager</span><span class="o">.</span><span class="n">setConfigFlag</span><span class="p">(</span><span class="n">CDockManager</span><span class="o">.</span><span class="n">MiddleMouseButtonClosesTab</span><span class="p">,</span> <span class="kc">True</span><span class="p">)</span>
+	<span class="n">CDockManager</span><span class="o">.</span><span class="n">setConfigFlag</span><span class="p">(</span><span class="n">CDockManager</span><span class="o">.</span><span class="n">DragPreviewShowsContentPixmap</span><span class="p">,</span> <span class="kc">False</span><span class="p">)</span>
+
+	<span class="k">if</span> <span class="n">platform</span><span class="o">.</span><span class="n">system</span><span class="p">()</span> <span class="o">==</span> <span class="s1">&#39;Darwin&#39;</span><span class="p">:</span>
+		<span class="n">CDockManager</span><span class="o">.</span><span class="n">setConfigFlag</span><span class="p">(</span><span class="n">CDockManager</span><span class="o">.</span><span class="n">AllMenusHaveCustomStyle</span><span class="p">,</span> <span class="kc">True</span><span class="p">)</span>
+
+	<span class="n">CDockManager</span><span class="o">.</span><span class="n">setAutoHideConfigFlag</span><span class="p">(</span><span class="n">CDockManager</span><span class="o">.</span><span class="n">AutoHideFeatureEnabled</span><span class="p">,</span> <span class="kc">True</span><span class="p">)</span>
+	<span class="n">CDockManager</span><span class="o">.</span><span class="n">setAutoHideConfigFlag</span><span class="p">(</span><span class="n">CDockManager</span><span class="o">.</span><span class="n">DockAreaHasAutoHideButton</span><span class="p">,</span> <span class="kc">True</span><span class="p">)</span>
+	<span class="n">CDockManager</span><span class="o">.</span><span class="n">setAutoHideConfigFlag</span><span class="p">(</span><span class="n">CDockManager</span><span class="o">.</span><span class="n">AutoHideTitleForceHasCloseBtn</span><span class="p">,</span> <span class="kc">True</span><span class="p">)</span>
+
+	<span class="k">global</span> <span class="n">_dockManager</span>
+	<span class="n">_dockManager</span> <span class="o">=</span> <span class="n">CDockManager</span><span class="p">(</span><span class="n">mainWin</span><span class="p">)</span>
+	<span class="n">_dockManager</span><span class="o">.</span><span class="n">setStyleSheet</span><span class="p">(</span><span class="kc">None</span><span class="p">)</span>
+	<span class="n">_dockManager</span><span class="o">.</span><span class="n">floatingWidgetCreated</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="k">lambda</span> <span class="n">f</span><span class="p">:</span> <span class="n">f</span><span class="o">.</span><span class="n">layout</span><span class="p">()</span><span class="o">.</span><span class="n">setContentsMargins</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">))</span>
+	
+	<span class="k">def</span> <span class="nf">focusedDockWidgetChanged</span><span class="p">(</span><span class="n">old</span><span class="p">,</span> <span class="n">now</span><span class="p">):</span>
+		<span class="n">focused</span> <span class="o">=</span> <span class="n">getIde</span><span class="p">()</span><span class="o">.</span><span class="n">focusWidget</span><span class="p">()</span>
+		<span class="k">if</span> <span class="ow">not</span> <span class="n">isParentOfWidget</span><span class="p">(</span><span class="n">now</span><span class="p">,</span> <span class="n">focused</span><span class="p">):</span> <span class="n">now</span><span class="o">.</span><span class="n">setFocus</span><span class="p">()</span>
+		<span class="k">if</span> <span class="n">now</span><span class="o">.</span><span class="n">dockContainer</span><span class="p">()</span><span class="o">.</span><span class="n">isFloating</span><span class="p">():</span> <span class="n">now</span><span class="o">.</span><span class="n">window</span><span class="p">()</span><span class="o">.</span><span class="n">setWindowTitle</span><span class="p">(</span><span class="n">now</span><span class="o">.</span><span class="n">tabWidget</span><span class="p">()</span><span class="o">.</span><span class="n">text</span><span class="p">())</span>
+
+	<span class="n">_dockManager</span><span class="o">.</span><span class="n">focusedDockWidgetChanged</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="n">focusedDockWidgetChanged</span><span class="p">)</span>
+	
+	<span class="k">return</span> <span class="n">_dockManager</span></div>
+
+<div class="viewcode-block" id="dockManager"><a class="viewcode-back" href="../../autoapi/editor/view_manager/index.html#editor.view_manager.dockManager">[docs]</a><span class="k">def</span> <span class="nf">dockManager</span><span class="p">():</span>
+	<span class="k">return</span> <span class="n">_dockManager</span></div>
+
+
+<span class="c1">#########################  LAYOUT  #########################</span>
+<div class="viewcode-block" id="listLayouts"><a class="viewcode-back" href="../../autoapi/editor/view_manager/index.html#editor.view_manager.listLayouts">[docs]</a><span class="k">def</span> <span class="nf">listLayouts</span><span class="p">():</span>
+	<span class="n">folder</span> <span class="o">=</span> <span class="s1">&#39;data/layouts/&#39;</span>
+	<span class="k">if</span> <span class="ow">not</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="n">folder</span><span class="p">):</span> <span class="k">return</span>
+	<span class="k">return</span> <span class="p">[</span> <span class="n">f</span><span class="o">.</span><span class="n">name</span> <span class="k">for</span> <span class="n">f</span> <span class="ow">in</span> <span class="n">os</span><span class="o">.</span><span class="n">scandir</span><span class="p">(</span><span class="n">folder</span><span class="p">)</span> <span class="k">if</span> <span class="n">f</span><span class="o">.</span><span class="n">is_dir</span><span class="p">()</span> <span class="p">]</span></div>
+
+<div class="viewcode-block" id="saveLayout"><a class="viewcode-back" href="../../autoapi/editor/view_manager/index.html#editor.view_manager.saveLayout">[docs]</a><span class="k">def</span> <span class="nf">saveLayout</span><span class="p">(</span><span class="n">name</span><span class="p">):</span>
+	<span class="n">folder</span> <span class="o">=</span> <span class="sa">f</span><span class="s1">&#39;data/layouts/</span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s1">/&#39;</span>
+	<span class="k">if</span> <span class="ow">not</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="n">folder</span><span class="p">):</span> <span class="n">os</span><span class="o">.</span><span class="n">makedirs</span><span class="p">(</span><span class="n">folder</span><span class="p">)</span>
+
+	<span class="n">statesFile</span> <span class="o">=</span> <span class="n">folder</span> <span class="o">+</span> <span class="s1">&#39;states.xml&#39;</span>
+	<span class="n">windowFile</span> <span class="o">=</span> <span class="n">folder</span> <span class="o">+</span> <span class="s1">&#39;window.json&#39;</span>
+
+	<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">statesFile</span><span class="p">,</span> <span class="s1">&#39;wb&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">file</span><span class="p">:</span>
+		<span class="n">file</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="nb">bytes</span><span class="p">(</span><span class="n">_dockManager</span><span class="o">.</span><span class="n">saveState</span><span class="p">(</span><span class="mi">1</span><span class="p">)))</span>
+		<span class="n">file</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+
+	<span class="c1"># enum Qt.WindowState:</span>
+	<span class="c1"># ------------------------------------</span>
+	<span class="c1">#    Qt.WindowNoState     0x00000000</span>
+	<span class="c1">#    Qt.WindowMinimized   0x00000001</span>
+	<span class="c1">#    Qt.WindowMaximized   0x00000002</span>
+	<span class="c1">#    Qt.WindowFullScreen  0x00000004</span>
+	<span class="c1">#    Qt.WindowActive      0x00000008</span>
+
+	<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">windowFile</span><span class="p">,</span> <span class="s1">&#39;w&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">file</span><span class="p">:</span>
+		<span class="n">win</span> <span class="o">=</span> <span class="n">_dockManager</span><span class="o">.</span><span class="n">window</span><span class="p">()</span>
+		<span class="n">rect</span> <span class="o">=</span> <span class="n">win</span><span class="o">.</span><span class="n">geometry</span><span class="p">()</span>
+		<span class="n">file</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">json</span><span class="o">.</span><span class="n">dumps</span><span class="p">({</span>
+			<span class="s1">&#39;state&#39;</span> <span class="p">:</span> <span class="nb">int</span><span class="p">(</span><span class="n">win</span><span class="o">.</span><span class="n">windowState</span><span class="p">()),</span>
+			<span class="s1">&#39;width&#39;</span> <span class="p">:</span> <span class="n">rect</span><span class="o">.</span><span class="n">width</span><span class="p">(),</span>
+			<span class="s1">&#39;height&#39;</span><span class="p">:</span> <span class="n">rect</span><span class="o">.</span><span class="n">height</span><span class="p">(),</span>
+		<span class="p">},</span> <span class="n">indent</span> <span class="o">=</span> <span class="mi">4</span><span class="p">))</span>
+		<span class="n">file</span><span class="o">.</span><span class="n">close</span><span class="p">()</span></div>
+
+<div class="viewcode-block" id="loadLayout"><a class="viewcode-back" href="../../autoapi/editor/view_manager/index.html#editor.view_manager.loadLayout">[docs]</a><span class="k">def</span> <span class="nf">loadLayout</span><span class="p">(</span><span class="n">name</span><span class="p">):</span>
+	<span class="n">folder</span> <span class="o">=</span> <span class="sa">f</span><span class="s1">&#39;data/layouts/</span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s1">/&#39;</span>
+	<span class="k">if</span> <span class="ow">not</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="n">folder</span><span class="p">):</span> <span class="k">return</span> <span class="n">error</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;load layout fail! layout </span><span class="se">\&#39;</span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="se">\&#39;</span><span class="s1"> not found.&#39;</span><span class="p">)</span>
+
+	<span class="n">statesFile</span> <span class="o">=</span> <span class="n">folder</span> <span class="o">+</span> <span class="s1">&#39;states.xml&#39;</span>
+	<span class="n">windowFile</span> <span class="o">=</span> <span class="n">folder</span> <span class="o">+</span> <span class="s1">&#39;window.json&#39;</span>
+
+	<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">statesFile</span><span class="p">,</span> <span class="s1">&#39;rb&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">file</span><span class="p">:</span>
+		<span class="n">states</span> <span class="o">=</span> <span class="nb">bytearray</span><span class="p">(</span><span class="n">file</span><span class="o">.</span><span class="n">read</span><span class="p">())</span>
+		<span class="n">file</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+
+		<span class="n">layoutTable</span> <span class="o">=</span> <span class="p">{}</span>
+		<span class="n">adsTree</span> <span class="o">=</span> <span class="n">ET</span><span class="o">.</span><span class="n">fromstring</span><span class="p">(</span><span class="nb">bytes</span><span class="p">(</span><span class="n">states</span><span class="p">)</span><span class="o">.</span><span class="n">decode</span><span class="p">())</span>
+		<span class="k">for</span> <span class="n">dock</span> <span class="ow">in</span> <span class="n">adsTree</span><span class="o">.</span><span class="n">findall</span><span class="p">(</span><span class="s1">&#39;.//Widget&#39;</span><span class="p">):</span>
+			<span class="k">if</span> <span class="n">dock</span><span class="o">.</span><span class="n">attrib</span><span class="p">[</span><span class="s1">&#39;Closed&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;1&#39;</span><span class="p">:</span> <span class="k">continue</span>
+			<span class="n">names</span> <span class="o">=</span> <span class="n">dock</span><span class="o">.</span><span class="n">attrib</span><span class="p">[</span><span class="s1">&#39;Name&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;::&#39;</span><span class="p">)</span>
+			<span class="n">view</span><span class="p">,</span> <span class="n">guid</span> <span class="o">=</span> <span class="n">names</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">names</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+			<span class="n">data</span> <span class="o">=</span> <span class="p">{</span>
+				<span class="s1">&#39;guid&#39;</span><span class="p">:</span> <span class="n">guid</span><span class="p">,</span>
+				<span class="s1">&#39;name&#39;</span><span class="p">:</span> <span class="n">dock</span><span class="o">.</span><span class="n">attrib</span><span class="p">[</span><span class="s1">&#39;Name&#39;</span><span class="p">],</span>
+				<span class="s1">&#39;data&#39;</span><span class="p">:</span> <span class="n">dock</span><span class="o">.</span><span class="n">attrib</span><span class="p">[</span><span class="s1">&#39;Data&#39;</span><span class="p">]</span> <span class="k">if</span> <span class="s1">&#39;Data&#39;</span> <span class="ow">in</span> <span class="n">dock</span><span class="o">.</span><span class="n">attrib</span> <span class="k">else</span> <span class="kc">None</span>
+			<span class="p">}</span>
+			<span class="k">if</span> <span class="n">view</span> <span class="ow">in</span> <span class="n">layoutTable</span><span class="p">:</span>
+				<span class="n">layoutTable</span><span class="p">[</span> <span class="n">view</span> <span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+			<span class="k">else</span><span class="p">:</span>
+				<span class="n">layoutTable</span><span class="p">[</span> <span class="n">view</span> <span class="p">]</span> <span class="o">=</span> <span class="p">[</span> <span class="n">data</span> <span class="p">]</span>
+
+		<span class="k">for</span> <span class="n">view</span> <span class="ow">in</span> <span class="n">layoutTable</span><span class="p">:</span>
+			
+			<span class="k">if</span> <span class="n">view</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">_viewRegistry</span><span class="p">:</span>
+				<span class="n">error</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;skip restoring view </span><span class="se">\&#39;</span><span class="si">{</span><span class="n">view</span><span class="si">}</span><span class="se">\&#39;</span><span class="s1">, which is not registered.&#39;</span><span class="p">)</span>
+				<span class="k">for</span> <span class="n">dock</span> <span class="ow">in</span> <span class="n">findDockViewList</span><span class="p">(</span><span class="n">view</span><span class="p">):</span> <span class="n">dock</span><span class="o">.</span><span class="n">closeDockWidget</span><span class="p">()</span>
+				<span class="k">continue</span>
+
+			<span class="n">lviews</span> <span class="o">=</span> <span class="n">layoutTable</span><span class="p">[</span><span class="n">view</span><span class="p">]</span>
+			<span class="n">eviews</span> <span class="o">=</span> <span class="n">findDockViewList</span><span class="p">(</span><span class="n">view</span><span class="p">)</span>
+			<span class="n">lviewsLen</span><span class="p">,</span> <span class="n">eviewsLen</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">lviews</span><span class="p">),</span> <span class="nb">len</span><span class="p">(</span><span class="n">eviews</span><span class="p">)</span>
+				
+			<span class="k">def</span> <span class="nf">insideLayout</span><span class="p">(</span><span class="n">name</span><span class="p">):</span>
+				<span class="k">for</span> <span class="n">table</span> <span class="ow">in</span> <span class="n">lviews</span><span class="p">:</span>
+					<span class="k">if</span> <span class="n">table</span><span class="p">[</span><span class="s1">&#39;name&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="n">name</span><span class="p">:</span>
+						<span class="k">return</span> <span class="kc">True</span>
+				<span class="k">return</span> <span class="kc">False</span>
+
+			<span class="k">if</span> <span class="n">lviewsLen</span> <span class="o">&gt;</span> <span class="n">eviewsLen</span><span class="p">:</span>
+				<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">eviewsLen</span><span class="p">,</span> <span class="n">lviewsLen</span><span class="p">):</span>
+					<span class="n">new</span> <span class="o">=</span> <span class="n">createDockView</span><span class="p">(</span><span class="n">view</span><span class="p">)</span>
+					<span class="n">new</span><span class="o">.</span><span class="n">addIntoEditor</span><span class="p">()</span>
+					<span class="n">eviews</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">new</span><span class="p">)</span>
+			
+			<span class="k">elif</span> <span class="n">lviewsLen</span> <span class="o">&lt;</span> <span class="n">eviewsLen</span><span class="p">:</span>
+				<span class="n">closeIndexList</span> <span class="o">=</span> <span class="p">[]</span>
+				<span class="n">closeCount</span> <span class="o">=</span> <span class="n">eviewsLen</span> <span class="o">-</span> <span class="n">lviewsLen</span>
+				<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">eviewsLen</span><span class="p">):</span>
+					<span class="k">if</span> <span class="ow">not</span> <span class="n">insideLayout</span><span class="p">(</span><span class="n">eviews</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">objectName</span><span class="p">()):</span> <span class="n">closeIndexList</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">i</span><span class="p">)</span>
+					<span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">closeIndexList</span><span class="p">)</span> <span class="o">==</span> <span class="n">closeCount</span><span class="p">:</span> <span class="k">break</span>
+				<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">closeIndexList</span><span class="p">:</span>
+					<span class="n">eviews</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">closeDockWidget</span><span class="p">()</span>
+					<span class="k">del</span> <span class="n">eviews</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+
+			<span class="n">stayTable</span><span class="p">,</span> <span class="n">reuseList</span> <span class="o">=</span> <span class="p">{},</span> <span class="p">[]</span>
+			<span class="k">for</span> <span class="n">dock</span> <span class="ow">in</span> <span class="n">eviews</span><span class="p">:</span>
+				<span class="n">name</span> <span class="o">=</span> <span class="n">dock</span><span class="o">.</span><span class="n">objectName</span><span class="p">()</span>
+				<span class="k">if</span> <span class="n">insideLayout</span><span class="p">(</span><span class="n">name</span><span class="p">):</span>
+					<span class="n">stayTable</span><span class="p">[</span><span class="n">name</span><span class="p">]</span> <span class="o">=</span> <span class="n">dock</span>
+				<span class="k">else</span><span class="p">:</span>
+					<span class="n">reuseList</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">dock</span><span class="p">)</span>
+
+			<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">lviewsLen</span><span class="p">):</span>
+				<span class="n">table</span> <span class="o">=</span> <span class="n">lviews</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+				<span class="n">dockWidget</span> <span class="o">=</span> <span class="kc">None</span>
+				<span class="n">name</span> <span class="o">=</span> <span class="n">table</span><span class="p">[</span><span class="s1">&#39;name&#39;</span><span class="p">]</span>
+				<span class="k">if</span> <span class="n">name</span> <span class="ow">in</span> <span class="n">stayTable</span><span class="p">:</span>
+					<span class="n">dockWidget</span> <span class="o">=</span> <span class="n">stayTable</span><span class="p">[</span><span class="n">name</span><span class="p">]</span>
+				<span class="k">else</span><span class="p">:</span>
+					<span class="n">dockWidget</span> <span class="o">=</span> <span class="n">reuseList</span><span class="o">.</span><span class="n">pop</span><span class="p">()</span>
+					<span class="n">oldName</span> <span class="o">=</span> <span class="n">dockWidget</span><span class="o">.</span><span class="n">objectName</span><span class="p">()</span>
+					<span class="n">dockWidget</span><span class="o">.</span><span class="n">setObjectName</span><span class="p">(</span><span class="n">name</span><span class="p">)</span>
+					<span class="n">_dockManager</span><span class="o">.</span><span class="n">updateDockWidgetsMapKey</span><span class="p">(</span><span class="n">oldName</span><span class="p">,</span> <span class="n">name</span><span class="p">)</span>
+				
+		<span class="n">_dockManager</span><span class="o">.</span><span class="n">restoreState</span><span class="p">(</span><span class="n">states</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+		<span class="k">for</span> <span class="n">d</span> <span class="ow">in</span> <span class="n">_dockManager</span><span class="o">.</span><span class="n">dockWidgetsMap</span><span class="p">()</span><span class="o">.</span><span class="n">values</span><span class="p">():</span> <span class="n">d</span><span class="o">.</span><span class="n">onLoadLayout</span><span class="p">()</span>
+
+	<span class="n">win</span> <span class="o">=</span> <span class="n">_dockManager</span><span class="o">.</span><span class="n">window</span><span class="p">()</span>
+	<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">windowFile</span><span class="p">,</span> <span class="s1">&#39;r&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">file</span><span class="p">:</span>
+		<span class="n">windata</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">loads</span><span class="p">(</span><span class="n">file</span><span class="o">.</span><span class="n">read</span><span class="p">())</span>
+		<span class="n">file</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+
+		<span class="n">win</span><span class="o">.</span><span class="n">setWindowState</span><span class="p">(</span><span class="n">Qt</span><span class="o">.</span><span class="n">WindowState</span><span class="p">(</span><span class="n">windata</span><span class="p">[</span><span class="s1">&#39;state&#39;</span><span class="p">]))</span>
+		<span class="n">win</span><span class="o">.</span><span class="n">resize</span><span class="p">(</span><span class="n">windata</span><span class="p">[</span><span class="s1">&#39;width&#39;</span><span class="p">],</span> <span class="n">windata</span><span class="p">[</span><span class="s1">&#39;height&#39;</span><span class="p">])</span>
+
+	<span class="n">win</span><span class="o">.</span><span class="n">activateWindow</span><span class="p">()</span>
+	<span class="n">win</span><span class="o">.</span><span class="n">raise_</span><span class="p">()</span></div>
+
+
+<span class="c1">######################  TEST  ######################</span>
+<span class="kn">from</span> <span class="nn">editor.widgets.menubar</span> <span class="kn">import</span> <span class="n">menuItem</span>
+
+<span class="nd">@menuItem</span><span class="p">(</span><span class="s1">&#39;Tools/test save layout&#39;</span><span class="p">)</span>
+<div class="viewcode-block" id="testSaveLayout"><a class="viewcode-back" href="../../autoapi/editor/view_manager/index.html#editor.view_manager.testSaveLayout">[docs]</a><span class="k">def</span> <span class="nf">testSaveLayout</span><span class="p">():</span> <span class="n">saveLayout</span><span class="p">(</span><span class="s1">&#39;test&#39;</span><span class="p">)</span></div>
+
+<span class="nd">@menuItem</span><span class="p">(</span><span class="s1">&#39;Tools/test load layout&#39;</span><span class="p">)</span>
+<div class="viewcode-block" id="testLoadLayout"><a class="viewcode-back" href="../../autoapi/editor/view_manager/index.html#editor.view_manager.testLoadLayout">[docs]</a><span class="k">def</span> <span class="nf">testLoadLayout</span><span class="p">():</span> <span class="n">loadLayout</span><span class="p">(</span><span class="s1">&#39;test&#39;</span><span class="p">)</span></div>
+
+<span class="c1"># print(listLayouts())</span>
+</pre></div>
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023, kakako.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

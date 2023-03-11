@@ -1,0 +1,703 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>editor.views.gallery &mdash; Welcome to DearDoc!</title>
+      <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../../_static/graphviz.css" type="text/css" />
+    <link rel="shortcut icon" href="../../../_static/favicon.ico"/>
+  <!--[if lt IE 9]>
+    <script src="../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
+        <script src="../../../_static/doctools.js"></script>
+        <script src="../../../_static/sphinx_highlight.js"></script>
+    <script src="../../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../../index.html" class="icon icon-home">
+            DearDoc
+          </a>
+              <div class="version">
+                dev
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../_docs/about.html">About</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../_docs/about/introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../_docs/about/frequently_asked_questions.html">Frequently asked questions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../_docs/about/troubleshooting.html">Troubleshooting</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../_docs/about/license.html">License</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../_docs/manual.html">Manual</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../_docs/manual/introduction.html">Introduction</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../_docs/contributing.html">Contributing</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../_docs/contributing/introduction.html">Introduction</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../autoapi/index.html">API Reference</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../autoapi/editor/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../autoapi/editor/common/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.common</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../autoapi/editor/common/database/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.common.database</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../autoapi/editor/common/dispatcher/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.common.dispatcher</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../autoapi/editor/common/ease/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.common.ease</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../autoapi/editor/common/file_watcher/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.common.file_watcher</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../autoapi/editor/common/icon_cache/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.common.icon_cache</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../autoapi/editor/common/logger/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.common.logger</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../autoapi/editor/common/math/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.common.math</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../autoapi/editor/common/native/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.common.native</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../autoapi/editor/common/util/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.common.util</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../autoapi/editor/models/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.models</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../autoapi/editor/models/asset/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.models.asset</span></code></a><ul>
+<li class="toctree-l5"><a class="reference internal" href="../../../autoapi/editor/models/asset/asset/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.models.asset.asset</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../../autoapi/editor/models/asset/importer/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.models.asset.importer</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../../autoapi/editor/models/asset/meta/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.models.asset.meta</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="../../../autoapi/editor/models/editor/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.models.editor</span></code></a><ul>
+<li class="toctree-l5"><a class="reference internal" href="../../../autoapi/editor/models/editor/form/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.models.editor.form</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../../autoapi/editor/models/editor/menu_tree/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.models.editor.menu_tree</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="../../../autoapi/editor/models/gameplay/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.models.gameplay</span></code></a><ul>
+<li class="toctree-l5"><a class="reference internal" href="../../../autoapi/editor/models/gameplay/component/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.models.gameplay.component</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../../autoapi/editor/models/gameplay/entity/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.models.gameplay.entity</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../../autoapi/editor/models/gameplay/scene/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.models.gameplay.scene</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="../../../autoapi/editor/models/graph/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.models.graph</span></code></a><ul>
+<li class="toctree-l5"><a class="reference internal" href="../../../autoapi/editor/models/graph/base/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.models.graph.base</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../../autoapi/editor/models/graph/fsm/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.models.graph.fsm</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../../autoapi/editor/models/graph/shader/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.models.graph.shader</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../autoapi/editor/pipeline/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.pipeline</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../autoapi/editor/pipeline/build/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.pipeline.build</span></code></a><ul>
+<li class="toctree-l5"><a class="reference internal" href="../../../autoapi/editor/pipeline/build/targets/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.pipeline.build.targets</span></code></a><ul>
+<li class="toctree-l6"><a class="reference internal" href="../../../autoapi/editor/pipeline/build/targets/default/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.pipeline.build.targets.default</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l5"><a class="reference internal" href="../../../autoapi/editor/pipeline/build/registry/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.pipeline.build.registry</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../../autoapi/editor/pipeline/build/shared_task/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.pipeline.build.shared_task</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="../../../autoapi/editor/pipeline/run/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.pipeline.run</span></code></a><ul>
+<li class="toctree-l5"><a class="reference internal" href="../../../autoapi/editor/pipeline/run/targets/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.pipeline.run.targets</span></code></a><ul>
+<li class="toctree-l6"><a class="reference internal" href="../../../autoapi/editor/pipeline/run/targets/editor/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.pipeline.run.targets.editor</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="../../../autoapi/editor/pipeline/run/targets/external/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.pipeline.run.targets.external</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l5"><a class="reference internal" href="../../../autoapi/editor/pipeline/run/registry/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.pipeline.run.registry</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../../autoapi/editor/pipeline/run/shared_task/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.pipeline.run.shared_task</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="../../../autoapi/editor/pipeline/core/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.pipeline.core</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../autoapi/editor/views/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.views</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../autoapi/editor/views/animation/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.views.animation</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../autoapi/editor/views/build/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.views.build</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../autoapi/editor/views/console/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.views.console</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../autoapi/editor/views/fsm_graph/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.views.fsm_graph</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../autoapi/editor/views/gallery/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.views.gallery</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../autoapi/editor/views/game/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.views.game</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../autoapi/editor/views/hierarchy/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.views.hierarchy</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../autoapi/editor/views/inspector/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.views.inspector</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../autoapi/editor/views/preference/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.views.preference</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../autoapi/editor/views/preview/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.views.preview</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../autoapi/editor/views/profiler/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.views.profiler</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../autoapi/editor/views/project/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.views.project</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../autoapi/editor/views/project_setting/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.views.project_setting</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../autoapi/editor/views/scene/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.views.scene</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../autoapi/editor/views/shader_graph/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.views.shader_graph</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../autoapi/editor/widgets/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.widgets</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../autoapi/editor/widgets/basic/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.widgets.basic</span></code></a><ul>
+<li class="toctree-l5"><a class="reference internal" href="../../../autoapi/editor/widgets/basic/button/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.widgets.basic.button</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../../autoapi/editor/widgets/basic/line_edit/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.widgets.basic.line_edit</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../../autoapi/editor/widgets/basic/search_edit/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.widgets.basic.search_edit</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../../autoapi/editor/widgets/basic/slider/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.widgets.basic.slider</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="../../../autoapi/editor/widgets/complex/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.widgets.complex</span></code></a><ul>
+<li class="toctree-l5"><a class="reference internal" href="../../../autoapi/editor/widgets/complex/advanced_menu/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.widgets.complex.advanced_menu</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../../autoapi/editor/widgets/complex/color_picker/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.widgets.complex.color_picker</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../../autoapi/editor/widgets/complex/form_view/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.widgets.complex.form_view</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../../autoapi/editor/widgets/complex/tree_stacked/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.widgets.complex.tree_stacked</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../../autoapi/editor/widgets/complex/tree_view/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.widgets.complex.tree_view</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="../../../autoapi/editor/widgets/container/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.widgets.container</span></code></a><ul>
+<li class="toctree-l5"><a class="reference internal" href="../../../autoapi/editor/widgets/container/collapsible/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.widgets.container.collapsible</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../../autoapi/editor/widgets/container/sliding_stacked/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.widgets.container.sliding_stacked</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="../../../autoapi/editor/widgets/misc/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.widgets.misc</span></code></a><ul>
+<li class="toctree-l5"><a class="reference internal" href="../../../autoapi/editor/widgets/misc/flow_layout/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.widgets.misc.flow_layout</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../../autoapi/editor/widgets/misc/line/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.widgets.misc.line</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../../autoapi/editor/widgets/misc/pixmap_icon/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.widgets.misc.pixmap_icon</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../../autoapi/editor/widgets/misc/toast/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.widgets.misc.toast</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../../autoapi/editor/widgets/misc/waiting_spinner/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.widgets.misc.waiting_spinner</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="../../../autoapi/editor/widgets/menubar/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.widgets.menubar</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../autoapi/editor/widgets/statusbar/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.widgets.statusbar</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../autoapi/editor/widgets/toolbar/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.widgets.toolbar</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../autoapi/editor/asset_db/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.asset_db</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../autoapi/editor/editor_prefs/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.editor_prefs</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../autoapi/editor/main_window/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.main_window</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../autoapi/editor/theme_manager/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.theme_manager</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../autoapi/editor/view_manager/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.view_manager</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../autoapi/engine/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">engine</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../autoapi/engine/bridge/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">engine.bridge</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../autoapi/engine/runtime/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">engine.runtime</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../autoapi/engine/standalone/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">engine.standalone</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../autoapi/launcher/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">launcher</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../autoapi/tools/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">tools</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../autoapi/tools/doc/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">tools.doc</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../autoapi/tools/hello/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">tools.hello</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../autoapi/tools/ide/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">tools.ide</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../autoapi/tools/python/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">tools.python</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../autoapi/tools/report/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">tools.report</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">DearDoc</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../../index.html">Module code</a></li>
+          <li class="breadcrumb-item"><a href="../views.html">editor.views</a></li>
+      <li class="breadcrumb-item active">editor.views.gallery</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <h1>Source code for editor.views.gallery</h1><div class="highlight"><pre>
+<span></span><span class="kn">from</span> <span class="nn">PySide6.QtCore</span> <span class="kn">import</span> <span class="o">*</span>
+<span class="kn">from</span> <span class="nn">PySide6.QtGui</span> <span class="kn">import</span> <span class="o">*</span>
+<span class="kn">from</span> <span class="nn">PySide6.QtWidgets</span> <span class="kn">import</span> <span class="o">*</span>
+<span class="kn">from</span> <span class="nn">editor.widgets.complex.tree_view</span> <span class="kn">import</span> <span class="n">TreeView</span>
+<span class="kn">from</span> <span class="nn">editor.widgets.complex.tree_stacked</span> <span class="kn">import</span> <span class="n">TreeStackedWidget</span>
+<span class="kn">from</span> <span class="nn">editor.widgets.basic.slider</span> <span class="kn">import</span> <span class="n">RangeSlider</span>
+<span class="kn">from</span> <span class="nn">editor.widgets.basic.line_edit</span> <span class="kn">import</span> <span class="n">LineEdit</span>
+<span class="kn">from</span> <span class="nn">editor.widgets.basic.search_edit</span> <span class="kn">import</span> <span class="n">SearchEdit</span>
+<span class="kn">from</span> <span class="nn">editor.widgets.container.collapsible</span> <span class="kn">import</span> <span class="n">CollapsibleWidget</span>
+<span class="kn">from</span> <span class="nn">editor.widgets.container.sliding_stacked</span> <span class="kn">import</span> <span class="n">SlidingStackedWidget</span>
+<span class="kn">from</span> <span class="nn">editor.widgets.misc.waiting_spinner</span> <span class="kn">import</span> <span class="n">WaitingSpinner</span>
+<span class="kn">from</span> <span class="nn">editor.widgets.misc.line</span> <span class="kn">import</span> <span class="n">HLineWidget</span>
+<span class="kn">from</span> <span class="nn">editor.common.icon_cache</span> <span class="kn">import</span> <span class="n">getThemeIcon</span><span class="p">,</span> <span class="n">getThemePixmap</span>
+<span class="kn">from</span> <span class="nn">editor.common.util</span> <span class="kn">import</span> <span class="n">createTestMenu</span>
+<span class="kn">from</span> <span class="nn">editor.view_manager</span> <span class="kn">import</span> <span class="n">DockView</span><span class="p">,</span> <span class="n">dockView</span>
+
+
+<span class="nd">@dockView</span><span class="p">(</span><span class="s1">&#39;Gallery&#39;</span><span class="p">)</span>
+<div class="viewcode-block" id="GalleryView"><a class="viewcode-back" href="../../../autoapi/editor/views/gallery/index.html#editor.views.gallery.GalleryView">[docs]</a><span class="k">class</span> <span class="nc">GalleryView</span><span class="p">(</span><span class="n">DockView</span><span class="p">):</span>
+	<span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">parent</span><span class="p">,</span> <span class="o">**</span><span class="n">data</span><span class="p">):</span>
+		<span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">parent</span><span class="p">,</span> <span class="o">**</span><span class="n">data</span><span class="p">)</span>
+
+		<span class="n">layout</span> <span class="o">=</span> <span class="n">QVBoxLayout</span><span class="p">()</span>
+		<span class="bp">self</span><span class="o">.</span><span class="n">layout</span><span class="p">()</span><span class="o">.</span><span class="n">addLayout</span><span class="p">(</span><span class="n">layout</span><span class="p">)</span>
+
+		<span class="n">searchbar</span> <span class="o">=</span> <span class="n">QWidget</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
+		<span class="n">searchbar</span><span class="o">.</span><span class="n">setFixedHeight</span><span class="p">(</span><span class="mi">25</span><span class="p">)</span>
+		<span class="n">searchbar</span><span class="o">.</span><span class="n">setObjectName</span><span class="p">(</span><span class="s1">&#39;searchbar&#39;</span><span class="p">)</span>
+		<span class="n">searchbarLayout</span> <span class="o">=</span> <span class="n">QHBoxLayout</span><span class="p">(</span><span class="n">searchbar</span><span class="p">)</span>
+		<span class="n">searchbarLayout</span><span class="o">.</span><span class="n">setContentsMargins</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">)</span>
+		<span class="n">searchbarLayout</span><span class="o">.</span><span class="n">setAlignment</span><span class="p">(</span><span class="n">Qt</span><span class="o">.</span><span class="n">AlignRight</span> <span class="o">|</span> <span class="n">Qt</span><span class="o">.</span><span class="n">AlignVCenter</span><span class="p">)</span>
+		<span class="n">layout</span><span class="o">.</span><span class="n">addWidget</span><span class="p">(</span><span class="n">searchbar</span><span class="p">)</span>
+
+		<span class="n">searchEdit</span> <span class="o">=</span> <span class="n">SearchEdit</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
+		<span class="n">searchEdit</span><span class="o">.</span><span class="n">setFixedWidth</span><span class="p">(</span><span class="mi">300</span><span class="p">)</span>
+		<span class="n">searchbarLayout</span><span class="o">.</span><span class="n">addWidget</span><span class="p">(</span><span class="n">searchEdit</span><span class="p">)</span>
+
+		<span class="n">treeStacked</span> <span class="o">=</span> <span class="n">TreeStackedWidget</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
+		<span class="n">treeStacked</span><span class="o">.</span><span class="n">addStackedWidget</span><span class="p">(</span><span class="s1">&#39;Basic/Button&#39;</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">createButtonPreview</span><span class="p">())</span>
+		<span class="n">treeStacked</span><span class="o">.</span><span class="n">addStackedWidget</span><span class="p">(</span><span class="s1">&#39;Basic/CheckBox&#39;</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">createCheckBoxPreview</span><span class="p">())</span>
+		<span class="n">treeStacked</span><span class="o">.</span><span class="n">addStackedWidget</span><span class="p">(</span><span class="s1">&#39;Basic/LineEdit&#39;</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">createLineEditPreview</span><span class="p">())</span>
+		<span class="n">treeStacked</span><span class="o">.</span><span class="n">addStackedWidget</span><span class="p">(</span><span class="s1">&#39;Basic/Slider&#39;</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">createSliderPreview</span><span class="p">())</span>
+		<span class="n">treeStacked</span><span class="o">.</span><span class="n">addStackedWidget</span><span class="p">(</span><span class="s1">&#39;Container/Collapsible&#39;</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">createCollapsiblePreview</span><span class="p">())</span>
+		<span class="n">treeStacked</span><span class="o">.</span><span class="n">addStackedWidget</span><span class="p">(</span><span class="s1">&#39;Container/SlidingStacked&#39;</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">createSlidingStackedPreview</span><span class="p">())</span>
+		<span class="n">treeStacked</span><span class="o">.</span><span class="n">addStackedWidget</span><span class="p">(</span><span class="s1">&#39;Misc/WaitingSpinner&#39;</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">createWaitingSpinnerPreview</span><span class="p">())</span>
+		<span class="n">treeStacked</span><span class="o">.</span><span class="n">tree</span><span class="o">.</span><span class="n">expandAll</span><span class="p">()</span>
+		<span class="n">layout</span><span class="o">.</span><span class="n">addWidget</span><span class="p">(</span><span class="n">treeStacked</span><span class="p">)</span>
+
+<div class="viewcode-block" id="GalleryView.createButtonPreview"><a class="viewcode-back" href="../../../autoapi/editor/views/gallery/index.html#editor.views.gallery.GalleryView.createButtonPreview">[docs]</a>	<span class="k">def</span> <span class="nf">createButtonPreview</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+		<span class="n">preview</span> <span class="o">=</span> <span class="n">QWidget</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
+
+		<span class="n">layout</span> <span class="o">=</span> <span class="n">QVBoxLayout</span><span class="p">()</span>
+		<span class="n">layout</span><span class="o">.</span><span class="n">setAlignment</span><span class="p">(</span><span class="n">Qt</span><span class="o">.</span><span class="n">AlignTop</span><span class="p">)</span>
+		<span class="n">layout</span><span class="o">.</span><span class="n">setSpacing</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
+		<span class="c1"># layout.setContentsMargins(0, 0, 0, 0)</span>
+		<span class="n">preview</span><span class="o">.</span><span class="n">setLayout</span><span class="p">(</span><span class="n">layout</span><span class="p">)</span>
+
+
+		<span class="c1">#############  PUSHBUTTON  #############</span>
+		<span class="n">layout</span><span class="o">.</span><span class="n">addWidget</span><span class="p">(</span><span class="n">QLabel</span><span class="p">(</span><span class="s1">&#39;PushButton&#39;</span><span class="p">))</span>
+		<span class="n">layout</span><span class="o">.</span><span class="n">addWidget</span><span class="p">(</span><span class="n">HLineWidget</span><span class="p">())</span>
+		<span class="n">layout</span><span class="o">.</span><span class="n">addSpacing</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
+		<span class="n">pushBtnLayout</span> <span class="o">=</span> <span class="n">QHBoxLayout</span><span class="p">()</span>
+		<span class="n">pushBtnLayout</span><span class="o">.</span><span class="n">setAlignment</span><span class="p">(</span><span class="n">Qt</span><span class="o">.</span><span class="n">AlignLeft</span><span class="p">)</span>
+		<span class="c1"># pushBtnLayout.setSpacing(5)</span>
+
+		<span class="n">pushBtn1</span> <span class="o">=</span> <span class="n">QPushButton</span><span class="p">(</span><span class="s1">&#39;normal&#39;</span><span class="p">)</span>
+		<span class="n">pushBtn2</span> <span class="o">=</span> <span class="n">QPushButton</span><span class="p">(</span><span class="n">getThemeIcon</span><span class="p">(</span><span class="s1">&#39;project.png&#39;</span><span class="p">),</span> <span class="s1">&#39;icon&#39;</span><span class="p">)</span>
+		<span class="n">pushBtn3</span> <span class="o">=</span> <span class="n">QPushButton</span><span class="p">(</span><span class="s1">&#39;popup&#39;</span><span class="p">)</span>
+		<span class="n">pushBtn3</span><span class="o">.</span><span class="n">setMenu</span><span class="p">(</span><span class="n">createTestMenu</span><span class="p">(</span><span class="n">pushBtn3</span><span class="p">))</span>
+		<span class="n">pushBtn4</span> <span class="o">=</span> <span class="n">QPushButton</span><span class="p">(</span><span class="n">getThemeIcon</span><span class="p">(</span><span class="s1">&#39;project.png&#39;</span><span class="p">),</span> <span class="s1">&#39;all&#39;</span><span class="p">)</span>
+		<span class="n">pushBtn4</span><span class="o">.</span><span class="n">setMenu</span><span class="p">(</span><span class="n">createTestMenu</span><span class="p">(</span><span class="n">pushBtn4</span><span class="p">))</span>
+		<span class="n">pushBtn4</span><span class="o">.</span><span class="n">setFixedWidth</span><span class="p">(</span><span class="mi">100</span><span class="p">)</span>
+		<span class="n">pushBtn5</span> <span class="o">=</span> <span class="n">QPushButton</span><span class="p">(</span><span class="s1">&#39;checkable&#39;</span><span class="p">)</span>
+		<span class="n">pushBtn5</span><span class="o">.</span><span class="n">setCheckable</span><span class="p">(</span><span class="kc">True</span><span class="p">)</span>
+		<span class="n">pushBtn5</span><span class="o">.</span><span class="n">setChecked</span><span class="p">(</span><span class="kc">True</span><span class="p">)</span>
+
+		<span class="n">pushBtn1</span><span class="o">.</span><span class="n">setSizePolicy</span><span class="p">(</span><span class="n">QSizePolicy</span><span class="o">.</span><span class="n">Expanding</span><span class="p">,</span> <span class="n">QSizePolicy</span><span class="o">.</span><span class="n">Preferred</span><span class="p">)</span>
+		<span class="n">pushBtn2</span><span class="o">.</span><span class="n">setSizePolicy</span><span class="p">(</span><span class="n">QSizePolicy</span><span class="o">.</span><span class="n">Expanding</span><span class="p">,</span> <span class="n">QSizePolicy</span><span class="o">.</span><span class="n">Preferred</span><span class="p">)</span>
+		<span class="n">pushBtn3</span><span class="o">.</span><span class="n">setSizePolicy</span><span class="p">(</span><span class="n">QSizePolicy</span><span class="o">.</span><span class="n">Expanding</span><span class="p">,</span> <span class="n">QSizePolicy</span><span class="o">.</span><span class="n">Preferred</span><span class="p">)</span>
+		<span class="n">pushBtn4</span><span class="o">.</span><span class="n">setSizePolicy</span><span class="p">(</span><span class="n">QSizePolicy</span><span class="o">.</span><span class="n">Expanding</span><span class="p">,</span> <span class="n">QSizePolicy</span><span class="o">.</span><span class="n">Preferred</span><span class="p">)</span>
+		<span class="n">pushBtn5</span><span class="o">.</span><span class="n">setSizePolicy</span><span class="p">(</span><span class="n">QSizePolicy</span><span class="o">.</span><span class="n">Expanding</span><span class="p">,</span> <span class="n">QSizePolicy</span><span class="o">.</span><span class="n">Preferred</span><span class="p">)</span>
+
+		<span class="n">pushBtnLayout</span><span class="o">.</span><span class="n">addWidget</span><span class="p">(</span><span class="n">pushBtn1</span><span class="p">)</span>
+		<span class="n">pushBtnLayout</span><span class="o">.</span><span class="n">addWidget</span><span class="p">(</span><span class="n">pushBtn2</span><span class="p">)</span>
+		<span class="n">pushBtnLayout</span><span class="o">.</span><span class="n">addWidget</span><span class="p">(</span><span class="n">pushBtn3</span><span class="p">)</span>
+		<span class="n">pushBtnLayout</span><span class="o">.</span><span class="n">addWidget</span><span class="p">(</span><span class="n">pushBtn4</span><span class="p">)</span>
+		<span class="n">pushBtnLayout</span><span class="o">.</span><span class="n">addWidget</span><span class="p">(</span><span class="n">pushBtn5</span><span class="p">)</span>
+		<span class="n">layout</span><span class="o">.</span><span class="n">addLayout</span><span class="p">(</span><span class="n">pushBtnLayout</span><span class="p">)</span>
+
+
+		<span class="c1">#############  TOOLBUTTON  #############</span>
+		<span class="n">layout</span><span class="o">.</span><span class="n">addSpacing</span><span class="p">(</span><span class="mi">20</span><span class="p">)</span>
+		<span class="n">layout</span><span class="o">.</span><span class="n">addWidget</span><span class="p">(</span><span class="n">QLabel</span><span class="p">(</span><span class="s1">&#39;ToolButton&#39;</span><span class="p">))</span>
+		<span class="n">layout</span><span class="o">.</span><span class="n">addWidget</span><span class="p">(</span><span class="n">HLineWidget</span><span class="p">())</span>
+		<span class="n">layout</span><span class="o">.</span><span class="n">addSpacing</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
+		<span class="n">toolBtnLayout</span> <span class="o">=</span> <span class="n">QHBoxLayout</span><span class="p">()</span>
+		<span class="n">toolBtnLayout</span><span class="o">.</span><span class="n">setAlignment</span><span class="p">(</span><span class="n">Qt</span><span class="o">.</span><span class="n">AlignLeft</span><span class="p">)</span>
+
+		<span class="n">toolBtn1</span> <span class="o">=</span> <span class="n">QToolButton</span><span class="p">()</span>
+		<span class="n">toolBtn1</span><span class="o">.</span><span class="n">setIcon</span><span class="p">(</span><span class="n">getThemeIcon</span><span class="p">(</span><span class="s1">&#39;project.png&#39;</span><span class="p">))</span>
+		<span class="n">toolBtn2</span> <span class="o">=</span> <span class="n">QToolButton</span><span class="p">()</span>
+		<span class="n">toolBtn2</span><span class="o">.</span><span class="n">setIcon</span><span class="p">(</span><span class="n">getThemeIcon</span><span class="p">(</span><span class="s1">&#39;project.png&#39;</span><span class="p">))</span>
+		<span class="n">toolBtn2</span><span class="o">.</span><span class="n">setCheckable</span><span class="p">(</span><span class="kc">True</span><span class="p">)</span>
+		<span class="n">toolBtn2</span><span class="o">.</span><span class="n">setChecked</span><span class="p">(</span><span class="kc">True</span><span class="p">)</span>
+		<span class="n">toolBtn3</span> <span class="o">=</span> <span class="n">QToolButton</span><span class="p">()</span>
+		<span class="n">toolBtn3</span><span class="o">.</span><span class="n">setIcon</span><span class="p">(</span><span class="n">getThemeIcon</span><span class="p">(</span><span class="s1">&#39;project.png&#39;</span><span class="p">))</span>
+		<span class="n">toolBtn3</span><span class="o">.</span><span class="n">setPopupMode</span><span class="p">(</span><span class="n">QToolButton</span><span class="o">.</span><span class="n">MenuButtonPopup</span><span class="p">)</span>
+		<span class="n">toolBtn3</span><span class="o">.</span><span class="n">setMenu</span><span class="p">(</span><span class="n">createTestMenu</span><span class="p">(</span><span class="n">toolBtn3</span><span class="p">))</span>
+		<span class="n">toolBtn4</span> <span class="o">=</span> <span class="n">QToolButton</span><span class="p">()</span>
+		<span class="n">toolBtn4</span><span class="o">.</span><span class="n">setIcon</span><span class="p">(</span><span class="n">getThemeIcon</span><span class="p">(</span><span class="s1">&#39;project.png&#39;</span><span class="p">))</span>
+		<span class="n">toolBtn4</span><span class="o">.</span><span class="n">setPopupMode</span><span class="p">(</span><span class="n">QToolButton</span><span class="o">.</span><span class="n">InstantPopup</span><span class="p">)</span>
+		<span class="n">toolBtn4</span><span class="o">.</span><span class="n">setMenu</span><span class="p">(</span><span class="n">createTestMenu</span><span class="p">(</span><span class="n">toolBtn4</span><span class="p">))</span>
+		<span class="n">toolBtn5</span> <span class="o">=</span> <span class="n">QToolButton</span><span class="p">()</span>
+		<span class="n">toolBtn5</span><span class="o">.</span><span class="n">setText</span><span class="p">(</span><span class="s1">&#39;popup&#39;</span><span class="p">)</span>
+		<span class="n">toolBtn5</span><span class="o">.</span><span class="n">setPopupMode</span><span class="p">(</span><span class="n">QToolButton</span><span class="o">.</span><span class="n">InstantPopup</span><span class="p">)</span>
+		<span class="n">toolBtn5</span><span class="o">.</span><span class="n">setMenu</span><span class="p">(</span><span class="n">createTestMenu</span><span class="p">(</span><span class="n">toolBtn5</span><span class="p">))</span>
+		<span class="n">toolBtn6</span> <span class="o">=</span> <span class="n">QToolButton</span><span class="p">()</span>
+		<span class="n">toolBtn6</span><span class="o">.</span><span class="n">setText</span><span class="p">(</span><span class="s1">&#39;popup&#39;</span><span class="p">)</span>
+		<span class="n">toolBtn6</span><span class="o">.</span><span class="n">setPopupMode</span><span class="p">(</span><span class="n">QToolButton</span><span class="o">.</span><span class="n">MenuButtonPopup</span><span class="p">)</span>
+		<span class="n">toolBtn6</span><span class="o">.</span><span class="n">setMenu</span><span class="p">(</span><span class="n">createTestMenu</span><span class="p">(</span><span class="n">toolBtn6</span><span class="p">))</span>
+		<span class="n">toolBtn7</span> <span class="o">=</span> <span class="n">QToolButton</span><span class="p">()</span>
+		<span class="n">toolBtn7</span><span class="o">.</span><span class="n">setText</span><span class="p">(</span><span class="s1">&#39;checkable&#39;</span><span class="p">)</span>
+		<span class="n">toolBtn7</span><span class="o">.</span><span class="n">setCheckable</span><span class="p">(</span><span class="kc">True</span><span class="p">)</span>
+		<span class="n">toolBtn7</span><span class="o">.</span><span class="n">setChecked</span><span class="p">(</span><span class="kc">True</span><span class="p">)</span>
+
+		<span class="n">toolBtn1</span><span class="o">.</span><span class="n">setSizePolicy</span><span class="p">(</span><span class="n">QSizePolicy</span><span class="o">.</span><span class="n">Preferred</span><span class="p">,</span> <span class="n">QSizePolicy</span><span class="o">.</span><span class="n">Preferred</span><span class="p">)</span>
+		<span class="n">toolBtn2</span><span class="o">.</span><span class="n">setSizePolicy</span><span class="p">(</span><span class="n">QSizePolicy</span><span class="o">.</span><span class="n">Preferred</span><span class="p">,</span> <span class="n">QSizePolicy</span><span class="o">.</span><span class="n">Preferred</span><span class="p">)</span>
+		<span class="n">toolBtn3</span><span class="o">.</span><span class="n">setSizePolicy</span><span class="p">(</span><span class="n">QSizePolicy</span><span class="o">.</span><span class="n">Preferred</span><span class="p">,</span> <span class="n">QSizePolicy</span><span class="o">.</span><span class="n">Preferred</span><span class="p">)</span>
+		<span class="n">toolBtn4</span><span class="o">.</span><span class="n">setSizePolicy</span><span class="p">(</span><span class="n">QSizePolicy</span><span class="o">.</span><span class="n">Preferred</span><span class="p">,</span> <span class="n">QSizePolicy</span><span class="o">.</span><span class="n">Preferred</span><span class="p">)</span>
+		<span class="n">toolBtn5</span><span class="o">.</span><span class="n">setSizePolicy</span><span class="p">(</span><span class="n">QSizePolicy</span><span class="o">.</span><span class="n">Expanding</span><span class="p">,</span> <span class="n">QSizePolicy</span><span class="o">.</span><span class="n">Preferred</span><span class="p">)</span>
+		<span class="n">toolBtn6</span><span class="o">.</span><span class="n">setSizePolicy</span><span class="p">(</span><span class="n">QSizePolicy</span><span class="o">.</span><span class="n">Expanding</span><span class="p">,</span> <span class="n">QSizePolicy</span><span class="o">.</span><span class="n">Preferred</span><span class="p">)</span>
+		<span class="n">toolBtn7</span><span class="o">.</span><span class="n">setSizePolicy</span><span class="p">(</span><span class="n">QSizePolicy</span><span class="o">.</span><span class="n">Expanding</span><span class="p">,</span> <span class="n">QSizePolicy</span><span class="o">.</span><span class="n">Preferred</span><span class="p">)</span>
+
+		<span class="n">toolBtnLayout</span><span class="o">.</span><span class="n">addWidget</span><span class="p">(</span><span class="n">toolBtn1</span><span class="p">)</span>
+		<span class="n">toolBtnLayout</span><span class="o">.</span><span class="n">addWidget</span><span class="p">(</span><span class="n">toolBtn2</span><span class="p">)</span>
+		<span class="n">toolBtnLayout</span><span class="o">.</span><span class="n">addWidget</span><span class="p">(</span><span class="n">toolBtn3</span><span class="p">)</span>
+		<span class="n">toolBtnLayout</span><span class="o">.</span><span class="n">addWidget</span><span class="p">(</span><span class="n">toolBtn4</span><span class="p">)</span>
+		<span class="n">toolBtnLayout</span><span class="o">.</span><span class="n">addWidget</span><span class="p">(</span><span class="n">toolBtn5</span><span class="p">)</span>
+		<span class="n">toolBtnLayout</span><span class="o">.</span><span class="n">addWidget</span><span class="p">(</span><span class="n">toolBtn6</span><span class="p">)</span>
+		<span class="n">toolBtnLayout</span><span class="o">.</span><span class="n">addWidget</span><span class="p">(</span><span class="n">toolBtn7</span><span class="p">)</span>
+		<span class="n">layout</span><span class="o">.</span><span class="n">addLayout</span><span class="p">(</span><span class="n">toolBtnLayout</span><span class="p">)</span>
+
+
+		<span class="k">return</span> <span class="n">preview</span></div>
+<div class="viewcode-block" id="GalleryView.createCheckBoxPreview"><a class="viewcode-back" href="../../../autoapi/editor/views/gallery/index.html#editor.views.gallery.GalleryView.createCheckBoxPreview">[docs]</a>	<span class="k">def</span> <span class="nf">createCheckBoxPreview</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+		<span class="n">preview</span> <span class="o">=</span> <span class="n">QWidget</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
+
+		<span class="n">layout</span> <span class="o">=</span> <span class="n">QVBoxLayout</span><span class="p">()</span>
+		<span class="n">layout</span><span class="o">.</span><span class="n">setAlignment</span><span class="p">(</span><span class="n">Qt</span><span class="o">.</span><span class="n">AlignTop</span><span class="p">)</span>
+		<span class="n">layout</span><span class="o">.</span><span class="n">setSpacing</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
+		<span class="c1"># layout.setContentsMargins(0, 0, 0, 0)</span>
+		<span class="n">preview</span><span class="o">.</span><span class="n">setLayout</span><span class="p">(</span><span class="n">layout</span><span class="p">)</span>
+
+
+		<span class="c1">#############  CHECKBOX  #############</span>
+		<span class="n">layout</span><span class="o">.</span><span class="n">addWidget</span><span class="p">(</span><span class="n">QLabel</span><span class="p">(</span><span class="s1">&#39;CheckBox and RadioButton&#39;</span><span class="p">))</span>
+		<span class="n">layout</span><span class="o">.</span><span class="n">addWidget</span><span class="p">(</span><span class="n">HLineWidget</span><span class="p">())</span>
+		<span class="n">layout</span><span class="o">.</span><span class="n">addSpacing</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
+		<span class="n">checkBoxLayout</span> <span class="o">=</span> <span class="n">QHBoxLayout</span><span class="p">()</span>
+		<span class="n">checkBoxLayout</span><span class="o">.</span><span class="n">setSpacing</span><span class="p">(</span><span class="mi">20</span><span class="p">)</span>
+		<span class="n">checkBoxLayout</span><span class="o">.</span><span class="n">setAlignment</span><span class="p">(</span><span class="n">Qt</span><span class="o">.</span><span class="n">AlignLeft</span><span class="p">)</span>
+
+		<span class="n">checkBox1</span> <span class="o">=</span> <span class="n">QCheckBox</span><span class="p">(</span><span class="s1">&#39;normal&#39;</span><span class="p">)</span>
+		<span class="n">checkBox1</span><span class="o">.</span><span class="n">setFocusPolicy</span><span class="p">(</span><span class="n">Qt</span><span class="o">.</span><span class="n">StrongFocus</span><span class="p">)</span>
+		<span class="n">checkBox2</span> <span class="o">=</span> <span class="n">QCheckBox</span><span class="p">(</span><span class="s1">&#39;icon&#39;</span><span class="p">)</span>
+		<span class="n">checkBox2</span><span class="o">.</span><span class="n">setTristate</span><span class="p">(</span><span class="kc">True</span><span class="p">)</span>
+		<span class="n">checkBox2</span><span class="o">.</span><span class="n">setIcon</span><span class="p">(</span><span class="n">getThemeIcon</span><span class="p">(</span><span class="s1">&#39;project.png&#39;</span><span class="p">))</span>
+		<span class="n">checkBox2</span><span class="o">.</span><span class="n">setFocusPolicy</span><span class="p">(</span><span class="n">Qt</span><span class="o">.</span><span class="n">StrongFocus</span><span class="p">)</span>
+		<span class="n">checkBox3</span> <span class="o">=</span> <span class="n">QCheckBox</span><span class="p">()</span>
+		<span class="n">checkBox3</span><span class="o">.</span><span class="n">setFocusPolicy</span><span class="p">(</span><span class="n">Qt</span><span class="o">.</span><span class="n">StrongFocus</span><span class="p">)</span>
+
+		<span class="n">radioBtn1</span> <span class="o">=</span> <span class="n">QRadioButton</span><span class="p">(</span><span class="s1">&#39;normal&#39;</span><span class="p">)</span>
+		<span class="n">radioBtn1</span><span class="o">.</span><span class="n">setFocusPolicy</span><span class="p">(</span><span class="n">Qt</span><span class="o">.</span><span class="n">StrongFocus</span><span class="p">)</span>
+		<span class="n">radioBtn2</span> <span class="o">=</span> <span class="n">QRadioButton</span><span class="p">(</span><span class="s1">&#39;icon&#39;</span><span class="p">)</span>
+		<span class="n">radioBtn2</span><span class="o">.</span><span class="n">setIcon</span><span class="p">(</span><span class="n">getThemeIcon</span><span class="p">(</span><span class="s1">&#39;project.png&#39;</span><span class="p">))</span>
+		<span class="n">radioBtn2</span><span class="o">.</span><span class="n">setFocusPolicy</span><span class="p">(</span><span class="n">Qt</span><span class="o">.</span><span class="n">StrongFocus</span><span class="p">)</span>
+
+		<span class="n">checkBoxLayout</span><span class="o">.</span><span class="n">addWidget</span><span class="p">(</span><span class="n">checkBox1</span><span class="p">)</span>
+		<span class="n">checkBoxLayout</span><span class="o">.</span><span class="n">addWidget</span><span class="p">(</span><span class="n">checkBox2</span><span class="p">)</span>
+		<span class="n">checkBoxLayout</span><span class="o">.</span><span class="n">addWidget</span><span class="p">(</span><span class="n">checkBox3</span><span class="p">)</span>
+
+		<span class="n">checkBoxLayout</span><span class="o">.</span><span class="n">addWidget</span><span class="p">(</span><span class="n">radioBtn1</span><span class="p">)</span>
+		<span class="n">checkBoxLayout</span><span class="o">.</span><span class="n">addWidget</span><span class="p">(</span><span class="n">radioBtn2</span><span class="p">)</span>
+		<span class="n">layout</span><span class="o">.</span><span class="n">addLayout</span><span class="p">(</span><span class="n">checkBoxLayout</span><span class="p">)</span>
+
+
+		<span class="c1">#############  COMBOXBOX  #############</span>
+		<span class="n">layout</span><span class="o">.</span><span class="n">addSpacing</span><span class="p">(</span><span class="mi">20</span><span class="p">)</span>
+		<span class="n">layout</span><span class="o">.</span><span class="n">addWidget</span><span class="p">(</span><span class="n">QLabel</span><span class="p">(</span><span class="s1">&#39;ComboBox and SpinBox&#39;</span><span class="p">))</span>
+		<span class="n">layout</span><span class="o">.</span><span class="n">addWidget</span><span class="p">(</span><span class="n">HLineWidget</span><span class="p">())</span>
+		<span class="n">layout</span><span class="o">.</span><span class="n">addSpacing</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
+		<span class="n">comboBoxLayout</span> <span class="o">=</span> <span class="n">QHBoxLayout</span><span class="p">()</span>
+		<span class="n">comboBoxLayout</span><span class="o">.</span><span class="n">setSpacing</span><span class="p">(</span><span class="mi">20</span><span class="p">)</span>
+		<span class="n">comboBoxLayout</span><span class="o">.</span><span class="n">setAlignment</span><span class="p">(</span><span class="n">Qt</span><span class="o">.</span><span class="n">AlignLeft</span><span class="p">)</span>
+
+		<span class="n">comboBox1</span> <span class="o">=</span> <span class="n">QComboBox</span><span class="p">()</span>
+		<span class="n">comboBox1</span><span class="o">.</span><span class="n">addItems</span><span class="p">([</span><span class="s1">&#39;Zero&#39;</span><span class="p">,</span> <span class="s1">&#39;One&#39;</span><span class="p">,</span> <span class="s1">&#39;Two&#39;</span><span class="p">,</span> <span class="s1">&#39;Three&#39;</span><span class="p">])</span>
+		<span class="n">comboBox1</span><span class="o">.</span><span class="n">setCurrentIndex</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+
+		<span class="n">spinBox1</span> <span class="o">=</span> <span class="n">QSpinBox</span><span class="p">()</span>
+		<span class="n">spinBox2</span> <span class="o">=</span> <span class="n">QDoubleSpinBox</span><span class="p">()</span>
+
+		<span class="n">comboBox1</span><span class="o">.</span><span class="n">setSizePolicy</span><span class="p">(</span><span class="n">QSizePolicy</span><span class="o">.</span><span class="n">Expanding</span><span class="p">,</span> <span class="n">QSizePolicy</span><span class="o">.</span><span class="n">Preferred</span><span class="p">)</span>
+		<span class="n">spinBox1</span><span class="o">.</span><span class="n">setSizePolicy</span><span class="p">(</span><span class="n">QSizePolicy</span><span class="o">.</span><span class="n">Expanding</span><span class="p">,</span> <span class="n">QSizePolicy</span><span class="o">.</span><span class="n">Preferred</span><span class="p">)</span>
+		<span class="n">spinBox2</span><span class="o">.</span><span class="n">setSizePolicy</span><span class="p">(</span><span class="n">QSizePolicy</span><span class="o">.</span><span class="n">Expanding</span><span class="p">,</span> <span class="n">QSizePolicy</span><span class="o">.</span><span class="n">Preferred</span><span class="p">)</span>
+
+		<span class="n">comboBoxLayout</span><span class="o">.</span><span class="n">addWidget</span><span class="p">(</span><span class="n">comboBox1</span><span class="p">)</span>
+		<span class="n">comboBoxLayout</span><span class="o">.</span><span class="n">addWidget</span><span class="p">(</span><span class="n">spinBox1</span><span class="p">)</span>
+		<span class="n">comboBoxLayout</span><span class="o">.</span><span class="n">addWidget</span><span class="p">(</span><span class="n">spinBox2</span><span class="p">)</span>
+		<span class="n">layout</span><span class="o">.</span><span class="n">addLayout</span><span class="p">(</span><span class="n">comboBoxLayout</span><span class="p">)</span>
+
+		<span class="k">return</span> <span class="n">preview</span></div>
+<div class="viewcode-block" id="GalleryView.createLineEditPreview"><a class="viewcode-back" href="../../../autoapi/editor/views/gallery/index.html#editor.views.gallery.GalleryView.createLineEditPreview">[docs]</a>	<span class="k">def</span> <span class="nf">createLineEditPreview</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+		<span class="n">preview</span> <span class="o">=</span> <span class="n">QWidget</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
+
+		<span class="n">layout</span> <span class="o">=</span> <span class="n">QVBoxLayout</span><span class="p">()</span>
+		<span class="n">layout</span><span class="o">.</span><span class="n">setAlignment</span><span class="p">(</span><span class="n">Qt</span><span class="o">.</span><span class="n">AlignTop</span><span class="p">)</span>
+		<span class="n">layout</span><span class="o">.</span><span class="n">setSpacing</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
+		<span class="c1"># layout.setContentsMargins(0, 0, 0, 0)</span>
+		<span class="n">preview</span><span class="o">.</span><span class="n">setLayout</span><span class="p">(</span><span class="n">layout</span><span class="p">)</span>
+
+
+		<span class="c1">#############  LINEEDIT  #############</span>
+		<span class="n">layout</span><span class="o">.</span><span class="n">addWidget</span><span class="p">(</span><span class="n">QLabel</span><span class="p">(</span><span class="s1">&#39;LineEdit&#39;</span><span class="p">))</span>
+		<span class="n">layout</span><span class="o">.</span><span class="n">addWidget</span><span class="p">(</span><span class="n">HLineWidget</span><span class="p">())</span>
+		<span class="n">layout</span><span class="o">.</span><span class="n">addSpacing</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
+		<span class="n">comboBoxLayout</span> <span class="o">=</span> <span class="n">QHBoxLayout</span><span class="p">()</span>
+		<span class="n">comboBoxLayout</span><span class="o">.</span><span class="n">setSpacing</span><span class="p">(</span><span class="mi">20</span><span class="p">)</span>
+		<span class="n">comboBoxLayout</span><span class="o">.</span><span class="n">setAlignment</span><span class="p">(</span><span class="n">Qt</span><span class="o">.</span><span class="n">AlignLeft</span><span class="p">)</span>
+
+		<span class="n">lineEdit1</span> <span class="o">=</span> <span class="n">QLineEdit</span><span class="p">()</span>
+		<span class="n">lineEdit2</span> <span class="o">=</span> <span class="n">LineEdit</span><span class="p">()</span>
+		<span class="n">lineEdit2</span><span class="o">.</span><span class="n">setPlaceholderText</span><span class="p">(</span><span class="s1">&#39;placeholder&#39;</span><span class="p">)</span>
+
+		<span class="n">comboBoxLayout</span><span class="o">.</span><span class="n">addWidget</span><span class="p">(</span><span class="n">lineEdit1</span><span class="p">)</span>
+		<span class="n">comboBoxLayout</span><span class="o">.</span><span class="n">addWidget</span><span class="p">(</span><span class="n">lineEdit2</span><span class="p">)</span>
+		<span class="n">layout</span><span class="o">.</span><span class="n">addLayout</span><span class="p">(</span><span class="n">comboBoxLayout</span><span class="p">)</span>
+
+
+		<span class="c1">#############  SEARCH  #############</span>
+		<span class="n">layout</span><span class="o">.</span><span class="n">addSpacing</span><span class="p">(</span><span class="mi">20</span><span class="p">)</span>
+		<span class="n">layout</span><span class="o">.</span><span class="n">addWidget</span><span class="p">(</span><span class="n">QLabel</span><span class="p">(</span><span class="s1">&#39;SearchEdit&#39;</span><span class="p">))</span>
+		<span class="n">layout</span><span class="o">.</span><span class="n">addWidget</span><span class="p">(</span><span class="n">HLineWidget</span><span class="p">())</span>
+		<span class="n">layout</span><span class="o">.</span><span class="n">addSpacing</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
+		<span class="n">searchEditLayout</span> <span class="o">=</span> <span class="n">QHBoxLayout</span><span class="p">()</span>
+		<span class="n">searchEditLayout</span><span class="o">.</span><span class="n">setSpacing</span><span class="p">(</span><span class="mi">20</span><span class="p">)</span>
+		<span class="n">searchEditLayout</span><span class="o">.</span><span class="n">setAlignment</span><span class="p">(</span><span class="n">Qt</span><span class="o">.</span><span class="n">AlignLeft</span><span class="p">)</span>
+
+		<span class="n">searchEdit</span> <span class="o">=</span> <span class="n">SearchEdit</span><span class="p">()</span>
+
+		<span class="n">searchEditLayout</span><span class="o">.</span><span class="n">addWidget</span><span class="p">(</span><span class="n">searchEdit</span><span class="p">)</span>
+		<span class="n">layout</span><span class="o">.</span><span class="n">addLayout</span><span class="p">(</span><span class="n">searchEditLayout</span><span class="p">)</span>
+
+
+		<span class="c1">#############  KEYSEQ  #############</span>
+		<span class="n">layout</span><span class="o">.</span><span class="n">addSpacing</span><span class="p">(</span><span class="mi">20</span><span class="p">)</span>
+		<span class="n">layout</span><span class="o">.</span><span class="n">addWidget</span><span class="p">(</span><span class="n">QLabel</span><span class="p">(</span><span class="s1">&#39;KeySequenceEdit&#39;</span><span class="p">))</span>
+		<span class="n">layout</span><span class="o">.</span><span class="n">addWidget</span><span class="p">(</span><span class="n">HLineWidget</span><span class="p">())</span>
+		<span class="n">layout</span><span class="o">.</span><span class="n">addSpacing</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
+		<span class="n">keySeqLayout</span> <span class="o">=</span> <span class="n">QHBoxLayout</span><span class="p">()</span>
+		<span class="n">keySeqLayout</span><span class="o">.</span><span class="n">setSpacing</span><span class="p">(</span><span class="mi">20</span><span class="p">)</span>
+		<span class="n">keySeqLayout</span><span class="o">.</span><span class="n">setAlignment</span><span class="p">(</span><span class="n">Qt</span><span class="o">.</span><span class="n">AlignLeft</span><span class="p">)</span>
+
+		<span class="n">keySeq</span> <span class="o">=</span> <span class="n">QKeySequenceEdit</span><span class="p">()</span>
+
+		<span class="n">keySeqLayout</span><span class="o">.</span><span class="n">addWidget</span><span class="p">(</span><span class="n">keySeq</span><span class="p">)</span>
+		<span class="n">layout</span><span class="o">.</span><span class="n">addLayout</span><span class="p">(</span><span class="n">keySeqLayout</span><span class="p">)</span>
+
+		<span class="k">return</span> <span class="n">preview</span></div>
+<div class="viewcode-block" id="GalleryView.createSliderPreview"><a class="viewcode-back" href="../../../autoapi/editor/views/gallery/index.html#editor.views.gallery.GalleryView.createSliderPreview">[docs]</a>	<span class="k">def</span> <span class="nf">createSliderPreview</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+		<span class="n">preview</span> <span class="o">=</span> <span class="n">QWidget</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
+
+		<span class="n">layout</span> <span class="o">=</span> <span class="n">QVBoxLayout</span><span class="p">()</span>
+		<span class="n">layout</span><span class="o">.</span><span class="n">setAlignment</span><span class="p">(</span><span class="n">Qt</span><span class="o">.</span><span class="n">AlignTop</span><span class="p">)</span>
+		<span class="n">layout</span><span class="o">.</span><span class="n">setSpacing</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
+		<span class="c1"># layout.setContentsMargins(0, 0, 0, 0)</span>
+		<span class="n">preview</span><span class="o">.</span><span class="n">setLayout</span><span class="p">(</span><span class="n">layout</span><span class="p">)</span>
+
+
+		<span class="c1">#############  RPOGRESSBAR  #############</span>
+		<span class="n">layout</span><span class="o">.</span><span class="n">addWidget</span><span class="p">(</span><span class="n">QLabel</span><span class="p">(</span><span class="s1">&#39;ProgressBar&#39;</span><span class="p">))</span>
+		<span class="n">layout</span><span class="o">.</span><span class="n">addWidget</span><span class="p">(</span><span class="n">HLineWidget</span><span class="p">())</span>
+		<span class="n">layout</span><span class="o">.</span><span class="n">addSpacing</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
+		<span class="n">comboBoxLayout</span> <span class="o">=</span> <span class="n">QHBoxLayout</span><span class="p">()</span>
+		<span class="n">comboBoxLayout</span><span class="o">.</span><span class="n">setSpacing</span><span class="p">(</span><span class="mi">20</span><span class="p">)</span>
+		<span class="n">comboBoxLayout</span><span class="o">.</span><span class="n">setAlignment</span><span class="p">(</span><span class="n">Qt</span><span class="o">.</span><span class="n">AlignLeft</span><span class="p">)</span>
+
+		<span class="n">progressBar</span> <span class="o">=</span> <span class="n">QProgressBar</span><span class="p">()</span>
+		<span class="n">progressBar</span><span class="o">.</span><span class="n">setValue</span><span class="p">(</span><span class="mi">30</span><span class="p">)</span>
+		<span class="n">progressBar</span><span class="o">.</span><span class="n">setObjectName</span><span class="p">(</span><span class="s1">&#39;test&#39;</span><span class="p">)</span>
+		<span class="n">progressBar2</span> <span class="o">=</span> <span class="n">QProgressBar</span><span class="p">()</span>
+		<span class="n">progressBar2</span><span class="o">.</span><span class="n">setValue</span><span class="p">(</span><span class="mi">30</span><span class="p">)</span>
+
+
+		<span class="n">comboBoxLayout</span><span class="o">.</span><span class="n">addWidget</span><span class="p">(</span><span class="n">progressBar</span><span class="p">)</span>
+		<span class="n">comboBoxLayout</span><span class="o">.</span><span class="n">addWidget</span><span class="p">(</span><span class="n">progressBar2</span><span class="p">)</span>
+		<span class="n">layout</span><span class="o">.</span><span class="n">addLayout</span><span class="p">(</span><span class="n">comboBoxLayout</span><span class="p">)</span>
+
+
+		<span class="c1">#############  SLIDER  #############</span>
+		<span class="n">layout</span><span class="o">.</span><span class="n">addSpacing</span><span class="p">(</span><span class="mi">20</span><span class="p">)</span>
+		<span class="n">layout</span><span class="o">.</span><span class="n">addWidget</span><span class="p">(</span><span class="n">QLabel</span><span class="p">(</span><span class="s1">&#39;Slider&#39;</span><span class="p">))</span>
+		<span class="n">layout</span><span class="o">.</span><span class="n">addWidget</span><span class="p">(</span><span class="n">HLineWidget</span><span class="p">())</span>
+		<span class="n">layout</span><span class="o">.</span><span class="n">addSpacing</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
+		<span class="n">sliderLayout</span> <span class="o">=</span> <span class="n">QHBoxLayout</span><span class="p">()</span>
+		<span class="n">sliderLayout</span><span class="o">.</span><span class="n">setSpacing</span><span class="p">(</span><span class="mi">20</span><span class="p">)</span>
+		<span class="n">sliderLayout</span><span class="o">.</span><span class="n">setAlignment</span><span class="p">(</span><span class="n">Qt</span><span class="o">.</span><span class="n">AlignLeft</span><span class="p">)</span>
+
+		<span class="n">slider1</span> <span class="o">=</span> <span class="n">QSlider</span><span class="p">(</span><span class="n">Qt</span><span class="o">.</span><span class="n">Horizontal</span><span class="p">)</span>
+		<span class="n">slider1</span><span class="o">.</span><span class="n">setMinimum</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+		<span class="n">slider1</span><span class="o">.</span><span class="n">setMaximum</span><span class="p">(</span><span class="mi">100</span><span class="p">)</span>
+		<span class="n">slider1</span><span class="o">.</span><span class="n">setSingleStep</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span> 
+		<span class="n">slider1</span><span class="o">.</span><span class="n">setFixedWidth</span><span class="p">(</span><span class="mi">100</span><span class="p">)</span>
+		<span class="n">slider1</span><span class="o">.</span><span class="n">setValue</span><span class="p">(</span><span class="mi">20</span><span class="p">)</span>
+		<span class="n">slider1</span><span class="o">.</span><span class="n">sliderMoved</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="k">lambda</span> <span class="n">v</span><span class="p">:</span> <span class="n">progressBar</span><span class="o">.</span><span class="n">setValue</span><span class="p">(</span><span class="n">v</span><span class="p">))</span>
+		<span class="n">slider1</span><span class="o">.</span><span class="n">setFocusPolicy</span><span class="p">(</span><span class="n">Qt</span><span class="o">.</span><span class="n">StrongFocus</span><span class="p">)</span>
+		<span class="n">slider2</span> <span class="o">=</span> <span class="n">RangeSlider</span><span class="p">(</span><span class="n">Qt</span><span class="o">.</span><span class="n">Horizontal</span><span class="p">)</span>
+		<span class="n">slider2</span><span class="o">.</span><span class="n">setMinimumHeight</span><span class="p">(</span><span class="mi">30</span><span class="p">)</span>
+		<span class="n">slider2</span><span class="o">.</span><span class="n">setMinimum</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+		<span class="n">slider2</span><span class="o">.</span><span class="n">setMaximum</span><span class="p">(</span><span class="mi">255</span><span class="p">)</span>
+		<span class="n">slider2</span><span class="o">.</span><span class="n">setLow</span><span class="p">(</span><span class="mi">15</span><span class="p">)</span>
+		<span class="n">slider2</span><span class="o">.</span><span class="n">setHigh</span><span class="p">(</span><span class="mi">35</span><span class="p">)</span>
+		<span class="n">slider2</span><span class="o">.</span><span class="n">setTickPosition</span><span class="p">(</span><span class="n">QSlider</span><span class="o">.</span><span class="n">TicksBelow</span><span class="p">)</span>
+		<span class="n">slider2</span><span class="o">.</span><span class="n">setFixedWidth</span><span class="p">(</span><span class="mi">100</span><span class="p">)</span>
+
+		<span class="n">sliderLayout</span><span class="o">.</span><span class="n">addWidget</span><span class="p">(</span><span class="n">slider1</span><span class="p">)</span>
+		<span class="n">sliderLayout</span><span class="o">.</span><span class="n">addWidget</span><span class="p">(</span><span class="n">slider2</span><span class="p">)</span>
+		<span class="n">layout</span><span class="o">.</span><span class="n">addLayout</span><span class="p">(</span><span class="n">sliderLayout</span><span class="p">)</span>
+
+		<span class="k">return</span> <span class="n">preview</span></div>
+<div class="viewcode-block" id="GalleryView.createCollapsiblePreview"><a class="viewcode-back" href="../../../autoapi/editor/views/gallery/index.html#editor.views.gallery.GalleryView.createCollapsiblePreview">[docs]</a>	<span class="k">def</span> <span class="nf">createCollapsiblePreview</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+		<span class="n">preview</span> <span class="o">=</span> <span class="n">QWidget</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
+
+		<span class="n">layout</span> <span class="o">=</span> <span class="n">QVBoxLayout</span><span class="p">()</span>
+		<span class="n">layout</span><span class="o">.</span><span class="n">setAlignment</span><span class="p">(</span><span class="n">Qt</span><span class="o">.</span><span class="n">AlignTop</span><span class="p">)</span>
+		<span class="n">layout</span><span class="o">.</span><span class="n">setSpacing</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
+		<span class="c1"># layout.setContentsMargins(0, 0, 0, 0)</span>
+		<span class="n">preview</span><span class="o">.</span><span class="n">setLayout</span><span class="p">(</span><span class="n">layout</span><span class="p">)</span>
+
+
+		<span class="c1">#############  RPOGRESSBAR  #############</span>
+		<span class="n">layout</span><span class="o">.</span><span class="n">addWidget</span><span class="p">(</span><span class="n">QLabel</span><span class="p">(</span><span class="s1">&#39;Collapsible&#39;</span><span class="p">))</span>
+		<span class="n">layout</span><span class="o">.</span><span class="n">addWidget</span><span class="p">(</span><span class="n">HLineWidget</span><span class="p">())</span>
+		<span class="n">layout</span><span class="o">.</span><span class="n">addSpacing</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
+		<span class="n">tmpLayout</span> <span class="o">=</span> <span class="n">QHBoxLayout</span><span class="p">()</span>
+		<span class="n">tmpLayout</span><span class="o">.</span><span class="n">setSpacing</span><span class="p">(</span><span class="mi">20</span><span class="p">)</span>
+		<span class="n">tmpLayout</span><span class="o">.</span><span class="n">setAlignment</span><span class="p">(</span><span class="n">Qt</span><span class="o">.</span><span class="n">AlignLeft</span><span class="p">)</span>
+
+		<span class="n">wgt</span> <span class="o">=</span> <span class="n">CollapsibleWidget</span><span class="p">()</span>
+
+		<span class="n">tmpLayout</span><span class="o">.</span><span class="n">addWidget</span><span class="p">(</span><span class="n">wgt</span><span class="p">)</span>
+		<span class="n">layout</span><span class="o">.</span><span class="n">addLayout</span><span class="p">(</span><span class="n">tmpLayout</span><span class="p">)</span>
+
+
+		<span class="k">return</span> <span class="n">preview</span></div>
+<div class="viewcode-block" id="GalleryView.createSlidingStackedPreview"><a class="viewcode-back" href="../../../autoapi/editor/views/gallery/index.html#editor.views.gallery.GalleryView.createSlidingStackedPreview">[docs]</a>	<span class="k">def</span> <span class="nf">createSlidingStackedPreview</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+		<span class="n">preview</span> <span class="o">=</span> <span class="n">QWidget</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
+
+		<span class="n">layout</span> <span class="o">=</span> <span class="n">QVBoxLayout</span><span class="p">()</span>
+		<span class="n">layout</span><span class="o">.</span><span class="n">setAlignment</span><span class="p">(</span><span class="n">Qt</span><span class="o">.</span><span class="n">AlignTop</span><span class="p">)</span>
+		<span class="n">layout</span><span class="o">.</span><span class="n">setSpacing</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
+		<span class="c1"># layout.setContentsMargins(0, 0, 0, 0)</span>
+		<span class="n">preview</span><span class="o">.</span><span class="n">setLayout</span><span class="p">(</span><span class="n">layout</span><span class="p">)</span>
+
+
+		<span class="c1">#############  RPOGRESSBAR  #############</span>
+		<span class="n">layout</span><span class="o">.</span><span class="n">addWidget</span><span class="p">(</span><span class="n">QLabel</span><span class="p">(</span><span class="s1">&#39;SlidingStacked&#39;</span><span class="p">))</span>
+		<span class="n">layout</span><span class="o">.</span><span class="n">addWidget</span><span class="p">(</span><span class="n">HLineWidget</span><span class="p">())</span>
+		<span class="n">layout</span><span class="o">.</span><span class="n">addSpacing</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
+		<span class="n">tmpLayout</span> <span class="o">=</span> <span class="n">QHBoxLayout</span><span class="p">()</span>
+		<span class="n">tmpLayout</span><span class="o">.</span><span class="n">setSpacing</span><span class="p">(</span><span class="mi">20</span><span class="p">)</span>
+		<span class="n">tmpLayout</span><span class="o">.</span><span class="n">setAlignment</span><span class="p">(</span><span class="n">Qt</span><span class="o">.</span><span class="n">AlignLeft</span><span class="p">)</span>
+
+		<span class="n">ssw</span> <span class="o">=</span> <span class="n">SlidingStackedWidget</span><span class="p">()</span>
+
+		<span class="n">w1</span> <span class="o">=</span> <span class="n">QPushButton</span><span class="p">(</span><span class="s1">&#39;Page 1&#39;</span><span class="p">)</span>
+		<span class="n">w2</span> <span class="o">=</span> <span class="n">QPushButton</span><span class="p">(</span><span class="s1">&#39;Page 2&#39;</span><span class="p">)</span>
+		<span class="n">w3</span> <span class="o">=</span> <span class="n">QPushButton</span><span class="p">(</span><span class="s1">&#39;Page 3&#39;</span><span class="p">)</span>
+		<span class="n">w1</span><span class="o">.</span><span class="n">setStyleSheet</span><span class="p">(</span><span class="s2">&quot;background-color: blue ; border: 0; font-size: 24px; color: white;&quot;</span><span class="p">)</span>
+		<span class="n">w2</span><span class="o">.</span><span class="n">setStyleSheet</span><span class="p">(</span><span class="s2">&quot;background-color: green; border: 0; font-size: 24px; color: white;&quot;</span><span class="p">)</span>
+		<span class="n">w3</span><span class="o">.</span><span class="n">setStyleSheet</span><span class="p">(</span><span class="s2">&quot;background-color: gray ; border: 0; font-size: 24px; color: white;&quot;</span><span class="p">)</span>
+		<span class="n">ssw</span><span class="o">.</span><span class="n">addWidget</span><span class="p">(</span><span class="n">w1</span><span class="p">)</span>
+		<span class="n">ssw</span><span class="o">.</span><span class="n">addWidget</span><span class="p">(</span><span class="n">w2</span><span class="p">)</span>
+		<span class="n">ssw</span><span class="o">.</span><span class="n">addWidget</span><span class="p">(</span><span class="n">w3</span><span class="p">)</span>
+		<span class="n">w2</span><span class="o">.</span><span class="n">setFixedHeight</span><span class="p">(</span><span class="mi">100</span><span class="p">)</span>
+		<span class="c1"># ssw.vertical = True</span>
+		<span class="n">ssw</span><span class="o">.</span><span class="n">wrap</span> <span class="o">=</span> <span class="kc">True</span>
+
+		<span class="n">btn1</span> <span class="o">=</span> <span class="n">QPushButton</span><span class="p">(</span><span class="s1">&#39;Prev&#39;</span><span class="p">)</span>
+		<span class="n">btn1</span><span class="o">.</span><span class="n">clicked</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="n">ssw</span><span class="o">.</span><span class="n">slideInPrev</span><span class="p">)</span>
+
+		<span class="n">btn2</span> <span class="o">=</span> <span class="n">QPushButton</span><span class="p">(</span><span class="s1">&#39;Next&#39;</span><span class="p">)</span>
+		<span class="n">btn2</span><span class="o">.</span><span class="n">clicked</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="n">ssw</span><span class="o">.</span><span class="n">slideInNext</span><span class="p">)</span>
+
+		<span class="n">btnLayout</span> <span class="o">=</span> <span class="n">QHBoxLayout</span><span class="p">()</span>
+		<span class="n">btnLayout</span><span class="o">.</span><span class="n">addWidget</span><span class="p">(</span><span class="n">btn1</span><span class="p">)</span>
+		<span class="n">btnLayout</span><span class="o">.</span><span class="n">addWidget</span><span class="p">(</span><span class="n">btn2</span><span class="p">)</span>
+
+		<span class="n">tmpLayout</span><span class="o">.</span><span class="n">addWidget</span><span class="p">(</span><span class="n">ssw</span><span class="p">)</span>
+		
+		<span class="n">layout</span><span class="o">.</span><span class="n">addLayout</span><span class="p">(</span><span class="n">btnLayout</span><span class="p">)</span>
+		<span class="n">layout</span><span class="o">.</span><span class="n">addLayout</span><span class="p">(</span><span class="n">tmpLayout</span><span class="p">)</span>
+
+
+		<span class="k">return</span> <span class="n">preview</span></div>
+<div class="viewcode-block" id="GalleryView.createWaitingSpinnerPreview"><a class="viewcode-back" href="../../../autoapi/editor/views/gallery/index.html#editor.views.gallery.GalleryView.createWaitingSpinnerPreview">[docs]</a>	<span class="k">def</span> <span class="nf">createWaitingSpinnerPreview</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+		<span class="n">preview</span> <span class="o">=</span> <span class="n">QWidget</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
+
+		<span class="n">layout</span> <span class="o">=</span> <span class="n">QVBoxLayout</span><span class="p">()</span>
+		<span class="n">layout</span><span class="o">.</span><span class="n">setAlignment</span><span class="p">(</span><span class="n">Qt</span><span class="o">.</span><span class="n">AlignTop</span><span class="p">)</span>
+		<span class="n">layout</span><span class="o">.</span><span class="n">setSpacing</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
+		<span class="c1"># layout.setContentsMargins(0, 0, 0, 0)</span>
+		<span class="n">preview</span><span class="o">.</span><span class="n">setLayout</span><span class="p">(</span><span class="n">layout</span><span class="p">)</span>
+
+
+		<span class="c1">#############  RPOGRESSBAR  #############</span>
+		<span class="n">layout</span><span class="o">.</span><span class="n">addWidget</span><span class="p">(</span><span class="n">QLabel</span><span class="p">(</span><span class="s1">&#39;WaitingSpinner&#39;</span><span class="p">))</span>
+		<span class="n">layout</span><span class="o">.</span><span class="n">addWidget</span><span class="p">(</span><span class="n">HLineWidget</span><span class="p">())</span>
+		<span class="n">layout</span><span class="o">.</span><span class="n">addSpacing</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
+
+		<span class="n">spinnerLayout</span> <span class="o">=</span> <span class="n">QHBoxLayout</span><span class="p">()</span>
+		<span class="n">spinnerLayout</span><span class="o">.</span><span class="n">setSpacing</span><span class="p">(</span><span class="mi">50</span><span class="p">)</span>
+		<span class="n">spinnerLayout</span><span class="o">.</span><span class="n">setAlignment</span><span class="p">(</span><span class="n">Qt</span><span class="o">.</span><span class="n">AlignLeft</span><span class="p">)</span>
+
+		<span class="n">ws1</span> <span class="o">=</span> <span class="n">WaitingSpinner</span><span class="p">()</span>
+		<span class="n">ws2</span> <span class="o">=</span> <span class="n">WaitingSpinner</span><span class="p">(</span><span class="n">clockwise</span> <span class="o">=</span> <span class="kc">False</span><span class="p">)</span>
+		<span class="n">ws3</span> <span class="o">=</span> <span class="n">WaitingSpinner</span><span class="p">(</span><span class="n">color</span> <span class="o">=</span> <span class="n">QColor</span><span class="p">(</span><span class="mi">50</span><span class="p">,</span> <span class="mi">120</span><span class="p">,</span> <span class="mi">200</span><span class="p">),</span> <span class="n">clockwise</span> <span class="o">=</span> <span class="kc">False</span><span class="p">)</span>
+
+		<span class="n">ws1</span><span class="o">.</span><span class="n">setFixedSize</span><span class="p">(</span><span class="mi">50</span><span class="p">,</span> <span class="mi">50</span><span class="p">)</span>
+		<span class="n">ws2</span><span class="o">.</span><span class="n">setFixedSize</span><span class="p">(</span><span class="mi">50</span><span class="p">,</span> <span class="mi">50</span><span class="p">)</span>
+		<span class="n">ws3</span><span class="o">.</span><span class="n">setFixedSize</span><span class="p">(</span><span class="mi">50</span><span class="p">,</span> <span class="mi">50</span><span class="p">)</span>
+
+		<span class="n">spinnerLayout</span><span class="o">.</span><span class="n">addWidget</span><span class="p">(</span><span class="n">ws1</span><span class="p">)</span>
+		<span class="n">spinnerLayout</span><span class="o">.</span><span class="n">addWidget</span><span class="p">(</span><span class="n">ws2</span><span class="p">)</span>
+		<span class="n">spinnerLayout</span><span class="o">.</span><span class="n">addWidget</span><span class="p">(</span><span class="n">ws3</span><span class="p">)</span>
+		
+		<span class="n">layout</span><span class="o">.</span><span class="n">addLayout</span><span class="p">(</span><span class="n">spinnerLayout</span><span class="p">)</span>
+
+
+		<span class="k">return</span> <span class="n">preview</span></div>
+
+<div class="viewcode-block" id="GalleryView.minimumSizeHint"><a class="viewcode-back" href="../../../autoapi/editor/views/gallery/index.html#editor.views.gallery.GalleryView.minimumSizeHint">[docs]</a>	<span class="k">def</span> <span class="nf">minimumSizeHint</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+		<span class="k">return</span> <span class="n">QSize</span><span class="p">(</span><span class="mi">300</span><span class="p">,</span> <span class="mi">100</span><span class="p">)</span></div></div>
+
+</pre></div>
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023, kakako.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

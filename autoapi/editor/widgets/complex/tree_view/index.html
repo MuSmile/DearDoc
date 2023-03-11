@@ -1,0 +1,697 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>editor.widgets.complex.tree_view &mdash; Welcome to DearDoc!</title>
+      <link rel="stylesheet" href="../../../../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../../../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../../../../_static/graphviz.css" type="text/css" />
+    <link rel="shortcut icon" href="../../../../../_static/favicon.ico"/>
+  <!--[if lt IE 9]>
+    <script src="../../../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script data-url_root="../../../../../" id="documentation_options" src="../../../../../_static/documentation_options.js"></script>
+        <script src="../../../../../_static/doctools.js"></script>
+        <script src="../../../../../_static/sphinx_highlight.js"></script>
+    <script src="../../../../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../../search.html" />
+    <link rel="next" title="editor.widgets.container" href="../../container/index.html" />
+    <link rel="prev" title="editor.widgets.complex.tree_stacked" href="../tree_stacked/index.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../../../../index.html" class="icon icon-home">
+            DearDoc
+          </a>
+              <div class="version">
+                dev
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../../../_docs/about.html">About</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../_docs/about/introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../_docs/about/frequently_asked_questions.html">Frequently asked questions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../_docs/about/troubleshooting.html">Troubleshooting</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../_docs/about/license.html">License</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../_docs/manual.html">Manual</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../_docs/manual/introduction.html">Introduction</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../_docs/contributing.html">Contributing</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../_docs/contributing/introduction.html">Introduction</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../../../index.html">API Reference</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="../../../index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor</span></code></a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../../../common/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.common</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../common/database/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.common.database</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../common/dispatcher/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.common.dispatcher</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../common/ease/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.common.ease</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../common/file_watcher/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.common.file_watcher</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../common/icon_cache/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.common.icon_cache</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../common/logger/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.common.logger</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../common/math/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.common.math</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../common/native/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.common.native</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../common/util/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.common.util</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../models/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.models</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../models/asset/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.models.asset</span></code></a><ul>
+<li class="toctree-l5"><a class="reference internal" href="../../../models/asset/asset/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.models.asset.asset</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../../models/asset/importer/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.models.asset.importer</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../../models/asset/meta/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.models.asset.meta</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="../../../models/editor/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.models.editor</span></code></a><ul>
+<li class="toctree-l5"><a class="reference internal" href="../../../models/editor/form/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.models.editor.form</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../../models/editor/menu_tree/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.models.editor.menu_tree</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="../../../models/gameplay/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.models.gameplay</span></code></a><ul>
+<li class="toctree-l5"><a class="reference internal" href="../../../models/gameplay/component/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.models.gameplay.component</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../../models/gameplay/entity/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.models.gameplay.entity</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../../models/gameplay/scene/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.models.gameplay.scene</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="../../../models/graph/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.models.graph</span></code></a><ul>
+<li class="toctree-l5"><a class="reference internal" href="../../../models/graph/base/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.models.graph.base</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../../models/graph/fsm/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.models.graph.fsm</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../../models/graph/shader/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.models.graph.shader</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../pipeline/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.pipeline</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../pipeline/build/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.pipeline.build</span></code></a><ul>
+<li class="toctree-l5"><a class="reference internal" href="../../../pipeline/build/targets/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.pipeline.build.targets</span></code></a><ul>
+<li class="toctree-l6"><a class="reference internal" href="../../../pipeline/build/targets/default/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.pipeline.build.targets.default</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l5"><a class="reference internal" href="../../../pipeline/build/registry/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.pipeline.build.registry</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../../pipeline/build/shared_task/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.pipeline.build.shared_task</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="../../../pipeline/run/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.pipeline.run</span></code></a><ul>
+<li class="toctree-l5"><a class="reference internal" href="../../../pipeline/run/targets/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.pipeline.run.targets</span></code></a><ul>
+<li class="toctree-l6"><a class="reference internal" href="../../../pipeline/run/targets/editor/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.pipeline.run.targets.editor</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="../../../pipeline/run/targets/external/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.pipeline.run.targets.external</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l5"><a class="reference internal" href="../../../pipeline/run/registry/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.pipeline.run.registry</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../../pipeline/run/shared_task/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.pipeline.run.shared_task</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="../../../pipeline/core/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.pipeline.core</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../views/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.views</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../views/animation/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.views.animation</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../views/build/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.views.build</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../views/console/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.views.console</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../views/fsm_graph/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.views.fsm_graph</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../views/gallery/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.views.gallery</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../views/game/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.views.game</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../views/hierarchy/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.views.hierarchy</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../views/inspector/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.views.inspector</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../views/preference/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.views.preference</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../views/preview/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.views.preview</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../views/profiler/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.views.profiler</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../views/project/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.views.project</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../views/project_setting/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.views.project_setting</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../views/scene/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.views.scene</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../views/shader_graph/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.views.shader_graph</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3 current"><a class="reference internal" href="../../index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.widgets</span></code></a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="../../basic/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.widgets.basic</span></code></a><ul>
+<li class="toctree-l5"><a class="reference internal" href="../../basic/button/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.widgets.basic.button</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../basic/line_edit/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.widgets.basic.line_edit</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../basic/search_edit/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.widgets.basic.search_edit</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../basic/slider/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.widgets.basic.slider</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l4 current"><a class="reference internal" href="../index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.widgets.complex</span></code></a><ul class="current">
+<li class="toctree-l5"><a class="reference internal" href="../advanced_menu/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.widgets.complex.advanced_menu</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="../color_picker/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.widgets.complex.color_picker</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="../form_view/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.widgets.complex.form_view</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="../tree_stacked/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.widgets.complex.tree_stacked</span></code></a></li>
+<li class="toctree-l5 current"><a class="current reference internal" href="#"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.widgets.complex.tree_view</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="../../container/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.widgets.container</span></code></a><ul>
+<li class="toctree-l5"><a class="reference internal" href="../../container/collapsible/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.widgets.container.collapsible</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../container/sliding_stacked/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.widgets.container.sliding_stacked</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="../../misc/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.widgets.misc</span></code></a><ul>
+<li class="toctree-l5"><a class="reference internal" href="../../misc/flow_layout/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.widgets.misc.flow_layout</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../misc/line/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.widgets.misc.line</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../misc/pixmap_icon/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.widgets.misc.pixmap_icon</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../misc/toast/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.widgets.misc.toast</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../misc/waiting_spinner/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.widgets.misc.waiting_spinner</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="../../menubar/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.widgets.menubar</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../statusbar/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.widgets.statusbar</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../toolbar/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.widgets.toolbar</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../asset_db/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.asset_db</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../editor_prefs/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.editor_prefs</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../main_window/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.main_window</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../theme_manager/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.theme_manager</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../view_manager/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.view_manager</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../engine/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">engine</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../../engine/bridge/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">engine.bridge</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../engine/runtime/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">engine.runtime</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../engine/standalone/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">engine.standalone</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../launcher/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">launcher</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../tools/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">tools</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../../tools/doc/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">tools.doc</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../tools/hello/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">tools.hello</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../tools/ide/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">tools.ide</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../tools/python/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">tools.python</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../tools/report/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">tools.report</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../../../index.html">DearDoc</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../../../../index.html">API Reference</a></li>
+          <li class="breadcrumb-item"><a href="../../../index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor</span></code></a></li>
+          <li class="breadcrumb-item"><a href="../../index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.widgets</span></code></a></li>
+          <li class="breadcrumb-item"><a href="../index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.widgets.complex</span></code></a></li>
+      <li class="breadcrumb-item active"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.widgets.complex.tree_view</span></code></li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="module-editor.widgets.complex.tree_view">
+<span id="editor-widgets-complex-tree-view"></span><h1><a class="reference internal" href="#module-editor.widgets.complex.tree_view" title="editor.widgets.complex.tree_view"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.widgets.complex.tree_view</span></code></a><a class="headerlink" href="#module-editor.widgets.complex.tree_view" title="Permalink to this heading"></a></h1>
+<section id="module-contents">
+<h2>Module Contents<a class="headerlink" href="#module-contents" title="Permalink to this heading"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="editor.widgets.complex.tree_view.TreeItemDelegate">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">editor.widgets.complex.tree_view.</span></span><span class="sig-name descname"><span class="pre">TreeItemDelegate</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">view</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../../../../_modules/editor/widgets/complex/tree_view.html#TreeItemDelegate"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#editor.widgets.complex.tree_view.TreeItemDelegate" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-obj docutils literal notranslate"><span class="pre">PySide6.QtWidgets.QItemDelegate</span></code></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="editor.widgets.complex.tree_view.TreeItemDelegate.sizeHint">
+<span class="sig-name descname"><span class="pre">sizeHint</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">option</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">index</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../../../../_modules/editor/widgets/complex/tree_view.html#TreeItemDelegate.sizeHint"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#editor.widgets.complex.tree_view.TreeItemDelegate.sizeHint" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="editor.widgets.complex.tree_view.TreeItemDelegate.updateEditorGeometry">
+<span class="sig-name descname"><span class="pre">updateEditorGeometry</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">editor</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">option</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">index</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../../../../_modules/editor/widgets/complex/tree_view.html#TreeItemDelegate.updateEditorGeometry"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#editor.widgets.complex.tree_view.TreeItemDelegate.updateEditorGeometry" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="editor.widgets.complex.tree_view.TreeItemDelegate.paint">
+<span class="sig-name descname"><span class="pre">paint</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">painter</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">option</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">index</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../../../../_modules/editor/widgets/complex/tree_view.html#TreeItemDelegate.paint"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#editor.widgets.complex.tree_view.TreeItemDelegate.paint" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="editor.widgets.complex.tree_view.TreeItemDelegate.drawBackground">
+<span class="sig-name descname"><span class="pre">drawBackground</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">painter</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rect</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">state</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">index</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../../../../_modules/editor/widgets/complex/tree_view.html#TreeItemDelegate.drawBackground"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#editor.widgets.complex.tree_view.TreeItemDelegate.drawBackground" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="editor.widgets.complex.tree_view.TreeItemDelegate.drawContent">
+<span class="sig-name descname"><span class="pre">drawContent</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">painter</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rect</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">index</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../../../../_modules/editor/widgets/complex/tree_view.html#TreeItemDelegate.drawContent"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#editor.widgets.complex.tree_view.TreeItemDelegate.drawContent" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="editor.widgets.complex.tree_view.TreeItemDelegate.drawBranchLines">
+<span class="sig-name descname"><span class="pre">drawBranchLines</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">painter</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rect</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">index</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../../../../_modules/editor/widgets/complex/tree_view.html#TreeItemDelegate.drawBranchLines"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#editor.widgets.complex.tree_view.TreeItemDelegate.drawBranchLines" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="editor.widgets.complex.tree_view.TreeItemDelegate.drawBranchArrow">
+<span class="sig-name descname"><span class="pre">drawBranchArrow</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">painter</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rect</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">index</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../../../../_modules/editor/widgets/complex/tree_view.html#TreeItemDelegate.drawBranchArrow"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#editor.widgets.complex.tree_view.TreeItemDelegate.drawBranchArrow" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="editor.widgets.complex.tree_view.PingAnimPhase">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">editor.widgets.complex.tree_view.</span></span><span class="sig-name descname"><span class="pre">PingAnimPhase</span></span><a class="reference internal" href="../../../../../_modules/editor/widgets/complex/tree_view.html#PingAnimPhase"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#editor.widgets.complex.tree_view.PingAnimPhase" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-obj docutils literal notranslate"><span class="pre">enum.Enum</span></code></p>
+<p>Generic enumeration.</p>
+<p>Derive from this class to define new enumerations.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="editor.widgets.complex.tree_view.PingAnimPhase.ZoomIn">
+<span class="sig-name descname"><span class="pre">ZoomIn</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">0</span></em><a class="reference internal" href="../../../../../_modules/editor/widgets/complex/tree_view.html#PingAnimPhase.ZoomIn"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#editor.widgets.complex.tree_view.PingAnimPhase.ZoomIn" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="editor.widgets.complex.tree_view.PingAnimPhase.ZoomOut">
+<span class="sig-name descname"><span class="pre">ZoomOut</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">2</span></em><a class="reference internal" href="../../../../../_modules/editor/widgets/complex/tree_view.html#PingAnimPhase.ZoomOut"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#editor.widgets.complex.tree_view.PingAnimPhase.ZoomOut" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="editor.widgets.complex.tree_view.PingAnimPhase.Idle">
+<span class="sig-name descname"><span class="pre">Idle</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">3</span></em><a class="reference internal" href="../../../../../_modules/editor/widgets/complex/tree_view.html#PingAnimPhase.Idle"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#editor.widgets.complex.tree_view.PingAnimPhase.Idle" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="editor.widgets.complex.tree_view.PingAnimPhase.Fade">
+<span class="sig-name descname"><span class="pre">Fade</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">4</span></em><a class="reference internal" href="../../../../../_modules/editor/widgets/complex/tree_view.html#PingAnimPhase.Fade"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#editor.widgets.complex.tree_view.PingAnimPhase.Fade" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="editor.widgets.complex.tree_view.TreeItemPingOverlay">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">editor.widgets.complex.tree_view.</span></span><span class="sig-name descname"><span class="pre">TreeItemPingOverlay</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">treeview</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../../../../_modules/editor/widgets/complex/tree_view.html#TreeItemPingOverlay"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#editor.widgets.complex.tree_view.TreeItemPingOverlay" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-obj docutils literal notranslate"><span class="pre">PySide6.QtWidgets.QWidget</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="editor.widgets.complex.tree_view.TreeItemPingOverlay.InstanceList">
+<span class="sig-name descname"><span class="pre">InstanceList</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">[]</span></em><a class="reference internal" href="../../../../../_modules/editor/widgets/complex/tree_view.html#TreeItemPingOverlay.InstanceList"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#editor.widgets.complex.tree_view.TreeItemPingOverlay.InstanceList" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="editor.widgets.complex.tree_view.TreeItemPingOverlay.pingZoomDuration">
+<span class="sig-name descname"><span class="pre">pingZoomDuration</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../../../../_modules/editor/widgets/complex/tree_view.html#TreeItemPingOverlay.pingZoomDuration"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#editor.widgets.complex.tree_view.TreeItemPingOverlay.pingZoomDuration" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="editor.widgets.complex.tree_view.TreeItemPingOverlay.pingIdleDuration">
+<span class="sig-name descname"><span class="pre">pingIdleDuration</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../../../../_modules/editor/widgets/complex/tree_view.html#TreeItemPingOverlay.pingIdleDuration"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#editor.widgets.complex.tree_view.TreeItemPingOverlay.pingIdleDuration" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="editor.widgets.complex.tree_view.TreeItemPingOverlay.pingFadeDuration">
+<span class="sig-name descname"><span class="pre">pingFadeDuration</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../../../../_modules/editor/widgets/complex/tree_view.html#TreeItemPingOverlay.pingFadeDuration"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#editor.widgets.complex.tree_view.TreeItemPingOverlay.pingFadeDuration" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="editor.widgets.complex.tree_view.TreeItemPingOverlay.pingZoomScale">
+<span class="sig-name descname"><span class="pre">pingZoomScale</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../../../../_modules/editor/widgets/complex/tree_view.html#TreeItemPingOverlay.pingZoomScale"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#editor.widgets.complex.tree_view.TreeItemPingOverlay.pingZoomScale" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="editor.widgets.complex.tree_view.TreeItemPingOverlay.pingAnimTickInterval">
+<span class="sig-name descname"><span class="pre">pingAnimTickInterval</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../../../../_modules/editor/widgets/complex/tree_view.html#TreeItemPingOverlay.pingAnimTickInterval"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#editor.widgets.complex.tree_view.TreeItemPingOverlay.pingAnimTickInterval" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="editor.widgets.complex.tree_view.TreeItemPingOverlay.pingOutlineColor">
+<span class="sig-name descname"><span class="pre">pingOutlineColor</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../../../../_modules/editor/widgets/complex/tree_view.html#TreeItemPingOverlay.pingOutlineColor"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#editor.widgets.complex.tree_view.TreeItemPingOverlay.pingOutlineColor" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="editor.widgets.complex.tree_view.TreeItemPingOverlay.pingOutlineWidth">
+<span class="sig-name descname"><span class="pre">pingOutlineWidth</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../../../../_modules/editor/widgets/complex/tree_view.html#TreeItemPingOverlay.pingOutlineWidth"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#editor.widgets.complex.tree_view.TreeItemPingOverlay.pingOutlineWidth" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="editor.widgets.complex.tree_view.TreeItemPingOverlay.pingOutlineRound">
+<span class="sig-name descname"><span class="pre">pingOutlineRound</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../../../../_modules/editor/widgets/complex/tree_view.html#TreeItemPingOverlay.pingOutlineRound"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#editor.widgets.complex.tree_view.TreeItemPingOverlay.pingOutlineRound" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="editor.widgets.complex.tree_view.TreeItemPingOverlay.syncTreeViewRect">
+<span class="sig-name descname"><span class="pre">syncTreeViewRect</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../../../../_modules/editor/widgets/complex/tree_view.html#TreeItemPingOverlay.syncTreeViewRect"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#editor.widgets.complex.tree_view.TreeItemPingOverlay.syncTreeViewRect" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="editor.widgets.complex.tree_view.TreeItemPingOverlay.eventFilter">
+<span class="sig-name descname"><span class="pre">eventFilter</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">obj</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">evt</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../../../../_modules/editor/widgets/complex/tree_view.html#TreeItemPingOverlay.eventFilter"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#editor.widgets.complex.tree_view.TreeItemPingOverlay.eventFilter" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="editor.widgets.complex.tree_view.TreeItemPingOverlay.startPing">
+<span class="sig-name descname"><span class="pre">startPing</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">index</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../../../../_modules/editor/widgets/complex/tree_view.html#TreeItemPingOverlay.startPing"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#editor.widgets.complex.tree_view.TreeItemPingOverlay.startPing" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="editor.widgets.complex.tree_view.TreeItemPingOverlay.stopPing">
+<span class="sig-name descname"><span class="pre">stopPing</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../../../../_modules/editor/widgets/complex/tree_view.html#TreeItemPingOverlay.stopPing"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#editor.widgets.complex.tree_view.TreeItemPingOverlay.stopPing" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="editor.widgets.complex.tree_view.TreeItemPingOverlay.stopAll">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">stopAll</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../../../../_modules/editor/widgets/complex/tree_view.html#TreeItemPingOverlay.stopAll"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#editor.widgets.complex.tree_view.TreeItemPingOverlay.stopAll" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="editor.widgets.complex.tree_view.TreeItemPingOverlay.tickPingAnim">
+<span class="sig-name descname"><span class="pre">tickPingAnim</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../../../../_modules/editor/widgets/complex/tree_view.html#TreeItemPingOverlay.tickPingAnim"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#editor.widgets.complex.tree_view.TreeItemPingOverlay.tickPingAnim" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="editor.widgets.complex.tree_view.TreeItemPingOverlay.paintEvent">
+<span class="sig-name descname"><span class="pre">paintEvent</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">event</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../../../../_modules/editor/widgets/complex/tree_view.html#TreeItemPingOverlay.paintEvent"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#editor.widgets.complex.tree_view.TreeItemPingOverlay.paintEvent" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="editor.widgets.complex.tree_view.TreeView">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">editor.widgets.complex.tree_view.</span></span><span class="sig-name descname"><span class="pre">TreeView</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">parent</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../../../../_modules/editor/widgets/complex/tree_view.html#TreeView"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#editor.widgets.complex.tree_view.TreeView" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-obj docutils literal notranslate"><span class="pre">PySide6.QtWidgets.QTreeView</span></code></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="editor.widgets.complex.tree_view.TreeView.treePaddingLeft">
+<span class="sig-name descname"><span class="pre">treePaddingLeft</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../../../../_modules/editor/widgets/complex/tree_view.html#TreeView.treePaddingLeft"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#editor.widgets.complex.tree_view.TreeView.treePaddingLeft" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="editor.widgets.complex.tree_view.TreeView.itemPaddingLeft">
+<span class="sig-name descname"><span class="pre">itemPaddingLeft</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../../../../_modules/editor/widgets/complex/tree_view.html#TreeView.itemPaddingLeft"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#editor.widgets.complex.tree_view.TreeView.itemPaddingLeft" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="editor.widgets.complex.tree_view.TreeView.itemIconSize">
+<span class="sig-name descname"><span class="pre">itemIconSize</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../../../../_modules/editor/widgets/complex/tree_view.html#TreeView.itemIconSize"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#editor.widgets.complex.tree_view.TreeView.itemIconSize" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="editor.widgets.complex.tree_view.TreeView.itemHeight">
+<span class="sig-name descname"><span class="pre">itemHeight</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../../../../_modules/editor/widgets/complex/tree_view.html#TreeView.itemHeight"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#editor.widgets.complex.tree_view.TreeView.itemHeight" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="editor.widgets.complex.tree_view.TreeView.branchPixmapSize">
+<span class="sig-name descname"><span class="pre">branchPixmapSize</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../../../../_modules/editor/widgets/complex/tree_view.html#TreeView.branchPixmapSize"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#editor.widgets.complex.tree_view.TreeView.branchPixmapSize" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="editor.widgets.complex.tree_view.TreeView.branchOpened">
+<span class="sig-name descname"><span class="pre">branchOpened</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../../../../_modules/editor/widgets/complex/tree_view.html#TreeView.branchOpened"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#editor.widgets.complex.tree_view.TreeView.branchOpened" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="editor.widgets.complex.tree_view.TreeView.branchClosed">
+<span class="sig-name descname"><span class="pre">branchClosed</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../../../../_modules/editor/widgets/complex/tree_view.html#TreeView.branchClosed"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#editor.widgets.complex.tree_view.TreeView.branchClosed" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="editor.widgets.complex.tree_view.TreeView.branchArrowOffset">
+<span class="sig-name descname"><span class="pre">branchArrowOffset</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../../../../_modules/editor/widgets/complex/tree_view.html#TreeView.branchArrowOffset"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#editor.widgets.complex.tree_view.TreeView.branchArrowOffset" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="editor.widgets.complex.tree_view.TreeView.customAnimated">
+<span class="sig-name descname"><span class="pre">customAnimated</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../../../../_modules/editor/widgets/complex/tree_view.html#TreeView.customAnimated"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#editor.widgets.complex.tree_view.TreeView.customAnimated" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="editor.widgets.complex.tree_view.TreeView.customAnimDuration">
+<span class="sig-name descname"><span class="pre">customAnimDuration</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../../../../_modules/editor/widgets/complex/tree_view.html#TreeView.customAnimDuration"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#editor.widgets.complex.tree_view.TreeView.customAnimDuration" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="editor.widgets.complex.tree_view.TreeView.customAnimTickInterval">
+<span class="sig-name descname"><span class="pre">customAnimTickInterval</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../../../../_modules/editor/widgets/complex/tree_view.html#TreeView.customAnimTickInterval"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#editor.widgets.complex.tree_view.TreeView.customAnimTickInterval" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="editor.widgets.complex.tree_view.TreeView.dropIndicatorMargin">
+<span class="sig-name descname"><span class="pre">dropIndicatorMargin</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../../../../_modules/editor/widgets/complex/tree_view.html#TreeView.dropIndicatorMargin"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#editor.widgets.complex.tree_view.TreeView.dropIndicatorMargin" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="editor.widgets.complex.tree_view.TreeView.dropIndicatorColor">
+<span class="sig-name descname"><span class="pre">dropIndicatorColor</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../../../../_modules/editor/widgets/complex/tree_view.html#TreeView.dropIndicatorColor"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#editor.widgets.complex.tree_view.TreeView.dropIndicatorColor" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="editor.widgets.complex.tree_view.TreeView.dropIndicatorWidth">
+<span class="sig-name descname"><span class="pre">dropIndicatorWidth</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../../../../_modules/editor/widgets/complex/tree_view.html#TreeView.dropIndicatorWidth"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#editor.widgets.complex.tree_view.TreeView.dropIndicatorWidth" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="editor.widgets.complex.tree_view.TreeView.drawBranchLine">
+<span class="sig-name descname"><span class="pre">drawBranchLine</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../../../../_modules/editor/widgets/complex/tree_view.html#TreeView.drawBranchLine"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#editor.widgets.complex.tree_view.TreeView.drawBranchLine" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="editor.widgets.complex.tree_view.TreeView.branchLineFilterDepth">
+<span class="sig-name descname"><span class="pre">branchLineFilterDepth</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../../../../_modules/editor/widgets/complex/tree_view.html#TreeView.branchLineFilterDepth"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#editor.widgets.complex.tree_view.TreeView.branchLineFilterDepth" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="editor.widgets.complex.tree_view.TreeView.background">
+<span class="sig-name descname"><span class="pre">background</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../../../../_modules/editor/widgets/complex/tree_view.html#TreeView.background"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#editor.widgets.complex.tree_view.TreeView.background" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="editor.widgets.complex.tree_view.TreeView.backgroundAlternate">
+<span class="sig-name descname"><span class="pre">backgroundAlternate</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../../../../_modules/editor/widgets/complex/tree_view.html#TreeView.backgroundAlternate"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#editor.widgets.complex.tree_view.TreeView.backgroundAlternate" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="editor.widgets.complex.tree_view.TreeView.backgroundSelected">
+<span class="sig-name descname"><span class="pre">backgroundSelected</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../../../../_modules/editor/widgets/complex/tree_view.html#TreeView.backgroundSelected"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#editor.widgets.complex.tree_view.TreeView.backgroundSelected" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="editor.widgets.complex.tree_view.TreeView.backgroundSelectedUnfocused">
+<span class="sig-name descname"><span class="pre">backgroundSelectedUnfocused</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../../../../_modules/editor/widgets/complex/tree_view.html#TreeView.backgroundSelectedUnfocused"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#editor.widgets.complex.tree_view.TreeView.backgroundSelectedUnfocused" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="editor.widgets.complex.tree_view.TreeView.backgroundHovered">
+<span class="sig-name descname"><span class="pre">backgroundHovered</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../../../../_modules/editor/widgets/complex/tree_view.html#TreeView.backgroundHovered"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#editor.widgets.complex.tree_view.TreeView.backgroundHovered" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="editor.widgets.complex.tree_view.TreeView.useAlternatingBackground">
+<span class="sig-name descname"><span class="pre">useAlternatingBackground</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../../../../_modules/editor/widgets/complex/tree_view.html#TreeView.useAlternatingBackground"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#editor.widgets.complex.tree_view.TreeView.useAlternatingBackground" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="editor.widgets.complex.tree_view.TreeView.updateViewFocused">
+<span class="sig-name descname"><span class="pre">updateViewFocused</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">focused</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../../../../_modules/editor/widgets/complex/tree_view.html#TreeView.updateViewFocused"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#editor.widgets.complex.tree_view.TreeView.updateViewFocused" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="editor.widgets.complex.tree_view.TreeView.focusInEvent">
+<span class="sig-name descname"><span class="pre">focusInEvent</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">evt</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../../../../_modules/editor/widgets/complex/tree_view.html#TreeView.focusInEvent"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#editor.widgets.complex.tree_view.TreeView.focusInEvent" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="editor.widgets.complex.tree_view.TreeView.focusOutEvent">
+<span class="sig-name descname"><span class="pre">focusOutEvent</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">evt</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../../../../_modules/editor/widgets/complex/tree_view.html#TreeView.focusOutEvent"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#editor.widgets.complex.tree_view.TreeView.focusOutEvent" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="editor.widgets.complex.tree_view.TreeView.testClickBranchArrow">
+<span class="sig-name descname"><span class="pre">testClickBranchArrow</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">evt</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">doubleClick</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../../../../_modules/editor/widgets/complex/tree_view.html#TreeView.testClickBranchArrow"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#editor.widgets.complex.tree_view.TreeView.testClickBranchArrow" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="editor.widgets.complex.tree_view.TreeView.mousePressEvent">
+<span class="sig-name descname"><span class="pre">mousePressEvent</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">evt</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../../../../_modules/editor/widgets/complex/tree_view.html#TreeView.mousePressEvent"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#editor.widgets.complex.tree_view.TreeView.mousePressEvent" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="editor.widgets.complex.tree_view.TreeView.mouseReleaseEvent">
+<span class="sig-name descname"><span class="pre">mouseReleaseEvent</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">evt</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../../../../_modules/editor/widgets/complex/tree_view.html#TreeView.mouseReleaseEvent"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#editor.widgets.complex.tree_view.TreeView.mouseReleaseEvent" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="editor.widgets.complex.tree_view.TreeView.mouseDoubleClickEvent">
+<span class="sig-name descname"><span class="pre">mouseDoubleClickEvent</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">evt</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../../../../_modules/editor/widgets/complex/tree_view.html#TreeView.mouseDoubleClickEvent"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#editor.widgets.complex.tree_view.TreeView.mouseDoubleClickEvent" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="editor.widgets.complex.tree_view.TreeView.mouseMoveEvent">
+<span class="sig-name descname"><span class="pre">mouseMoveEvent</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">evt</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../../../../_modules/editor/widgets/complex/tree_view.html#TreeView.mouseMoveEvent"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#editor.widgets.complex.tree_view.TreeView.mouseMoveEvent" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="editor.widgets.complex.tree_view.TreeView.leaveEvent">
+<span class="sig-name descname"><span class="pre">leaveEvent</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">evt</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../../../../_modules/editor/widgets/complex/tree_view.html#TreeView.leaveEvent"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#editor.widgets.complex.tree_view.TreeView.leaveEvent" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="editor.widgets.complex.tree_view.TreeView.onScrollerValueChange">
+<span class="sig-name descname"><span class="pre">onScrollerValueChange</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../../../../_modules/editor/widgets/complex/tree_view.html#TreeView.onScrollerValueChange"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#editor.widgets.complex.tree_view.TreeView.onScrollerValueChange" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="editor.widgets.complex.tree_view.TreeView.keyPressEvent">
+<span class="sig-name descname"><span class="pre">keyPressEvent</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">evt</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../../../../_modules/editor/widgets/complex/tree_view.html#TreeView.keyPressEvent"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#editor.widgets.complex.tree_view.TreeView.keyPressEvent" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="editor.widgets.complex.tree_view.TreeView.copySelection">
+<span class="sig-name descname"><span class="pre">copySelection</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../../../../_modules/editor/widgets/complex/tree_view.html#TreeView.copySelection"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#editor.widgets.complex.tree_view.TreeView.copySelection" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="editor.widgets.complex.tree_view.TreeView.pasteSelection">
+<span class="sig-name descname"><span class="pre">pasteSelection</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../../../../_modules/editor/widgets/complex/tree_view.html#TreeView.pasteSelection"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#editor.widgets.complex.tree_view.TreeView.pasteSelection" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="editor.widgets.complex.tree_view.TreeView.duplicateSelection">
+<span class="sig-name descname"><span class="pre">duplicateSelection</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../../../../_modules/editor/widgets/complex/tree_view.html#TreeView.duplicateSelection"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#editor.widgets.complex.tree_view.TreeView.duplicateSelection" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="editor.widgets.complex.tree_view.TreeView.event">
+<span class="sig-name descname"><span class="pre">event</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">evt</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../../../../_modules/editor/widgets/complex/tree_view.html#TreeView.event"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#editor.widgets.complex.tree_view.TreeView.event" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="editor.widgets.complex.tree_view.TreeView.paintEvent">
+<span class="sig-name descname"><span class="pre">paintEvent</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">event</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../../../../_modules/editor/widgets/complex/tree_view.html#TreeView.paintEvent"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#editor.widgets.complex.tree_view.TreeView.paintEvent" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="editor.widgets.complex.tree_view.TreeView.drawBranches">
+<span class="sig-name descname"><span class="pre">drawBranches</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">painter</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rect</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">index</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../../../../_modules/editor/widgets/complex/tree_view.html#TreeView.drawBranches"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#editor.widgets.complex.tree_view.TreeView.drawBranches" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="editor.widgets.complex.tree_view.TreeView.drawDropIndicator">
+<span class="sig-name descname"><span class="pre">drawDropIndicator</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">painter</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../../../../_modules/editor/widgets/complex/tree_view.html#TreeView.drawDropIndicator"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#editor.widgets.complex.tree_view.TreeView.drawDropIndicator" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="editor.widgets.complex.tree_view.TreeView.updateHoveredIndex">
+<span class="sig-name descname"><span class="pre">updateHoveredIndex</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">new</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../../../../_modules/editor/widgets/complex/tree_view.html#TreeView.updateHoveredIndex"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#editor.widgets.complex.tree_view.TreeView.updateHoveredIndex" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="editor.widgets.complex.tree_view.TreeView.updateDropIndicatorRect">
+<span class="sig-name descname"><span class="pre">updateDropIndicatorRect</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">new</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../../../../_modules/editor/widgets/complex/tree_view.html#TreeView.updateDropIndicatorRect"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#editor.widgets.complex.tree_view.TreeView.updateDropIndicatorRect" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="editor.widgets.complex.tree_view.TreeView.startDrag">
+<span class="sig-name descname"><span class="pre">startDrag</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">supportedActions</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../../../../_modules/editor/widgets/complex/tree_view.html#TreeView.startDrag"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#editor.widgets.complex.tree_view.TreeView.startDrag" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="editor.widgets.complex.tree_view.TreeView.dragEnterEvent">
+<span class="sig-name descname"><span class="pre">dragEnterEvent</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">evt</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../../../../_modules/editor/widgets/complex/tree_view.html#TreeView.dragEnterEvent"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#editor.widgets.complex.tree_view.TreeView.dragEnterEvent" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="editor.widgets.complex.tree_view.TreeView.dragLeaveEvent">
+<span class="sig-name descname"><span class="pre">dragLeaveEvent</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">evt</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../../../../_modules/editor/widgets/complex/tree_view.html#TreeView.dragLeaveEvent"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#editor.widgets.complex.tree_view.TreeView.dragLeaveEvent" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="editor.widgets.complex.tree_view.TreeView.checkDropable">
+<span class="sig-name descname"><span class="pre">checkDropable</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">hovered</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">source</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../../../../_modules/editor/widgets/complex/tree_view.html#TreeView.checkDropable"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#editor.widgets.complex.tree_view.TreeView.checkDropable" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="editor.widgets.complex.tree_view.TreeView.dragMoveEvent">
+<span class="sig-name descname"><span class="pre">dragMoveEvent</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">evt</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../../../../_modules/editor/widgets/complex/tree_view.html#TreeView.dragMoveEvent"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#editor.widgets.complex.tree_view.TreeView.dragMoveEvent" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="editor.widgets.complex.tree_view.TreeView.dropEvent">
+<span class="sig-name descname"><span class="pre">dropEvent</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">evt</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../../../../_modules/editor/widgets/complex/tree_view.html#TreeView.dropEvent"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#editor.widgets.complex.tree_view.TreeView.dropEvent" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="editor.widgets.complex.tree_view.TreeView.toggleExpand">
+<span class="sig-name descname"><span class="pre">toggleExpand</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">index</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">recursive</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../../../../_modules/editor/widgets/complex/tree_view.html#TreeView.toggleExpand"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#editor.widgets.complex.tree_view.TreeView.toggleExpand" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="editor.widgets.complex.tree_view.TreeView.expandInstant">
+<span class="sig-name descname"><span class="pre">expandInstant</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">index</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">recursive</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../../../../_modules/editor/widgets/complex/tree_view.html#TreeView.expandInstant"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#editor.widgets.complex.tree_view.TreeView.expandInstant" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="editor.widgets.complex.tree_view.TreeView.expandHovered">
+<span class="sig-name descname"><span class="pre">expandHovered</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../../../../_modules/editor/widgets/complex/tree_view.html#TreeView.expandHovered"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#editor.widgets.complex.tree_view.TreeView.expandHovered" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="editor.widgets.complex.tree_view.TreeView.pingItem">
+<span class="sig-name descname"><span class="pre">pingItem</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">index</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../../../../_modules/editor/widgets/complex/tree_view.html#TreeView.pingItem"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#editor.widgets.complex.tree_view.TreeView.pingItem" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="editor.widgets.complex.tree_view.runTreeDemo">
+<span class="sig-prename descclassname"><span class="pre">editor.widgets.complex.tree_view.</span></span><span class="sig-name descname"><span class="pre">runTreeDemo</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../../../../_modules/editor/widgets/complex/tree_view.html#runTreeDemo"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#editor.widgets.complex.tree_view.runTreeDemo" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../tree_stacked/index.html" class="btn btn-neutral float-left" title="editor.widgets.complex.tree_stacked" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../../container/index.html" class="btn btn-neutral float-right" title="editor.widgets.container" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023, kakako.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

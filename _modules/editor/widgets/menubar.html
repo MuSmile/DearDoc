@@ -1,0 +1,709 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>editor.widgets.menubar &mdash; Welcome to DearDoc!</title>
+      <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../../_static/graphviz.css" type="text/css" />
+    <link rel="shortcut icon" href="../../../_static/favicon.ico"/>
+  <!--[if lt IE 9]>
+    <script src="../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
+        <script src="../../../_static/doctools.js"></script>
+        <script src="../../../_static/sphinx_highlight.js"></script>
+    <script src="../../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../../index.html" class="icon icon-home">
+            DearDoc
+          </a>
+              <div class="version">
+                dev
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../_docs/about.html">About</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../_docs/about/introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../_docs/about/frequently_asked_questions.html">Frequently asked questions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../_docs/about/troubleshooting.html">Troubleshooting</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../_docs/about/license.html">License</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../_docs/manual.html">Manual</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../_docs/manual/introduction.html">Introduction</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../_docs/contributing.html">Contributing</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../_docs/contributing/introduction.html">Introduction</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../autoapi/index.html">API Reference</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../autoapi/editor/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../autoapi/editor/common/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.common</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../autoapi/editor/common/database/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.common.database</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../autoapi/editor/common/dispatcher/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.common.dispatcher</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../autoapi/editor/common/ease/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.common.ease</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../autoapi/editor/common/file_watcher/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.common.file_watcher</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../autoapi/editor/common/icon_cache/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.common.icon_cache</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../autoapi/editor/common/logger/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.common.logger</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../autoapi/editor/common/math/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.common.math</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../autoapi/editor/common/native/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.common.native</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../autoapi/editor/common/util/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.common.util</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../autoapi/editor/models/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.models</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../autoapi/editor/models/asset/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.models.asset</span></code></a><ul>
+<li class="toctree-l5"><a class="reference internal" href="../../../autoapi/editor/models/asset/asset/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.models.asset.asset</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../../autoapi/editor/models/asset/importer/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.models.asset.importer</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../../autoapi/editor/models/asset/meta/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.models.asset.meta</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="../../../autoapi/editor/models/editor/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.models.editor</span></code></a><ul>
+<li class="toctree-l5"><a class="reference internal" href="../../../autoapi/editor/models/editor/form/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.models.editor.form</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../../autoapi/editor/models/editor/menu_tree/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.models.editor.menu_tree</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="../../../autoapi/editor/models/gameplay/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.models.gameplay</span></code></a><ul>
+<li class="toctree-l5"><a class="reference internal" href="../../../autoapi/editor/models/gameplay/component/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.models.gameplay.component</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../../autoapi/editor/models/gameplay/entity/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.models.gameplay.entity</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../../autoapi/editor/models/gameplay/scene/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.models.gameplay.scene</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="../../../autoapi/editor/models/graph/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.models.graph</span></code></a><ul>
+<li class="toctree-l5"><a class="reference internal" href="../../../autoapi/editor/models/graph/base/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.models.graph.base</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../../autoapi/editor/models/graph/fsm/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.models.graph.fsm</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../../autoapi/editor/models/graph/shader/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.models.graph.shader</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../autoapi/editor/pipeline/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.pipeline</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../autoapi/editor/pipeline/build/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.pipeline.build</span></code></a><ul>
+<li class="toctree-l5"><a class="reference internal" href="../../../autoapi/editor/pipeline/build/targets/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.pipeline.build.targets</span></code></a><ul>
+<li class="toctree-l6"><a class="reference internal" href="../../../autoapi/editor/pipeline/build/targets/default/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.pipeline.build.targets.default</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l5"><a class="reference internal" href="../../../autoapi/editor/pipeline/build/registry/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.pipeline.build.registry</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../../autoapi/editor/pipeline/build/shared_task/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.pipeline.build.shared_task</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="../../../autoapi/editor/pipeline/run/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.pipeline.run</span></code></a><ul>
+<li class="toctree-l5"><a class="reference internal" href="../../../autoapi/editor/pipeline/run/targets/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.pipeline.run.targets</span></code></a><ul>
+<li class="toctree-l6"><a class="reference internal" href="../../../autoapi/editor/pipeline/run/targets/editor/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.pipeline.run.targets.editor</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="../../../autoapi/editor/pipeline/run/targets/external/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.pipeline.run.targets.external</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l5"><a class="reference internal" href="../../../autoapi/editor/pipeline/run/registry/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.pipeline.run.registry</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../../autoapi/editor/pipeline/run/shared_task/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.pipeline.run.shared_task</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="../../../autoapi/editor/pipeline/core/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.pipeline.core</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../autoapi/editor/views/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.views</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../autoapi/editor/views/animation/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.views.animation</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../autoapi/editor/views/build/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.views.build</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../autoapi/editor/views/console/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.views.console</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../autoapi/editor/views/fsm_graph/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.views.fsm_graph</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../autoapi/editor/views/gallery/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.views.gallery</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../autoapi/editor/views/game/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.views.game</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../autoapi/editor/views/hierarchy/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.views.hierarchy</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../autoapi/editor/views/inspector/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.views.inspector</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../autoapi/editor/views/preference/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.views.preference</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../autoapi/editor/views/preview/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.views.preview</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../autoapi/editor/views/profiler/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.views.profiler</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../autoapi/editor/views/project/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.views.project</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../autoapi/editor/views/project_setting/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.views.project_setting</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../autoapi/editor/views/scene/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.views.scene</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../autoapi/editor/views/shader_graph/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.views.shader_graph</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../autoapi/editor/widgets/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.widgets</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../autoapi/editor/widgets/basic/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.widgets.basic</span></code></a><ul>
+<li class="toctree-l5"><a class="reference internal" href="../../../autoapi/editor/widgets/basic/button/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.widgets.basic.button</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../../autoapi/editor/widgets/basic/line_edit/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.widgets.basic.line_edit</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../../autoapi/editor/widgets/basic/search_edit/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.widgets.basic.search_edit</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../../autoapi/editor/widgets/basic/slider/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.widgets.basic.slider</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="../../../autoapi/editor/widgets/complex/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.widgets.complex</span></code></a><ul>
+<li class="toctree-l5"><a class="reference internal" href="../../../autoapi/editor/widgets/complex/advanced_menu/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.widgets.complex.advanced_menu</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../../autoapi/editor/widgets/complex/color_picker/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.widgets.complex.color_picker</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../../autoapi/editor/widgets/complex/form_view/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.widgets.complex.form_view</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../../autoapi/editor/widgets/complex/tree_stacked/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.widgets.complex.tree_stacked</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../../autoapi/editor/widgets/complex/tree_view/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.widgets.complex.tree_view</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="../../../autoapi/editor/widgets/container/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.widgets.container</span></code></a><ul>
+<li class="toctree-l5"><a class="reference internal" href="../../../autoapi/editor/widgets/container/collapsible/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.widgets.container.collapsible</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../../autoapi/editor/widgets/container/sliding_stacked/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.widgets.container.sliding_stacked</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="../../../autoapi/editor/widgets/misc/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.widgets.misc</span></code></a><ul>
+<li class="toctree-l5"><a class="reference internal" href="../../../autoapi/editor/widgets/misc/flow_layout/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.widgets.misc.flow_layout</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../../autoapi/editor/widgets/misc/line/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.widgets.misc.line</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../../autoapi/editor/widgets/misc/pixmap_icon/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.widgets.misc.pixmap_icon</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../../autoapi/editor/widgets/misc/toast/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.widgets.misc.toast</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../../autoapi/editor/widgets/misc/waiting_spinner/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.widgets.misc.waiting_spinner</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="../../../autoapi/editor/widgets/menubar/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.widgets.menubar</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../autoapi/editor/widgets/statusbar/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.widgets.statusbar</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../autoapi/editor/widgets/toolbar/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.widgets.toolbar</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../autoapi/editor/asset_db/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.asset_db</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../autoapi/editor/editor_prefs/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.editor_prefs</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../autoapi/editor/main_window/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.main_window</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../autoapi/editor/theme_manager/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.theme_manager</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../autoapi/editor/view_manager/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.view_manager</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../autoapi/engine/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">engine</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../autoapi/engine/bridge/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">engine.bridge</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../autoapi/engine/runtime/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">engine.runtime</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../autoapi/engine/standalone/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">engine.standalone</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../autoapi/launcher/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">launcher</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../autoapi/tools/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">tools</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../autoapi/tools/doc/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">tools.doc</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../autoapi/tools/hello/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">tools.hello</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../autoapi/tools/ide/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">tools.ide</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../autoapi/tools/python/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">tools.python</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../autoapi/tools/report/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">tools.report</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">DearDoc</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../../index.html">Module code</a></li>
+      <li class="breadcrumb-item active">editor.widgets.menubar</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <h1>Source code for editor.widgets.menubar</h1><div class="highlight"><pre>
+<span></span><span class="kn">import</span> <span class="nn">sys</span><span class="o">,</span> <span class="nn">os</span><span class="o">,</span> <span class="nn">platform</span>
+<span class="kn">from</span> <span class="nn">PySide6.QtCore</span> <span class="kn">import</span> <span class="n">Qt</span>
+<span class="kn">from</span> <span class="nn">PySide6.QtGui</span> <span class="kn">import</span> <span class="n">QAction</span>
+<span class="kn">from</span> <span class="nn">PySide6.QtWidgets</span> <span class="kn">import</span> <span class="n">QMenuBar</span>
+<span class="kn">from</span> <span class="nn">editor.common.logger</span> <span class="kn">import</span> <span class="n">warn</span>
+<span class="kn">from</span> <span class="nn">editor.common.util</span> <span class="kn">import</span> <span class="n">quitApp</span><span class="p">,</span> <span class="n">restartApp</span>
+<span class="kn">from</span> <span class="nn">editor.models.editor.menu_tree</span> <span class="kn">import</span> <span class="n">MenuTree</span>
+<span class="n">__system__</span> <span class="o">=</span> <span class="n">platform</span><span class="o">.</span><span class="n">system</span><span class="p">()</span>
+
+<div class="viewcode-block" id="MenuBarModel"><a class="viewcode-back" href="../../../autoapi/editor/widgets/menubar/index.html#editor.widgets.menubar.MenuBarModel">[docs]</a><span class="k">class</span> <span class="nc">MenuBarModel</span><span class="p">:</span>
+	<span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+		<span class="bp">self</span><span class="o">.</span><span class="n">menuTreeTable</span> <span class="o">=</span> <span class="p">{}</span>
+		<span class="bp">self</span><span class="o">.</span><span class="n">menuPriorityTable</span> <span class="o">=</span> <span class="p">{}</span>
+		<span class="bp">self</span><span class="o">.</span><span class="n">defaultPriority</span> <span class="o">=</span> <span class="mi">10</span>
+		<span class="bp">self</span><span class="o">.</span><span class="n">menubar</span> <span class="o">=</span> <span class="kc">None</span>
+
+<div class="viewcode-block" id="MenuBarModel.registerMenu"><a class="viewcode-back" href="../../../autoapi/editor/widgets/menubar/index.html#editor.widgets.menubar.MenuBarModel.registerMenu">[docs]</a>	<span class="k">def</span> <span class="nf">registerMenu</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">priority</span><span class="p">):</span>
+		<span class="k">if</span> <span class="n">name</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">menuPriorityTable</span><span class="p">:</span> <span class="n">warn</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;menu </span><span class="se">\&#39;</span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="se">\&#39;</span><span class="s1"> has registered, priority will be overrided.&#39;</span><span class="p">)</span>
+		<span class="bp">self</span><span class="o">.</span><span class="n">menuPriorityTable</span><span class="p">[</span> <span class="n">name</span> <span class="p">]</span> <span class="o">=</span> <span class="n">priority</span></div>
+
+<div class="viewcode-block" id="MenuBarModel.affirmMenuTree"><a class="viewcode-back" href="../../../autoapi/editor/widgets/menubar/index.html#editor.widgets.menubar.MenuBarModel.affirmMenuTree">[docs]</a>	<span class="k">def</span> <span class="nf">affirmMenuTree</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">):</span>
+		<span class="k">if</span> <span class="n">name</span> <span class="ow">not</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">menuTreeTable</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">menuTreeTable</span><span class="p">[</span> <span class="n">name</span> <span class="p">]</span> <span class="o">=</span> <span class="n">MenuTree</span><span class="p">(</span><span class="n">name</span><span class="p">)</span>
+		<span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">menuTreeTable</span><span class="p">[</span> <span class="n">name</span> <span class="p">]</span></div>
+
+<div class="viewcode-block" id="MenuBarModel.registerMenuItem"><a class="viewcode-back" href="../../../autoapi/editor/widgets/menubar/index.html#editor.widgets.menubar.MenuBarModel.registerMenuItem">[docs]</a>	<span class="k">def</span> <span class="nf">registerMenuItem</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">path</span><span class="p">,</span> <span class="n">callback</span><span class="p">,</span> <span class="n">shortcut</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">priority</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="o">**</span><span class="n">data</span><span class="p">):</span>
+		<span class="n">idx</span> <span class="o">=</span> <span class="n">path</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s1">&#39;/&#39;</span><span class="p">)</span>
+		<span class="k">assert</span><span class="p">(</span><span class="n">idx</span> <span class="o">!=</span> <span class="o">-</span><span class="mi">1</span><span class="p">)</span>
+		<span class="n">name</span> <span class="o">=</span> <span class="n">path</span><span class="p">[:</span><span class="n">idx</span><span class="p">]</span>
+		<span class="n">path</span> <span class="o">=</span> <span class="n">path</span><span class="p">[</span><span class="n">idx</span><span class="o">+</span><span class="mi">1</span><span class="p">:]</span>
+		<span class="n">tree</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">affirmMenuTree</span><span class="p">(</span><span class="n">name</span><span class="p">)</span>
+		<span class="k">if</span> <span class="s1">&#39;shortcutContext&#39;</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">data</span><span class="p">:</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;shortcutContext&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">Qt</span><span class="o">.</span><span class="n">ApplicationShortcut</span>
+		<span class="n">tree</span><span class="o">.</span><span class="n">addItem</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="n">callback</span><span class="p">,</span> <span class="n">shortcut</span><span class="p">,</span> <span class="n">priority</span><span class="p">,</span> <span class="o">**</span><span class="n">data</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="MenuBarModel.registerMenuSeparator"><a class="viewcode-back" href="../../../autoapi/editor/widgets/menubar/index.html#editor.widgets.menubar.MenuBarModel.registerMenuSeparator">[docs]</a>	<span class="k">def</span> <span class="nf">registerMenuSeparator</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">groupPath</span><span class="p">,</span> <span class="n">priority</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="o">**</span><span class="n">data</span><span class="p">):</span>
+		<span class="n">idx</span> <span class="o">=</span> <span class="n">groupPath</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s1">&#39;/&#39;</span><span class="p">)</span>
+		<span class="k">if</span> <span class="n">idx</span> <span class="o">==</span> <span class="o">-</span><span class="mi">1</span><span class="p">:</span> <span class="n">idx</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">groupPath</span><span class="p">)</span>
+		<span class="n">name</span> <span class="o">=</span> <span class="n">groupPath</span><span class="p">[:</span><span class="n">idx</span><span class="p">]</span>
+		<span class="n">groupPath</span> <span class="o">=</span> <span class="n">groupPath</span><span class="p">[</span><span class="n">idx</span><span class="o">+</span><span class="mi">1</span><span class="p">:]</span>
+		<span class="n">tree</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">affirmMenuTree</span><span class="p">(</span><span class="n">name</span><span class="p">)</span>
+		<span class="n">tree</span><span class="o">.</span><span class="n">addSeparator</span><span class="p">(</span><span class="n">groupPath</span><span class="p">,</span> <span class="n">priority</span><span class="p">,</span> <span class="o">**</span><span class="n">data</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="MenuBarModel.menuPriority"><a class="viewcode-back" href="../../../autoapi/editor/widgets/menubar/index.html#editor.widgets.menubar.MenuBarModel.menuPriority">[docs]</a>	<span class="k">def</span> <span class="nf">menuPriority</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">):</span>
+		<span class="k">if</span> <span class="n">name</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">menuPriorityTable</span><span class="p">:</span> <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">menuPriorityTable</span><span class="p">[</span> <span class="n">name</span> <span class="p">]</span>
+		<span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">defaultPriority</span></div>
+
+<div class="viewcode-block" id="MenuBarModel.createMenuBar"><a class="viewcode-back" href="../../../autoapi/editor/widgets/menubar/index.html#editor.widgets.menubar.MenuBarModel.createMenuBar">[docs]</a>	<span class="k">def</span> <span class="nf">createMenuBar</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">parent</span><span class="p">):</span>
+		<span class="bp">self</span><span class="o">.</span><span class="n">menubar</span> <span class="o">=</span> <span class="n">QMenuBar</span><span class="p">(</span><span class="n">parent</span><span class="p">)</span>
+		<span class="bp">self</span><span class="o">.</span><span class="n">menubar</span><span class="o">.</span><span class="n">setContextMenuPolicy</span><span class="p">(</span><span class="n">Qt</span><span class="o">.</span><span class="n">PreventContextMenu</span><span class="p">)</span>
+		<span class="n">sortedMenus</span> <span class="o">=</span> <span class="nb">sorted</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">menuTreeTable</span><span class="o">.</span><span class="n">keys</span><span class="p">(),</span> <span class="n">key</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">n</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">menuPriority</span><span class="p">(</span><span class="n">n</span><span class="p">))</span>
+		<span class="k">for</span> <span class="n">name</span> <span class="ow">in</span> <span class="n">sortedMenus</span><span class="p">:</span>
+			<span class="n">tree</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">menuTreeTable</span><span class="p">[</span> <span class="n">name</span> <span class="p">]</span>
+			<span class="n">widget</span> <span class="o">=</span> <span class="n">tree</span><span class="o">.</span><span class="n">createWidget</span><span class="p">(</span><span class="n">parent</span><span class="p">)</span>
+			<span class="bp">self</span><span class="o">.</span><span class="n">menubar</span><span class="o">.</span><span class="n">addMenu</span><span class="p">(</span><span class="n">widget</span><span class="p">)</span>
+		<span class="c1"># self.menubar.setNativeMenuBar(False)</span>
+		<span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">menubar</span></div>
+
+<div class="viewcode-block" id="MenuBarModel.updateMenuBar"><a class="viewcode-back" href="../../../autoapi/editor/widgets/menubar/index.html#editor.widgets.menubar.MenuBarModel.updateMenuBar">[docs]</a>	<span class="k">def</span> <span class="nf">updateMenuBar</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+		<span class="k">assert</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">menubar</span><span class="p">)</span>
+		<span class="k">pass</span></div></div>
+
+
+<span class="c1">#####################  INIT  #####################</span>
+<span class="n">_model</span> <span class="o">=</span> <span class="n">MenuBarModel</span><span class="p">()</span>
+
+<span class="n">_model</span><span class="o">.</span><span class="n">registerMenu</span><span class="p">(</span><span class="s1">&#39;File&#39;</span>      <span class="p">,</span>     <span class="mi">1</span><span class="p">)</span>
+<span class="n">_model</span><span class="o">.</span><span class="n">registerMenu</span><span class="p">(</span><span class="s1">&#39;Edit&#39;</span>      <span class="p">,</span>     <span class="mi">2</span><span class="p">)</span>
+<span class="n">_model</span><span class="o">.</span><span class="n">registerMenu</span><span class="p">(</span><span class="s1">&#39;Asset&#39;</span>     <span class="p">,</span>     <span class="mi">3</span><span class="p">)</span>
+<span class="n">_model</span><span class="o">.</span><span class="n">registerMenu</span><span class="p">(</span><span class="s1">&#39;Entity&#39;</span>    <span class="p">,</span>     <span class="mi">4</span><span class="p">)</span>
+<span class="n">_model</span><span class="o">.</span><span class="n">registerMenu</span><span class="p">(</span><span class="s1">&#39;Component&#39;</span> <span class="p">,</span>     <span class="mi">5</span><span class="p">)</span>
+
+<span class="n">_model</span><span class="o">.</span><span class="n">registerMenu</span><span class="p">(</span><span class="s1">&#39;Window&#39;</span>    <span class="p">,</span> <span class="mi">10000</span><span class="p">)</span>
+<span class="n">_model</span><span class="o">.</span><span class="n">registerMenu</span><span class="p">(</span><span class="s1">&#39;Help&#39;</span>      <span class="p">,</span> <span class="mi">10001</span><span class="p">)</span>
+
+
+<span class="n">_model</span><span class="o">.</span><span class="n">registerMenuItem</span><span class="p">(</span><span class="s1">&#39;Extenstion/__placeholder__&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+
+
+<span class="c1">#####################  MENU - FILE  #####################</span>
+<span class="n">_model</span><span class="o">.</span><span class="n">registerMenuItem</span><span class="p">(</span><span class="s1">&#39;File/New Scene&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">,</span> <span class="s1">&#39;Ctrl+N&#39;</span><span class="p">)</span>
+<span class="n">_model</span><span class="o">.</span><span class="n">registerMenuItem</span><span class="p">(</span><span class="s1">&#39;File/Open Scene&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">,</span> <span class="s1">&#39;Ctrl+O&#39;</span><span class="p">)</span>
+
+<span class="n">_model</span><span class="o">.</span><span class="n">registerMenuSeparator</span><span class="p">(</span><span class="s1">&#39;File&#39;</span><span class="p">)</span>
+<span class="n">_model</span><span class="o">.</span><span class="n">registerMenuItem</span><span class="p">(</span><span class="s1">&#39;File/Save&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">,</span> <span class="s1">&#39;Ctrl+S&#39;</span><span class="p">)</span>
+<span class="n">_model</span><span class="o">.</span><span class="n">registerMenuItem</span><span class="p">(</span><span class="s1">&#39;File/Save As...&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">,</span> <span class="s1">&#39;Ctrl+Shift+S&#39;</span><span class="p">)</span>
+
+<span class="n">_model</span><span class="o">.</span><span class="n">registerMenuSeparator</span><span class="p">(</span><span class="s1">&#39;File&#39;</span><span class="p">)</span>
+<span class="n">_model</span><span class="o">.</span><span class="n">registerMenuItem</span><span class="p">(</span><span class="s1">&#39;File/New Project...&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+<span class="n">_model</span><span class="o">.</span><span class="n">registerMenuItem</span><span class="p">(</span><span class="s1">&#39;File/Open Project...&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+<span class="n">_model</span><span class="o">.</span><span class="n">registerMenuItem</span><span class="p">(</span><span class="s1">&#39;File/Save Project&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+
+<span class="n">_model</span><span class="o">.</span><span class="n">registerMenuSeparator</span><span class="p">(</span><span class="s1">&#39;File&#39;</span><span class="p">)</span>
+<span class="n">_model</span><span class="o">.</span><span class="n">registerMenuItem</span><span class="p">(</span><span class="s1">&#39;File/Build Settings...&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">,</span> <span class="s1">&#39;Ctrl+Shift+B&#39;</span><span class="p">)</span>
+<span class="n">_model</span><span class="o">.</span><span class="n">registerMenuItem</span><span class="p">(</span><span class="s1">&#39;File/Build And Run&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">,</span> <span class="s1">&#39;Ctrl+B&#39;</span><span class="p">)</span>
+	
+<span class="n">_model</span><span class="o">.</span><span class="n">registerMenuItem</span><span class="p">(</span><span class="s1">&#39;File/Restart Dear&#39;</span><span class="p">,</span> <span class="n">restartApp</span><span class="p">,</span> <span class="s1">&#39;Ctrl+R&#39;</span><span class="p">,</span> <span class="n">priority</span> <span class="o">=</span> <span class="mi">10000</span><span class="p">,</span> <span class="n">menuRole</span> <span class="o">=</span> <span class="n">QAction</span><span class="o">.</span><span class="n">ApplicationSpecificRole</span><span class="p">)</span>
+<span class="n">_model</span><span class="o">.</span><span class="n">registerMenuItem</span><span class="p">(</span><span class="s1">&#39;File/Quit Dear&#39;</span><span class="p">,</span> <span class="n">quitApp</span><span class="p">,</span> <span class="s1">&#39;Ctrl+Q&#39;</span><span class="p">,</span> <span class="n">priority</span> <span class="o">=</span> <span class="mi">10001</span><span class="p">)</span>
+
+
+<span class="c1">#####################  MENU - EDIT  #####################</span>
+<span class="n">_model</span><span class="o">.</span><span class="n">registerMenuItem</span><span class="p">(</span><span class="s1">&#39;Edit/Undo&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">,</span> <span class="s1">&#39;Ctrl+Z&#39;</span><span class="p">)</span>
+<span class="n">_model</span><span class="o">.</span><span class="n">registerMenuItem</span><span class="p">(</span><span class="s1">&#39;Edit/Redo&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">,</span> <span class="s1">&#39;Ctrl+Y&#39;</span><span class="p">)</span>
+
+<span class="n">_model</span><span class="o">.</span><span class="n">registerMenuSeparator</span><span class="p">(</span><span class="s1">&#39;Edit&#39;</span><span class="p">)</span>
+<span class="n">_model</span><span class="o">.</span><span class="n">registerMenuItem</span><span class="p">(</span><span class="s1">&#39;Edit/Select All&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">,</span> <span class="s1">&#39;Ctrl+A&#39;</span><span class="p">)</span>
+<span class="n">_model</span><span class="o">.</span><span class="n">registerMenuItem</span><span class="p">(</span><span class="s1">&#39;Edit/Deselect All&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">,</span> <span class="s1">&#39;Shift+D&#39;</span><span class="p">)</span>
+<span class="n">_model</span><span class="o">.</span><span class="n">registerMenuItem</span><span class="p">(</span><span class="s1">&#39;Edit/Select Children&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">,</span> <span class="s1">&#39;Shift+C&#39;</span><span class="p">)</span>
+<span class="n">_model</span><span class="o">.</span><span class="n">registerMenuItem</span><span class="p">(</span><span class="s1">&#39;Edit/Select Prefab Root&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">,</span> <span class="s1">&#39;Ctrl+Shift+R&#39;</span><span class="p">)</span>
+<span class="n">_model</span><span class="o">.</span><span class="n">registerMenuItem</span><span class="p">(</span><span class="s1">&#39;Edit/Invert Selection&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">,</span> <span class="s1">&#39;Ctrl+Y&#39;</span><span class="p">)</span>
+
+<span class="n">_model</span><span class="o">.</span><span class="n">registerMenuSeparator</span><span class="p">(</span><span class="s1">&#39;Edit&#39;</span><span class="p">)</span>
+<span class="n">_model</span><span class="o">.</span><span class="n">registerMenuItem</span><span class="p">(</span><span class="s1">&#39;Edit/Cut&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">,</span> <span class="s1">&#39;Ctrl+X&#39;</span><span class="p">)</span>
+<span class="n">_model</span><span class="o">.</span><span class="n">registerMenuItem</span><span class="p">(</span><span class="s1">&#39;Edit/Copy&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">,</span> <span class="s1">&#39;Ctrl+C&#39;</span><span class="p">)</span>
+<span class="n">_model</span><span class="o">.</span><span class="n">registerMenuItem</span><span class="p">(</span><span class="s1">&#39;Edit/Paste&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">,</span> <span class="s1">&#39;Ctrl+V&#39;</span><span class="p">)</span>
+
+<span class="n">_model</span><span class="o">.</span><span class="n">registerMenuSeparator</span><span class="p">(</span><span class="s1">&#39;Edit&#39;</span><span class="p">)</span>
+<span class="n">_model</span><span class="o">.</span><span class="n">registerMenuItem</span><span class="p">(</span><span class="s1">&#39;Edit/Duplicate&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">,</span> <span class="s1">&#39;Ctrl+D&#39;</span><span class="p">)</span>
+<span class="n">_model</span><span class="o">.</span><span class="n">registerMenuItem</span><span class="p">(</span><span class="s1">&#39;Edit/Rename&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+<span class="n">_model</span><span class="o">.</span><span class="n">registerMenuItem</span><span class="p">(</span><span class="s1">&#39;Edit/Delete&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+
+<span class="n">_model</span><span class="o">.</span><span class="n">registerMenuSeparator</span><span class="p">(</span><span class="s1">&#39;Edit&#39;</span><span class="p">)</span>
+<span class="n">_model</span><span class="o">.</span><span class="n">registerMenuItem</span><span class="p">(</span><span class="s1">&#39;Edit/Frame Selected&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">,</span> <span class="s1">&#39;F&#39;</span><span class="p">)</span>
+<span class="n">_model</span><span class="o">.</span><span class="n">registerMenuItem</span><span class="p">(</span><span class="s1">&#39;Edit/Lock View to Selected&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">,</span> <span class="s1">&#39;Shift+F&#39;</span><span class="p">)</span>
+<span class="n">_model</span><span class="o">.</span><span class="n">registerMenuItem</span><span class="p">(</span><span class="s1">&#39;Edit/Find&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">,</span> <span class="s1">&#39;Ctrl+F&#39;</span><span class="p">)</span>
+
+<span class="n">_model</span><span class="o">.</span><span class="n">registerMenuSeparator</span><span class="p">(</span><span class="s1">&#39;Edit&#39;</span><span class="p">)</span>
+<span class="n">_model</span><span class="o">.</span><span class="n">registerMenuItem</span><span class="p">(</span><span class="s1">&#39;Edit/Play&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">,</span> <span class="s1">&#39;Ctrl+P&#39;</span><span class="p">)</span>
+<span class="n">_model</span><span class="o">.</span><span class="n">registerMenuItem</span><span class="p">(</span><span class="s1">&#39;Edit/Pause&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">,</span> <span class="s1">&#39;Ctrl+Shift+P&#39;</span><span class="p">)</span>
+<span class="n">_model</span><span class="o">.</span><span class="n">registerMenuItem</span><span class="p">(</span><span class="s1">&#39;Edit/Step&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">,</span> <span class="s1">&#39;Ctrl+Alt+P&#39;</span><span class="p">)</span>
+
+<span class="n">_model</span><span class="o">.</span><span class="n">registerMenuSeparator</span><span class="p">(</span><span class="s1">&#39;Edit&#39;</span><span class="p">)</span>
+<span class="n">_model</span><span class="o">.</span><span class="n">registerMenuItem</span><span class="p">(</span><span class="s1">&#39;Edit/Project Settings...&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+<span class="n">_model</span><span class="o">.</span><span class="n">registerMenuItem</span><span class="p">(</span><span class="s1">&#39;Edit/Preferences...&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+<span class="n">_model</span><span class="o">.</span><span class="n">registerMenuItem</span><span class="p">(</span><span class="s1">&#39;Edit/Shortcuts...&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+
+
+<span class="c1">#####################  MENU - ASSET  #####################</span>
+<span class="n">_model</span><span class="o">.</span><span class="n">registerMenuItem</span><span class="p">(</span><span class="s1">&#39;Asset/Create/Folder&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+<span class="n">_model</span><span class="o">.</span><span class="n">registerMenuSeparator</span><span class="p">(</span><span class="s1">&#39;Asset/Create&#39;</span><span class="p">)</span>
+<span class="n">_model</span><span class="o">.</span><span class="n">registerMenuItem</span><span class="p">(</span><span class="s1">&#39;Asset/Create/Script&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+<span class="n">_model</span><span class="o">.</span><span class="n">registerMenuItem</span><span class="p">(</span><span class="s1">&#39;Asset/Create/Shader&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+<span class="n">_model</span><span class="o">.</span><span class="n">registerMenuSeparator</span><span class="p">(</span><span class="s1">&#39;Asset/Create&#39;</span><span class="p">)</span>
+<span class="n">_model</span><span class="o">.</span><span class="n">registerMenuItem</span><span class="p">(</span><span class="s1">&#39;Asset/Create/Scene&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+<span class="n">_model</span><span class="o">.</span><span class="n">registerMenuItem</span><span class="p">(</span><span class="s1">&#39;Asset/Create/Post-processing Profile&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+<span class="n">_model</span><span class="o">.</span><span class="n">registerMenuItem</span><span class="p">(</span><span class="s1">&#39;Asset/Create/Prefab Variant&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+<span class="n">_model</span><span class="o">.</span><span class="n">registerMenuSeparator</span><span class="p">(</span><span class="s1">&#39;Asset/Create&#39;</span><span class="p">)</span>
+<span class="n">_model</span><span class="o">.</span><span class="n">registerMenuItem</span><span class="p">(</span><span class="s1">&#39;Asset/Create/Material&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+<span class="n">_model</span><span class="o">.</span><span class="n">registerMenuItem</span><span class="p">(</span><span class="s1">&#39;Asset/Create/Lens Flare&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+<span class="n">_model</span><span class="o">.</span><span class="n">registerMenuItem</span><span class="p">(</span><span class="s1">&#39;Asset/Create/Render Texture&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+<span class="n">_model</span><span class="o">.</span><span class="n">registerMenuItem</span><span class="p">(</span><span class="s1">&#39;Asset/Create/Lightmap Parameters&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+<span class="n">_model</span><span class="o">.</span><span class="n">registerMenuItem</span><span class="p">(</span><span class="s1">&#39;Asset/Create/Custom Render Texture&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+<span class="n">_model</span><span class="o">.</span><span class="n">registerMenuSeparator</span><span class="p">(</span><span class="s1">&#39;Asset/Create&#39;</span><span class="p">)</span>
+<span class="n">_model</span><span class="o">.</span><span class="n">registerMenuItem</span><span class="p">(</span><span class="s1">&#39;Asset/Create/Sprite Atlas&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+<span class="n">_model</span><span class="o">.</span><span class="n">registerMenuItem</span><span class="p">(</span><span class="s1">&#39;Asset/Create/Sprites&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+<span class="n">_model</span><span class="o">.</span><span class="n">registerMenuSeparator</span><span class="p">(</span><span class="s1">&#39;Asset/Create&#39;</span><span class="p">)</span>
+<span class="n">_model</span><span class="o">.</span><span class="n">registerMenuItem</span><span class="p">(</span><span class="s1">&#39;Asset/Create/Animation&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+<span class="n">_model</span><span class="o">.</span><span class="n">registerMenuItem</span><span class="p">(</span><span class="s1">&#39;Asset/Create/Timeline&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+
+<span class="k">if</span> <span class="n">__system__</span> <span class="o">==</span> <span class="s1">&#39;Darwin&#39;</span><span class="p">:</span>
+	<span class="n">_model</span><span class="o">.</span><span class="n">registerMenuItem</span><span class="p">(</span><span class="s1">&#39;Asset/Rereal in Finder&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+	<span class="n">_model</span><span class="o">.</span><span class="n">registerMenuItem</span><span class="p">(</span><span class="s1">&#39;Asset/Show in Explorer&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+
+<span class="n">_model</span><span class="o">.</span><span class="n">registerMenuItem</span><span class="p">(</span><span class="s1">&#39;Asset/Open&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+<span class="n">_model</span><span class="o">.</span><span class="n">registerMenuItem</span><span class="p">(</span><span class="s1">&#39;Asset/Delete&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+<span class="n">_model</span><span class="o">.</span><span class="n">registerMenuItem</span><span class="p">(</span><span class="s1">&#39;Asset/Rename&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+<span class="n">_model</span><span class="o">.</span><span class="n">registerMenuItem</span><span class="p">(</span><span class="s1">&#39;Asset/Copy Path&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">,</span> <span class="s1">&#39;Ctrl+Shift+C&#39;</span><span class="p">)</span>
+
+<span class="n">_model</span><span class="o">.</span><span class="n">registerMenuSeparator</span><span class="p">(</span><span class="s1">&#39;Asset&#39;</span><span class="p">)</span>
+<span class="n">_model</span><span class="o">.</span><span class="n">registerMenuItem</span><span class="p">(</span><span class="s1">&#39;Asset/Import New Asset...&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+<span class="n">_model</span><span class="o">.</span><span class="n">registerMenuItem</span><span class="p">(</span><span class="s1">&#39;Asset/Import Package&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+<span class="n">_model</span><span class="o">.</span><span class="n">registerMenuItem</span><span class="p">(</span><span class="s1">&#39;Asset/Export Package...&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+<span class="n">_model</span><span class="o">.</span><span class="n">registerMenuItem</span><span class="p">(</span><span class="s1">&#39;Asset/Find References In Scene&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+<span class="n">_model</span><span class="o">.</span><span class="n">registerMenuItem</span><span class="p">(</span><span class="s1">&#39;Asset/Select Dependencies&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+
+<span class="n">_model</span><span class="o">.</span><span class="n">registerMenuSeparator</span><span class="p">(</span><span class="s1">&#39;Asset&#39;</span><span class="p">)</span>
+<span class="n">_model</span><span class="o">.</span><span class="n">registerMenuItem</span><span class="p">(</span><span class="s1">&#39;Asset/Refresh&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">,</span> <span class="s1">&#39;Shift+R&#39;</span><span class="p">)</span>
+<span class="n">_model</span><span class="o">.</span><span class="n">registerMenuItem</span><span class="p">(</span><span class="s1">&#39;Asset/Reimport&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+<span class="n">_model</span><span class="o">.</span><span class="n">registerMenuSeparator</span><span class="p">(</span><span class="s1">&#39;Asset&#39;</span><span class="p">)</span>
+<span class="n">_model</span><span class="o">.</span><span class="n">registerMenuItem</span><span class="p">(</span><span class="s1">&#39;Asset/Reimport All&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+<span class="n">_model</span><span class="o">.</span><span class="n">registerMenuSeparator</span><span class="p">(</span><span class="s1">&#39;Asset&#39;</span><span class="p">)</span>
+<span class="n">_model</span><span class="o">.</span><span class="n">registerMenuItem</span><span class="p">(</span><span class="s1">&#39;Asset/Open Script Project&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+
+
+<span class="c1">#####################  MENU - EDIT  #####################</span>
+<span class="n">_model</span><span class="o">.</span><span class="n">registerMenuItem</span><span class="p">(</span><span class="s1">&#39;Entity/Create Empty&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">,</span> <span class="s1">&#39;Ctrl+Shift+N&#39;</span><span class="p">)</span>
+<span class="n">_model</span><span class="o">.</span><span class="n">registerMenuItem</span><span class="p">(</span><span class="s1">&#39;Entity/Create Empty Child&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">,</span> <span class="s1">&#39;Alt+Shift+N&#39;</span><span class="p">)</span>
+
+<span class="n">_model</span><span class="o">.</span><span class="n">registerMenuItem</span><span class="p">(</span><span class="s1">&#39;Entity/3D Entity/Cube&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+<span class="n">_model</span><span class="o">.</span><span class="n">registerMenuItem</span><span class="p">(</span><span class="s1">&#39;Entity/3D Entity/Sphere&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+<span class="n">_model</span><span class="o">.</span><span class="n">registerMenuItem</span><span class="p">(</span><span class="s1">&#39;Entity/3D Entity/Capsule&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+<span class="n">_model</span><span class="o">.</span><span class="n">registerMenuItem</span><span class="p">(</span><span class="s1">&#39;Entity/3D Entity/Cylinder&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+<span class="n">_model</span><span class="o">.</span><span class="n">registerMenuItem</span><span class="p">(</span><span class="s1">&#39;Entity/3D Entity/Plane&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+<span class="n">_model</span><span class="o">.</span><span class="n">registerMenuItem</span><span class="p">(</span><span class="s1">&#39;Entity/3D Entity/Quad&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+<span class="n">_model</span><span class="o">.</span><span class="n">registerMenuSeparator</span><span class="p">(</span><span class="s1">&#39;Entity/3D Entity&#39;</span><span class="p">)</span>
+<span class="n">_model</span><span class="o">.</span><span class="n">registerMenuItem</span><span class="p">(</span><span class="s1">&#39;Asset/Create/Post-processing Volume&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+<span class="n">_model</span><span class="o">.</span><span class="n">registerMenuSeparator</span><span class="p">(</span><span class="s1">&#39;Entity/3D Entity&#39;</span><span class="p">)</span>
+<span class="n">_model</span><span class="o">.</span><span class="n">registerMenuItem</span><span class="p">(</span><span class="s1">&#39;Asset/Create/Terrain&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+<span class="n">_model</span><span class="o">.</span><span class="n">registerMenuItem</span><span class="p">(</span><span class="s1">&#39;Asset/Create/Tree&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+<span class="n">_model</span><span class="o">.</span><span class="n">registerMenuItem</span><span class="p">(</span><span class="s1">&#39;Asset/Create/Wind Zone&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+<span class="n">_model</span><span class="o">.</span><span class="n">registerMenuSeparator</span><span class="p">(</span><span class="s1">&#39;Entity/3D Entity&#39;</span><span class="p">)</span>
+<span class="n">_model</span><span class="o">.</span><span class="n">registerMenuItem</span><span class="p">(</span><span class="s1">&#39;Asset/Create/3D Text&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+
+
+<span class="c1">#####################  MENU - ENTITY  #####################</span>
+<span class="n">_model</span><span class="o">.</span><span class="n">registerMenuItem</span><span class="p">(</span><span class="s1">&#39;Entity/2D Entity/Sprite&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+<span class="n">_model</span><span class="o">.</span><span class="n">registerMenuSeparator</span><span class="p">(</span><span class="s1">&#39;Entity/2D Entity&#39;</span><span class="p">)</span>
+<span class="n">_model</span><span class="o">.</span><span class="n">registerMenuItem</span><span class="p">(</span><span class="s1">&#39;Entity/2D Entity/Sprite Mask&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+<span class="n">_model</span><span class="o">.</span><span class="n">registerMenuItem</span><span class="p">(</span><span class="s1">&#39;Entity/2D Entity/Tilemap&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+
+<span class="n">_model</span><span class="o">.</span><span class="n">registerMenuItem</span><span class="p">(</span><span class="s1">&#39;Entity/Effects/Particle System&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+<span class="n">_model</span><span class="o">.</span><span class="n">registerMenuItem</span><span class="p">(</span><span class="s1">&#39;Entity/Effects/Particle System Force Field&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+<span class="n">_model</span><span class="o">.</span><span class="n">registerMenuItem</span><span class="p">(</span><span class="s1">&#39;Entity/Effects/Trail&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+<span class="n">_model</span><span class="o">.</span><span class="n">registerMenuItem</span><span class="p">(</span><span class="s1">&#39;Entity/Effects/Line&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+
+<span class="n">_model</span><span class="o">.</span><span class="n">registerMenuItem</span><span class="p">(</span><span class="s1">&#39;Entity/Light/Directional Light&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+<span class="n">_model</span><span class="o">.</span><span class="n">registerMenuItem</span><span class="p">(</span><span class="s1">&#39;Entity/Light/Point Light&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+<span class="n">_model</span><span class="o">.</span><span class="n">registerMenuItem</span><span class="p">(</span><span class="s1">&#39;Entity/Light/Spotlight&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+<span class="n">_model</span><span class="o">.</span><span class="n">registerMenuItem</span><span class="p">(</span><span class="s1">&#39;Entity/Light/Area Light&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+<span class="n">_model</span><span class="o">.</span><span class="n">registerMenuSeparator</span><span class="p">(</span><span class="s1">&#39;Entity/Light&#39;</span><span class="p">)</span>
+<span class="n">_model</span><span class="o">.</span><span class="n">registerMenuItem</span><span class="p">(</span><span class="s1">&#39;Entity/Light/Reflection Probe&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+<span class="n">_model</span><span class="o">.</span><span class="n">registerMenuItem</span><span class="p">(</span><span class="s1">&#39;Entity/Light/Light Probe Group&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+
+<span class="n">_model</span><span class="o">.</span><span class="n">registerMenuItem</span><span class="p">(</span><span class="s1">&#39;Entity/Audio/Audio Source&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+<span class="n">_model</span><span class="o">.</span><span class="n">registerMenuItem</span><span class="p">(</span><span class="s1">&#39;Entity/Audio/Audio Reverb Zone&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+<span class="n">_model</span><span class="o">.</span><span class="n">registerMenuItem</span><span class="p">(</span><span class="s1">&#39;Entity/Video/Video Player&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+
+<span class="n">_model</span><span class="o">.</span><span class="n">registerMenuItem</span><span class="p">(</span><span class="s1">&#39;Entity/UI/Text&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+<span class="n">_model</span><span class="o">.</span><span class="n">registerMenuItem</span><span class="p">(</span><span class="s1">&#39;Entity/UI/Image&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+<span class="n">_model</span><span class="o">.</span><span class="n">registerMenuItem</span><span class="p">(</span><span class="s1">&#39;Entity/UI/Raw Image&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+<span class="n">_model</span><span class="o">.</span><span class="n">registerMenuSeparator</span><span class="p">(</span><span class="s1">&#39;Entity/UI&#39;</span><span class="p">)</span>
+<span class="n">_model</span><span class="o">.</span><span class="n">registerMenuItem</span><span class="p">(</span><span class="s1">&#39;Entity/UI/Button&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+<span class="n">_model</span><span class="o">.</span><span class="n">registerMenuItem</span><span class="p">(</span><span class="s1">&#39;Entity/UI/Toggle&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+<span class="n">_model</span><span class="o">.</span><span class="n">registerMenuItem</span><span class="p">(</span><span class="s1">&#39;Entity/UI/Slider&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+<span class="n">_model</span><span class="o">.</span><span class="n">registerMenuItem</span><span class="p">(</span><span class="s1">&#39;Entity/UI/Scrollbar&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+<span class="n">_model</span><span class="o">.</span><span class="n">registerMenuItem</span><span class="p">(</span><span class="s1">&#39;Entity/UI/Dropdown&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+<span class="n">_model</span><span class="o">.</span><span class="n">registerMenuItem</span><span class="p">(</span><span class="s1">&#39;Entity/UI/Input Field&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+<span class="n">_model</span><span class="o">.</span><span class="n">registerMenuSeparator</span><span class="p">(</span><span class="s1">&#39;Entity/UI&#39;</span><span class="p">)</span>
+<span class="n">_model</span><span class="o">.</span><span class="n">registerMenuItem</span><span class="p">(</span><span class="s1">&#39;Entity/UI/Canvas&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+<span class="n">_model</span><span class="o">.</span><span class="n">registerMenuItem</span><span class="p">(</span><span class="s1">&#39;Entity/UI/Panel&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+<span class="n">_model</span><span class="o">.</span><span class="n">registerMenuItem</span><span class="p">(</span><span class="s1">&#39;Entity/UI/Scroll View&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+<span class="n">_model</span><span class="o">.</span><span class="n">registerMenuSeparator</span><span class="p">(</span><span class="s1">&#39;Entity/UI&#39;</span><span class="p">)</span>
+<span class="n">_model</span><span class="o">.</span><span class="n">registerMenuItem</span><span class="p">(</span><span class="s1">&#39;Entity/UI/Event System&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+
+<span class="n">_model</span><span class="o">.</span><span class="n">registerMenuItem</span><span class="p">(</span><span class="s1">&#39;Entity/Camera&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+<span class="n">_model</span><span class="o">.</span><span class="n">registerMenuSeparator</span><span class="p">(</span><span class="s1">&#39;Entity&#39;</span><span class="p">)</span>
+<span class="n">_model</span><span class="o">.</span><span class="n">registerMenuItem</span><span class="p">(</span><span class="s1">&#39;Entity/Center on Children&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+
+<span class="n">_model</span><span class="o">.</span><span class="n">registerMenuSeparator</span><span class="p">(</span><span class="s1">&#39;Entity&#39;</span><span class="p">)</span>
+<span class="n">_model</span><span class="o">.</span><span class="n">registerMenuItem</span><span class="p">(</span><span class="s1">&#39;Entity/Make Parent&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+<span class="n">_model</span><span class="o">.</span><span class="n">registerMenuItem</span><span class="p">(</span><span class="s1">&#39;Entity/Clear Parent&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+
+<span class="n">_model</span><span class="o">.</span><span class="n">registerMenuSeparator</span><span class="p">(</span><span class="s1">&#39;Entity&#39;</span><span class="p">)</span>
+<span class="n">_model</span><span class="o">.</span><span class="n">registerMenuItem</span><span class="p">(</span><span class="s1">&#39;Entity/Lock Selection&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+<span class="n">_model</span><span class="o">.</span><span class="n">registerMenuItem</span><span class="p">(</span><span class="s1">&#39;Entity/Unlock Selection&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">,</span> <span class="s1">&#39;Ctrl+Alt+L&#39;</span><span class="p">)</span>
+<span class="n">_model</span><span class="o">.</span><span class="n">registerMenuItem</span><span class="p">(</span><span class="s1">&#39;Entity/Move Selection Up&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">,</span> <span class="s1">&#39;Shift+W&#39;</span><span class="p">)</span>
+<span class="n">_model</span><span class="o">.</span><span class="n">registerMenuItem</span><span class="p">(</span><span class="s1">&#39;Entity/Move Selection Down&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">,</span> <span class="s1">&#39;Shift+S&#39;</span><span class="p">)</span>
+
+<span class="n">_model</span><span class="o">.</span><span class="n">registerMenuSeparator</span><span class="p">(</span><span class="s1">&#39;Entity&#39;</span><span class="p">)</span>
+<span class="n">_model</span><span class="o">.</span><span class="n">registerMenuItem</span><span class="p">(</span><span class="s1">&#39;Entity/Set as first sibling&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">,</span> <span class="s1">&#39;Ctrl+=&#39;</span><span class="p">)</span>
+<span class="n">_model</span><span class="o">.</span><span class="n">registerMenuItem</span><span class="p">(</span><span class="s1">&#39;Entity/Set as last sibling&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">,</span> <span class="s1">&#39;Ctrl+-&#39;</span><span class="p">)</span>
+<span class="n">_model</span><span class="o">.</span><span class="n">registerMenuItem</span><span class="p">(</span><span class="s1">&#39;Entity/Move To View&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">,</span> <span class="s1">&#39;Ctrl+Alt+F&#39;</span><span class="p">)</span>
+<span class="n">_model</span><span class="o">.</span><span class="n">registerMenuItem</span><span class="p">(</span><span class="s1">&#39;Entity/Align With View&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">,</span> <span class="s1">&#39;Ctrl+Shift+F&#39;</span><span class="p">)</span>
+<span class="n">_model</span><span class="o">.</span><span class="n">registerMenuItem</span><span class="p">(</span><span class="s1">&#39;Entity/Align View To Selected&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+<span class="n">_model</span><span class="o">.</span><span class="n">registerMenuItem</span><span class="p">(</span><span class="s1">&#39;Entity/Toggle Active State&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">,</span> <span class="s1">&#39;Alt+Shift+A&#39;</span><span class="p">)</span>
+
+
+<span class="c1">#####################  MENU - COMPONENT  #####################</span>
+<span class="k">if</span> <span class="n">__system__</span> <span class="o">==</span> <span class="s1">&#39;Darwin&#39;</span><span class="p">:</span>
+	<span class="n">_model</span><span class="o">.</span><span class="n">registerMenuItem</span><span class="p">(</span><span class="s1">&#39;Component/Create...&#39;</span> <span class="o">+</span> <span class="s1">&#39; &#39;</span> <span class="o">*</span> <span class="mi">12</span><span class="p">,</span> <span class="kc">None</span><span class="p">,</span> <span class="s1">&#39;Ctrl+Shift+A&#39;</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+	<span class="n">_model</span><span class="o">.</span><span class="n">registerMenuItem</span><span class="p">(</span><span class="s1">&#39;Component/Create...&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">,</span> <span class="s1">&#39;Ctrl+Shift+A&#39;</span><span class="p">)</span>
+
+<span class="n">_model</span><span class="o">.</span><span class="n">registerMenuItem</span><span class="p">(</span><span class="s1">&#39;Component/Mesh/Mesh Filter&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+<span class="n">_model</span><span class="o">.</span><span class="n">registerMenuItem</span><span class="p">(</span><span class="s1">&#39;Component/Mesh/Text Mesh&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+<span class="n">_model</span><span class="o">.</span><span class="n">registerMenuSeparator</span><span class="p">(</span><span class="s1">&#39;Component/Mesh&#39;</span><span class="p">)</span>
+<span class="n">_model</span><span class="o">.</span><span class="n">registerMenuItem</span><span class="p">(</span><span class="s1">&#39;Component/Mesh/Mesh Renderer&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+<span class="n">_model</span><span class="o">.</span><span class="n">registerMenuItem</span><span class="p">(</span><span class="s1">&#39;Component/Mesh/Skinned Mesh Renderer&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+
+<span class="n">_model</span><span class="o">.</span><span class="n">registerMenuItem</span><span class="p">(</span><span class="s1">&#39;Component/Effects/Particle System&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+<span class="n">_model</span><span class="o">.</span><span class="n">registerMenuItem</span><span class="p">(</span><span class="s1">&#39;Component/Effects/Trail Renderer&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+<span class="n">_model</span><span class="o">.</span><span class="n">registerMenuItem</span><span class="p">(</span><span class="s1">&#39;Component/Effects/Line Renderer&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+<span class="n">_model</span><span class="o">.</span><span class="n">registerMenuItem</span><span class="p">(</span><span class="s1">&#39;Component/Effects/Lens Flare&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+<span class="n">_model</span><span class="o">.</span><span class="n">registerMenuItem</span><span class="p">(</span><span class="s1">&#39;Component/Effects/Halo&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+<span class="n">_model</span><span class="o">.</span><span class="n">registerMenuItem</span><span class="p">(</span><span class="s1">&#39;Component/Effects/Projector&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+<span class="n">_model</span><span class="o">.</span><span class="n">registerMenuItem</span><span class="p">(</span><span class="s1">&#39;Component/Effects/Visual Effect&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+
+<span class="n">_model</span><span class="o">.</span><span class="n">registerMenuItem</span><span class="p">(</span><span class="s1">&#39;Component/Physics/Rigidbody&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+<span class="n">_model</span><span class="o">.</span><span class="n">registerMenuSeparator</span><span class="p">(</span><span class="s1">&#39;Component/Physics&#39;</span><span class="p">)</span>
+<span class="n">_model</span><span class="o">.</span><span class="n">registerMenuItem</span><span class="p">(</span><span class="s1">&#39;Component/Physics/Box Collider&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+<span class="n">_model</span><span class="o">.</span><span class="n">registerMenuItem</span><span class="p">(</span><span class="s1">&#39;Component/Physics/Sphere Collider&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+<span class="n">_model</span><span class="o">.</span><span class="n">registerMenuItem</span><span class="p">(</span><span class="s1">&#39;Component/Physics/Capsule Collider&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+<span class="n">_model</span><span class="o">.</span><span class="n">registerMenuItem</span><span class="p">(</span><span class="s1">&#39;Component/Physics/Mesh Collider&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+<span class="n">_model</span><span class="o">.</span><span class="n">registerMenuItem</span><span class="p">(</span><span class="s1">&#39;Component/Physics/Terrain Collider&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+<span class="n">_model</span><span class="o">.</span><span class="n">registerMenuSeparator</span><span class="p">(</span><span class="s1">&#39;Component/Physics&#39;</span><span class="p">)</span>
+<span class="n">_model</span><span class="o">.</span><span class="n">registerMenuItem</span><span class="p">(</span><span class="s1">&#39;Component/Physics/Cloth&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+<span class="n">_model</span><span class="o">.</span><span class="n">registerMenuSeparator</span><span class="p">(</span><span class="s1">&#39;Component/Physics&#39;</span><span class="p">)</span>
+<span class="n">_model</span><span class="o">.</span><span class="n">registerMenuItem</span><span class="p">(</span><span class="s1">&#39;Component/Physics/Hinge Joint&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+<span class="n">_model</span><span class="o">.</span><span class="n">registerMenuItem</span><span class="p">(</span><span class="s1">&#39;Component/Physics/Fixed Joint&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+<span class="n">_model</span><span class="o">.</span><span class="n">registerMenuItem</span><span class="p">(</span><span class="s1">&#39;Component/Physics/Spring Joint&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+<span class="n">_model</span><span class="o">.</span><span class="n">registerMenuItem</span><span class="p">(</span><span class="s1">&#39;Component/Physics/Configurable Joint&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+<span class="n">_model</span><span class="o">.</span><span class="n">registerMenuSeparator</span><span class="p">(</span><span class="s1">&#39;Component/Physics&#39;</span><span class="p">)</span>
+<span class="n">_model</span><span class="o">.</span><span class="n">registerMenuItem</span><span class="p">(</span><span class="s1">&#39;Component/Physics/Constant Force&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+
+<span class="n">_model</span><span class="o">.</span><span class="n">registerMenuItem</span><span class="p">(</span><span class="s1">&#39;Component/Physics 2D/Rigidbody 2D&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+<span class="n">_model</span><span class="o">.</span><span class="n">registerMenuSeparator</span><span class="p">(</span><span class="s1">&#39;Component/Physics 2D&#39;</span><span class="p">)</span>
+<span class="n">_model</span><span class="o">.</span><span class="n">registerMenuItem</span><span class="p">(</span><span class="s1">&#39;Component/Physics 2D/Box Collider 2D&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+<span class="n">_model</span><span class="o">.</span><span class="n">registerMenuItem</span><span class="p">(</span><span class="s1">&#39;Component/Physics 2D/Circle Collider 2D&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+<span class="n">_model</span><span class="o">.</span><span class="n">registerMenuItem</span><span class="p">(</span><span class="s1">&#39;Component/Physics 2D/Edge Collider 2D&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+<span class="n">_model</span><span class="o">.</span><span class="n">registerMenuItem</span><span class="p">(</span><span class="s1">&#39;Component/Physics 2D/Polygon Collider 2D&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+<span class="n">_model</span><span class="o">.</span><span class="n">registerMenuItem</span><span class="p">(</span><span class="s1">&#39;Component/Physics 2D/Capsule Collider 2D&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+<span class="n">_model</span><span class="o">.</span><span class="n">registerMenuItem</span><span class="p">(</span><span class="s1">&#39;Component/Physics 2D/Composite Collider 2D&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+<span class="n">_model</span><span class="o">.</span><span class="n">registerMenuSeparator</span><span class="p">(</span><span class="s1">&#39;Component/Physics 2D&#39;</span><span class="p">)</span>
+<span class="n">_model</span><span class="o">.</span><span class="n">registerMenuItem</span><span class="p">(</span><span class="s1">&#39;Component/Physics 2D/Distance Joint 2D&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+<span class="n">_model</span><span class="o">.</span><span class="n">registerMenuItem</span><span class="p">(</span><span class="s1">&#39;Component/Physics 2D/Fixed Joint 2D&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+<span class="n">_model</span><span class="o">.</span><span class="n">registerMenuItem</span><span class="p">(</span><span class="s1">&#39;Component/Physics 2D/Friction Joint 2D&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+<span class="n">_model</span><span class="o">.</span><span class="n">registerMenuItem</span><span class="p">(</span><span class="s1">&#39;Component/Physics 2D/Hinge Joint 2D&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+<span class="n">_model</span><span class="o">.</span><span class="n">registerMenuItem</span><span class="p">(</span><span class="s1">&#39;Component/Physics 2D/Relative Joint 2D&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+<span class="n">_model</span><span class="o">.</span><span class="n">registerMenuItem</span><span class="p">(</span><span class="s1">&#39;Component/Physics 2D/Slider Joint 2D&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+<span class="n">_model</span><span class="o">.</span><span class="n">registerMenuItem</span><span class="p">(</span><span class="s1">&#39;Component/Physics 2D/Spring Joint 2D&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+<span class="n">_model</span><span class="o">.</span><span class="n">registerMenuItem</span><span class="p">(</span><span class="s1">&#39;Component/Physics 2D/Target Joint 2D&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+<span class="n">_model</span><span class="o">.</span><span class="n">registerMenuSeparator</span><span class="p">(</span><span class="s1">&#39;Component/Physics 2D&#39;</span><span class="p">)</span>
+<span class="n">_model</span><span class="o">.</span><span class="n">registerMenuItem</span><span class="p">(</span><span class="s1">&#39;Component/Physics 2D/Area Effector 2D&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+<span class="n">_model</span><span class="o">.</span><span class="n">registerMenuItem</span><span class="p">(</span><span class="s1">&#39;Component/Physics 2D/Buoyancy Effector 2D&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+<span class="n">_model</span><span class="o">.</span><span class="n">registerMenuItem</span><span class="p">(</span><span class="s1">&#39;Component/Physics 2D/Point Effector 2D&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+<span class="n">_model</span><span class="o">.</span><span class="n">registerMenuItem</span><span class="p">(</span><span class="s1">&#39;Component/Physics 2D/Platform Effector 2D&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+<span class="n">_model</span><span class="o">.</span><span class="n">registerMenuItem</span><span class="p">(</span><span class="s1">&#39;Component/Physics 2D/Surface Effector 2D&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+<span class="n">_model</span><span class="o">.</span><span class="n">registerMenuSeparator</span><span class="p">(</span><span class="s1">&#39;Component/Physics 2D&#39;</span><span class="p">)</span>
+<span class="n">_model</span><span class="o">.</span><span class="n">registerMenuItem</span><span class="p">(</span><span class="s1">&#39;Component/Physics 2D/Constant Force 2D&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+
+<span class="n">_model</span><span class="o">.</span><span class="n">registerMenuItem</span><span class="p">(</span><span class="s1">&#39;Component/Navigation&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+
+<span class="n">_model</span><span class="o">.</span><span class="n">registerMenuItem</span><span class="p">(</span><span class="s1">&#39;Component/Audio/Audio Listener&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+<span class="n">_model</span><span class="o">.</span><span class="n">registerMenuItem</span><span class="p">(</span><span class="s1">&#39;Component/Audio/Audio Source&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+<span class="n">_model</span><span class="o">.</span><span class="n">registerMenuItem</span><span class="p">(</span><span class="s1">&#39;Component/Audio/Audio Reverb Zone&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+<span class="n">_model</span><span class="o">.</span><span class="n">registerMenuSeparator</span><span class="p">(</span><span class="s1">&#39;Component/Audio&#39;</span><span class="p">)</span>
+<span class="n">_model</span><span class="o">.</span><span class="n">registerMenuItem</span><span class="p">(</span><span class="s1">&#39;Component/Audio/Audio Low Pass Filter&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+<span class="n">_model</span><span class="o">.</span><span class="n">registerMenuItem</span><span class="p">(</span><span class="s1">&#39;Component/Audio/Audio High Pass Filter&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+<span class="n">_model</span><span class="o">.</span><span class="n">registerMenuItem</span><span class="p">(</span><span class="s1">&#39;Component/Audio/Audio Echo Filter&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+<span class="n">_model</span><span class="o">.</span><span class="n">registerMenuItem</span><span class="p">(</span><span class="s1">&#39;Component/Audio/Audio Distortion Filter&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+<span class="n">_model</span><span class="o">.</span><span class="n">registerMenuItem</span><span class="p">(</span><span class="s1">&#39;Component/Audio/Audio Reverb Filter&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+<span class="n">_model</span><span class="o">.</span><span class="n">registerMenuItem</span><span class="p">(</span><span class="s1">&#39;Component/Audio/Audio Chorus Filter&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+
+<span class="n">_model</span><span class="o">.</span><span class="n">registerMenuItem</span><span class="p">(</span><span class="s1">&#39;Component/Video/Video Player&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+
+<span class="n">_model</span><span class="o">.</span><span class="n">registerMenuItem</span><span class="p">(</span><span class="s1">&#39;Component/Rendering/Camera&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+<span class="n">_model</span><span class="o">.</span><span class="n">registerMenuItem</span><span class="p">(</span><span class="s1">&#39;Component/Rendering/Skybox&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+<span class="n">_model</span><span class="o">.</span><span class="n">registerMenuItem</span><span class="p">(</span><span class="s1">&#39;Component/Rendering/Flare Layer&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+<span class="n">_model</span><span class="o">.</span><span class="n">registerMenuSeparator</span><span class="p">(</span><span class="s1">&#39;Component/Rendering&#39;</span><span class="p">)</span>
+<span class="n">_model</span><span class="o">.</span><span class="n">registerMenuItem</span><span class="p">(</span><span class="s1">&#39;Component/Rendering/Light&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+<span class="n">_model</span><span class="o">.</span><span class="n">registerMenuItem</span><span class="p">(</span><span class="s1">&#39;Component/Rendering/Light Probe Group&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+<span class="n">_model</span><span class="o">.</span><span class="n">registerMenuItem</span><span class="p">(</span><span class="s1">&#39;Component/Rendering/Light Probe Proxy Volume&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+<span class="n">_model</span><span class="o">.</span><span class="n">registerMenuItem</span><span class="p">(</span><span class="s1">&#39;Component/Rendering/Reflection Probe&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+<span class="n">_model</span><span class="o">.</span><span class="n">registerMenuSeparator</span><span class="p">(</span><span class="s1">&#39;Component/Rendering&#39;</span><span class="p">)</span>
+<span class="n">_model</span><span class="o">.</span><span class="n">registerMenuItem</span><span class="p">(</span><span class="s1">&#39;Component/Rendering/Occlusion Area&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+<span class="n">_model</span><span class="o">.</span><span class="n">registerMenuItem</span><span class="p">(</span><span class="s1">&#39;Component/Rendering/Occlusion Portal&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+<span class="n">_model</span><span class="o">.</span><span class="n">registerMenuItem</span><span class="p">(</span><span class="s1">&#39;Component/Rendering/LOD Group&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+<span class="n">_model</span><span class="o">.</span><span class="n">registerMenuSeparator</span><span class="p">(</span><span class="s1">&#39;Component/Rendering&#39;</span><span class="p">)</span>
+<span class="n">_model</span><span class="o">.</span><span class="n">registerMenuItem</span><span class="p">(</span><span class="s1">&#39;Component/Rendering/Sprite Renderer&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+<span class="n">_model</span><span class="o">.</span><span class="n">registerMenuItem</span><span class="p">(</span><span class="s1">&#39;Component/Rendering/Sorting Group&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+<span class="n">_model</span><span class="o">.</span><span class="n">registerMenuItem</span><span class="p">(</span><span class="s1">&#39;Component/Rendering/Canvas Renderer&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+<span class="n">_model</span><span class="o">.</span><span class="n">registerMenuSeparator</span><span class="p">(</span><span class="s1">&#39;Component/Rendering&#39;</span><span class="p">)</span>
+<span class="n">_model</span><span class="o">.</span><span class="n">registerMenuItem</span><span class="p">(</span><span class="s1">&#39;Component/Rendering/Post-process Layer&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+<span class="n">_model</span><span class="o">.</span><span class="n">registerMenuItem</span><span class="p">(</span><span class="s1">&#39;Component/Rendering/Post-process Volume&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+<span class="n">_model</span><span class="o">.</span><span class="n">registerMenuItem</span><span class="p">(</span><span class="s1">&#39;Component/Rendering/Post-process Debug&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+
+<span class="n">_model</span><span class="o">.</span><span class="n">registerMenuItem</span><span class="p">(</span><span class="s1">&#39;Component/Tilemap/Tilemap&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+<span class="n">_model</span><span class="o">.</span><span class="n">registerMenuItem</span><span class="p">(</span><span class="s1">&#39;Component/Tilemap/Tilemap Renderer&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+<span class="n">_model</span><span class="o">.</span><span class="n">registerMenuItem</span><span class="p">(</span><span class="s1">&#39;Component/Tilemap/Tilemap Collider 2D&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+
+<span class="n">_model</span><span class="o">.</span><span class="n">registerMenuItem</span><span class="p">(</span><span class="s1">&#39;Component/Layout&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+<span class="n">_model</span><span class="o">.</span><span class="n">registerMenuItem</span><span class="p">(</span><span class="s1">&#39;Component/Scripts&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+<span class="n">_model</span><span class="o">.</span><span class="n">registerMenuItem</span><span class="p">(</span><span class="s1">&#39;Component/UI&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+<span class="n">_model</span><span class="o">.</span><span class="n">registerMenuItem</span><span class="p">(</span><span class="s1">&#39;Component/Event&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+<span class="n">_model</span><span class="o">.</span><span class="n">registerMenuItem</span><span class="p">(</span><span class="s1">&#39;Component/Input&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+
+
+<span class="c1">#####################  MENU - WINDOW  #####################</span>
+<span class="n">_model</span><span class="o">.</span><span class="n">registerMenuItem</span><span class="p">(</span><span class="s1">&#39;Window/Next Window&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">,</span> <span class="s1">&#39;Ctrl+Tab&#39;</span><span class="p">)</span>
+<span class="n">_model</span><span class="o">.</span><span class="n">registerMenuItem</span><span class="p">(</span><span class="s1">&#39;Window/Previous Window&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">,</span> <span class="s1">&#39;Ctrl+Shift+Tab&#39;</span><span class="p">)</span>
+
+<span class="n">_model</span><span class="o">.</span><span class="n">registerMenuSeparator</span><span class="p">(</span><span class="s1">&#39;Window&#39;</span><span class="p">)</span>
+<span class="n">_model</span><span class="o">.</span><span class="n">registerMenuItem</span><span class="p">(</span><span class="s1">&#39;Window/Layouts/Default&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+<span class="n">_model</span><span class="o">.</span><span class="n">registerMenuSeparator</span><span class="p">(</span><span class="s1">&#39;Window/Layouts&#39;</span><span class="p">)</span>
+<span class="n">_model</span><span class="o">.</span><span class="n">registerMenuItem</span><span class="p">(</span><span class="s1">&#39;Window/Layouts/Save Layout...&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+<span class="n">_model</span><span class="o">.</span><span class="n">registerMenuItem</span><span class="p">(</span><span class="s1">&#39;Window/Layouts/Load Layout...&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+<span class="n">_model</span><span class="o">.</span><span class="n">registerMenuItem</span><span class="p">(</span><span class="s1">&#39;Window/Layouts/Revert Factory Settings...&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+
+<span class="n">_model</span><span class="o">.</span><span class="n">registerMenuSeparator</span><span class="p">(</span><span class="s1">&#39;Window&#39;</span><span class="p">)</span>
+<span class="n">_model</span><span class="o">.</span><span class="n">registerMenuItem</span><span class="p">(</span><span class="s1">&#39;Window/General/Scene&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">,</span> <span class="s1">&#39;Ctrl+1&#39;</span><span class="p">)</span>
+<span class="n">_model</span><span class="o">.</span><span class="n">registerMenuItem</span><span class="p">(</span><span class="s1">&#39;Window/General/Game&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">,</span> <span class="s1">&#39;Ctrl+2&#39;</span><span class="p">)</span>
+<span class="n">_model</span><span class="o">.</span><span class="n">registerMenuItem</span><span class="p">(</span><span class="s1">&#39;Window/General/Inspector&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">,</span> <span class="s1">&#39;Ctrl+3&#39;</span><span class="p">)</span>
+<span class="n">_model</span><span class="o">.</span><span class="n">registerMenuItem</span><span class="p">(</span><span class="s1">&#39;Window/General/Hierarchy&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">,</span> <span class="s1">&#39;Ctrl+4&#39;</span><span class="p">)</span>
+<span class="n">_model</span><span class="o">.</span><span class="n">registerMenuItem</span><span class="p">(</span><span class="s1">&#39;Window/General/Project&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">,</span> <span class="s1">&#39;Ctrl+5&#39;</span><span class="p">)</span>
+<span class="n">_model</span><span class="o">.</span><span class="n">registerMenuItem</span><span class="p">(</span><span class="s1">&#39;Window/General/Console&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">,</span> <span class="s1">&#39;Ctrl+Shift+C&#39;</span><span class="p">)</span>
+<span class="n">_model</span><span class="o">.</span><span class="n">registerMenuItem</span><span class="p">(</span><span class="s1">&#39;Window/General/Test Runner&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+<span class="n">_model</span><span class="o">.</span><span class="n">registerMenuSeparator</span><span class="p">(</span><span class="s1">&#39;Window/General&#39;</span><span class="p">)</span>
+<span class="n">_model</span><span class="o">.</span><span class="n">registerMenuItem</span><span class="p">(</span><span class="s1">&#39;Window/General/Active Tool&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+
+<span class="n">_model</span><span class="o">.</span><span class="n">registerMenuItem</span><span class="p">(</span><span class="s1">&#39;Window/Rendering/Lighting Settings&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+<span class="n">_model</span><span class="o">.</span><span class="n">registerMenuItem</span><span class="p">(</span><span class="s1">&#39;Window/Rendering/Light Explorer&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+<span class="n">_model</span><span class="o">.</span><span class="n">registerMenuSeparator</span><span class="p">(</span><span class="s1">&#39;Window/Rendering&#39;</span><span class="p">)</span>
+<span class="n">_model</span><span class="o">.</span><span class="n">registerMenuItem</span><span class="p">(</span><span class="s1">&#39;Window/Rendering/Occlusion Culling&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+
+<span class="n">_model</span><span class="o">.</span><span class="n">registerMenuItem</span><span class="p">(</span><span class="s1">&#39;Window/Animation/Animation&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">,</span> <span class="s1">&#39;Ctrl+6&#39;</span><span class="p">)</span>
+<span class="n">_model</span><span class="o">.</span><span class="n">registerMenuItem</span><span class="p">(</span><span class="s1">&#39;Window/Audio/Audio Mixer&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">,</span> <span class="s1">&#39;Ctrl+8&#39;</span><span class="p">)</span>
+<span class="n">_model</span><span class="o">.</span><span class="n">registerMenuItem</span><span class="p">(</span><span class="s1">&#39;Window/Sequencing/Timeline&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+
+<span class="n">_model</span><span class="o">.</span><span class="n">registerMenuItem</span><span class="p">(</span><span class="s1">&#39;Window/Analysis/Profiler&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">,</span> <span class="s1">&#39;Ctrl+7&#39;</span><span class="p">)</span>
+<span class="n">_model</span><span class="o">.</span><span class="n">registerMenuItem</span><span class="p">(</span><span class="s1">&#39;Window/Analysis/Frame Debugger&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+<span class="n">_model</span><span class="o">.</span><span class="n">registerMenuItem</span><span class="p">(</span><span class="s1">&#39;Window/Analysis/Physics Debugger&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+<span class="n">_model</span><span class="o">.</span><span class="n">registerMenuSeparator</span><span class="p">(</span><span class="s1">&#39;Window/Analysis&#39;</span><span class="p">)</span>
+<span class="n">_model</span><span class="o">.</span><span class="n">registerMenuItem</span><span class="p">(</span><span class="s1">&#39;Window/Analysis/Input Debugger&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+
+<span class="n">_model</span><span class="o">.</span><span class="n">registerMenuItem</span><span class="p">(</span><span class="s1">&#39;Window/2D/Sprite Editor&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">,</span> <span class="s1">&#39;Ctrl+6&#39;</span><span class="p">)</span>
+<span class="n">_model</span><span class="o">.</span><span class="n">registerMenuItem</span><span class="p">(</span><span class="s1">&#39;Window/2D/Sprite Packer&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">,</span> <span class="s1">&#39;Ctrl+8&#39;</span><span class="p">)</span>
+
+
+<span class="c1">#####################  MENU - HELP  #####################</span>
+<span class="n">_model</span><span class="o">.</span><span class="n">registerMenuItem</span><span class="p">(</span><span class="s1">&#39;Help/About Dear&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+<span class="n">_model</span><span class="o">.</span><span class="n">registerMenuItem</span><span class="p">(</span><span class="s1">&#39;Help/Documentation&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+<span class="n">_model</span><span class="o">.</span><span class="n">registerMenuSeparator</span><span class="p">(</span><span class="s1">&#39;Help&#39;</span><span class="p">)</span>
+<span class="n">_model</span><span class="o">.</span><span class="n">registerMenuItem</span><span class="p">(</span><span class="s1">&#39;Help/Release Notes&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+<span class="n">_model</span><span class="o">.</span><span class="n">registerMenuItem</span><span class="p">(</span><span class="s1">&#39;Help/Software Licenses&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+<span class="n">_model</span><span class="o">.</span><span class="n">registerMenuItem</span><span class="p">(</span><span class="s1">&#39;Help/Report a Bug...&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+<span class="n">_model</span><span class="o">.</span><span class="n">registerMenuSeparator</span><span class="p">(</span><span class="s1">&#39;Help&#39;</span><span class="p">)</span>
+<span class="n">_model</span><span class="o">.</span><span class="n">registerMenuItem</span><span class="p">(</span><span class="s1">&#39;Help/Troubleshoot Issue...&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+<span class="n">_model</span><span class="o">.</span><span class="n">registerMenuSeparator</span><span class="p">(</span><span class="s1">&#39;Help&#39;</span><span class="p">)</span>
+<span class="n">_model</span><span class="o">.</span><span class="n">registerMenuItem</span><span class="p">(</span><span class="s1">&#39;Help/Quick Search&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">,</span> <span class="s1">&#39;Alt+</span><span class="se">\&#39;</span><span class="s1">&#39;</span><span class="p">)</span>
+<span class="c1"># _model.registerMenuItem(&#39;File/test&#39;, None, role = QAction.ApplicationSpecificRole, priority = 1)</span>
+
+
+<span class="c1">#####################  API  ######################</span>
+<div class="viewcode-block" id="createMenuBar"><a class="viewcode-back" href="../../../autoapi/editor/widgets/menubar/index.html#editor.widgets.menubar.createMenuBar">[docs]</a><span class="k">def</span> <span class="nf">createMenuBar</span><span class="p">(</span><span class="n">parent</span><span class="p">):</span>
+	<span class="k">return</span> <span class="n">_model</span><span class="o">.</span><span class="n">createMenuBar</span><span class="p">(</span><span class="n">parent</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="updateMenuBar"><a class="viewcode-back" href="../../../autoapi/editor/widgets/menubar/index.html#editor.widgets.menubar.updateMenuBar">[docs]</a><span class="k">def</span> <span class="nf">updateMenuBar</span><span class="p">():</span>
+	<span class="k">return</span> <span class="n">_model</span><span class="o">.</span><span class="n">updateMenuBar</span><span class="p">()</span></div>
+
+<div class="viewcode-block" id="registerMenu"><a class="viewcode-back" href="../../../autoapi/editor/widgets/menubar/index.html#editor.widgets.menubar.registerMenu">[docs]</a><span class="k">def</span> <span class="nf">registerMenu</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">priority</span><span class="p">):</span>
+	<span class="n">_model</span><span class="o">.</span><span class="n">registerMenu</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">priority</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="registerMenuItem"><a class="viewcode-back" href="../../../autoapi/editor/widgets/menubar/index.html#editor.widgets.menubar.registerMenuItem">[docs]</a><span class="k">def</span> <span class="nf">registerMenuItem</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="n">callback</span><span class="p">,</span> <span class="n">shortcut</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">priority</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="o">**</span><span class="n">data</span><span class="p">):</span>
+	<span class="n">_model</span><span class="o">.</span><span class="n">registerMenuItem</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="n">callback</span><span class="p">,</span> <span class="n">shortcut</span><span class="p">,</span> <span class="n">priority</span><span class="p">,</span> <span class="o">**</span><span class="n">data</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="registerMenuSeparator"><a class="viewcode-back" href="../../../autoapi/editor/widgets/menubar/index.html#editor.widgets.menubar.registerMenuSeparator">[docs]</a><span class="k">def</span> <span class="nf">registerMenuSeparator</span><span class="p">(</span><span class="n">groupPath</span><span class="p">,</span> <span class="n">priority</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="o">**</span><span class="n">data</span><span class="p">):</span>
+	<span class="n">_model</span><span class="o">.</span><span class="n">registerMenuSeparator</span><span class="p">(</span><span class="n">groupPath</span><span class="p">,</span> <span class="n">priority</span><span class="p">,</span> <span class="o">**</span><span class="n">data</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="menuItem"><a class="viewcode-back" href="../../../autoapi/editor/widgets/menubar/index.html#editor.widgets.menubar.menuItem">[docs]</a><span class="k">def</span> <span class="nf">menuItem</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="n">shortcut</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">priority</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="o">**</span><span class="n">data</span><span class="p">):</span>
+	<span class="k">def</span> <span class="nf">warpper</span><span class="p">(</span><span class="n">func</span><span class="p">):</span>
+		<span class="n">_model</span><span class="o">.</span><span class="n">registerMenuItem</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="n">func</span><span class="p">,</span> <span class="n">shortcut</span><span class="p">,</span> <span class="n">priority</span><span class="p">,</span> <span class="o">**</span><span class="n">data</span><span class="p">)</span>
+		<span class="k">return</span> <span class="n">func</span>
+	<span class="k">return</span> <span class="n">warpper</span></div>
+</pre></div>
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023, kakako.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

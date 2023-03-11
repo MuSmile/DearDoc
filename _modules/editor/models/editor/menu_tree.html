@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>editor.models.editor.menu_tree &mdash; Welcome to DearDoc!</title>
+      <link rel="stylesheet" href="../../../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../../../_static/graphviz.css" type="text/css" />
+    <link rel="shortcut icon" href="../../../../_static/favicon.ico"/>
+  <!--[if lt IE 9]>
+    <script src="../../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script data-url_root="../../../../" id="documentation_options" src="../../../../_static/documentation_options.js"></script>
+        <script src="../../../../_static/doctools.js"></script>
+        <script src="../../../../_static/sphinx_highlight.js"></script>
+    <script src="../../../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../../../index.html" class="icon icon-home">
+            DearDoc
+          </a>
+              <div class="version">
+                dev
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../_docs/about.html">About</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../_docs/about/introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../_docs/about/frequently_asked_questions.html">Frequently asked questions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../_docs/about/troubleshooting.html">Troubleshooting</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../_docs/about/license.html">License</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../_docs/manual.html">Manual</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../_docs/manual/introduction.html">Introduction</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../_docs/contributing.html">Contributing</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../_docs/contributing/introduction.html">Introduction</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../autoapi/index.html">API Reference</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../autoapi/editor/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../../autoapi/editor/common/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.common</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../../autoapi/editor/common/database/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.common.database</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../autoapi/editor/common/dispatcher/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.common.dispatcher</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../autoapi/editor/common/ease/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.common.ease</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../autoapi/editor/common/file_watcher/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.common.file_watcher</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../autoapi/editor/common/icon_cache/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.common.icon_cache</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../autoapi/editor/common/logger/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.common.logger</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../autoapi/editor/common/math/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.common.math</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../autoapi/editor/common/native/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.common.native</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../autoapi/editor/common/util/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.common.util</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../autoapi/editor/models/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.models</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../../autoapi/editor/models/asset/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.models.asset</span></code></a><ul>
+<li class="toctree-l5"><a class="reference internal" href="../../../../autoapi/editor/models/asset/asset/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.models.asset.asset</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../../../autoapi/editor/models/asset/importer/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.models.asset.importer</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../../../autoapi/editor/models/asset/meta/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.models.asset.meta</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../autoapi/editor/models/editor/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.models.editor</span></code></a><ul>
+<li class="toctree-l5"><a class="reference internal" href="../../../../autoapi/editor/models/editor/form/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.models.editor.form</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../../../autoapi/editor/models/editor/menu_tree/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.models.editor.menu_tree</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../autoapi/editor/models/gameplay/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.models.gameplay</span></code></a><ul>
+<li class="toctree-l5"><a class="reference internal" href="../../../../autoapi/editor/models/gameplay/component/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.models.gameplay.component</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../../../autoapi/editor/models/gameplay/entity/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.models.gameplay.entity</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../../../autoapi/editor/models/gameplay/scene/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.models.gameplay.scene</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../autoapi/editor/models/graph/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.models.graph</span></code></a><ul>
+<li class="toctree-l5"><a class="reference internal" href="../../../../autoapi/editor/models/graph/base/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.models.graph.base</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../../../autoapi/editor/models/graph/fsm/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.models.graph.fsm</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../../../autoapi/editor/models/graph/shader/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.models.graph.shader</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../autoapi/editor/pipeline/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.pipeline</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../../autoapi/editor/pipeline/build/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.pipeline.build</span></code></a><ul>
+<li class="toctree-l5"><a class="reference internal" href="../../../../autoapi/editor/pipeline/build/targets/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.pipeline.build.targets</span></code></a><ul>
+<li class="toctree-l6"><a class="reference internal" href="../../../../autoapi/editor/pipeline/build/targets/default/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.pipeline.build.targets.default</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l5"><a class="reference internal" href="../../../../autoapi/editor/pipeline/build/registry/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.pipeline.build.registry</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../../../autoapi/editor/pipeline/build/shared_task/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.pipeline.build.shared_task</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../autoapi/editor/pipeline/run/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.pipeline.run</span></code></a><ul>
+<li class="toctree-l5"><a class="reference internal" href="../../../../autoapi/editor/pipeline/run/targets/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.pipeline.run.targets</span></code></a><ul>
+<li class="toctree-l6"><a class="reference internal" href="../../../../autoapi/editor/pipeline/run/targets/editor/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.pipeline.run.targets.editor</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="../../../../autoapi/editor/pipeline/run/targets/external/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.pipeline.run.targets.external</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l5"><a class="reference internal" href="../../../../autoapi/editor/pipeline/run/registry/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.pipeline.run.registry</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../../../autoapi/editor/pipeline/run/shared_task/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.pipeline.run.shared_task</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../autoapi/editor/pipeline/core/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.pipeline.core</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../autoapi/editor/views/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.views</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../../autoapi/editor/views/animation/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.views.animation</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../autoapi/editor/views/build/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.views.build</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../autoapi/editor/views/console/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.views.console</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../autoapi/editor/views/fsm_graph/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.views.fsm_graph</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../autoapi/editor/views/gallery/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.views.gallery</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../autoapi/editor/views/game/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.views.game</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../autoapi/editor/views/hierarchy/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.views.hierarchy</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../autoapi/editor/views/inspector/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.views.inspector</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../autoapi/editor/views/preference/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.views.preference</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../autoapi/editor/views/preview/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.views.preview</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../autoapi/editor/views/profiler/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.views.profiler</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../autoapi/editor/views/project/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.views.project</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../autoapi/editor/views/project_setting/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.views.project_setting</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../autoapi/editor/views/scene/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.views.scene</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../autoapi/editor/views/shader_graph/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.views.shader_graph</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../autoapi/editor/widgets/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.widgets</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../../autoapi/editor/widgets/basic/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.widgets.basic</span></code></a><ul>
+<li class="toctree-l5"><a class="reference internal" href="../../../../autoapi/editor/widgets/basic/button/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.widgets.basic.button</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../../../autoapi/editor/widgets/basic/line_edit/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.widgets.basic.line_edit</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../../../autoapi/editor/widgets/basic/search_edit/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.widgets.basic.search_edit</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../../../autoapi/editor/widgets/basic/slider/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.widgets.basic.slider</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../autoapi/editor/widgets/complex/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.widgets.complex</span></code></a><ul>
+<li class="toctree-l5"><a class="reference internal" href="../../../../autoapi/editor/widgets/complex/advanced_menu/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.widgets.complex.advanced_menu</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../../../autoapi/editor/widgets/complex/color_picker/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.widgets.complex.color_picker</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../../../autoapi/editor/widgets/complex/form_view/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.widgets.complex.form_view</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../../../autoapi/editor/widgets/complex/tree_stacked/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.widgets.complex.tree_stacked</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../../../autoapi/editor/widgets/complex/tree_view/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.widgets.complex.tree_view</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../autoapi/editor/widgets/container/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.widgets.container</span></code></a><ul>
+<li class="toctree-l5"><a class="reference internal" href="../../../../autoapi/editor/widgets/container/collapsible/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.widgets.container.collapsible</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../../../autoapi/editor/widgets/container/sliding_stacked/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.widgets.container.sliding_stacked</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../autoapi/editor/widgets/misc/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.widgets.misc</span></code></a><ul>
+<li class="toctree-l5"><a class="reference internal" href="../../../../autoapi/editor/widgets/misc/flow_layout/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.widgets.misc.flow_layout</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../../../autoapi/editor/widgets/misc/line/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.widgets.misc.line</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../../../autoapi/editor/widgets/misc/pixmap_icon/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.widgets.misc.pixmap_icon</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../../../autoapi/editor/widgets/misc/toast/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.widgets.misc.toast</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../../../autoapi/editor/widgets/misc/waiting_spinner/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.widgets.misc.waiting_spinner</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../autoapi/editor/widgets/menubar/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.widgets.menubar</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../autoapi/editor/widgets/statusbar/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.widgets.statusbar</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../autoapi/editor/widgets/toolbar/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.widgets.toolbar</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../autoapi/editor/asset_db/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.asset_db</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../autoapi/editor/editor_prefs/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.editor_prefs</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../autoapi/editor/main_window/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.main_window</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../autoapi/editor/theme_manager/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.theme_manager</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../autoapi/editor/view_manager/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.view_manager</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../autoapi/engine/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">engine</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../../autoapi/engine/bridge/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">engine.bridge</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../autoapi/engine/runtime/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">engine.runtime</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../autoapi/engine/standalone/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">engine.standalone</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../autoapi/launcher/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">launcher</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../autoapi/tools/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">tools</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../../autoapi/tools/doc/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">tools.doc</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../autoapi/tools/hello/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">tools.hello</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../autoapi/tools/ide/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">tools.ide</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../autoapi/tools/python/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">tools.python</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../autoapi/tools/report/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">tools.report</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../../index.html">DearDoc</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../../../index.html">Module code</a></li>
+      <li class="breadcrumb-item active">editor.models.editor.menu_tree</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <h1>Source code for editor.models.editor.menu_tree</h1><div class="highlight"><pre>
+<span></span><span class="kn">from</span> <span class="nn">PySide6.QtCore</span> <span class="kn">import</span> <span class="n">Qt</span>
+<span class="kn">from</span> <span class="nn">PySide6.QtGui</span> <span class="kn">import</span> <span class="n">QAction</span>
+<span class="kn">from</span> <span class="nn">PySide6.QtWidgets</span> <span class="kn">import</span> <span class="n">QMenu</span><span class="p">,</span> <span class="n">QMenuBar</span>
+<span class="kn">from</span> <span class="nn">editor.common.logger</span> <span class="kn">import</span> <span class="n">warn</span>
+
+
+<div class="viewcode-block" id="MenuItem"><a class="viewcode-back" href="../../../../autoapi/editor/models/editor/menu_tree/index.html#editor.models.editor.menu_tree.MenuItem">[docs]</a><span class="k">class</span> <span class="nc">MenuItem</span><span class="p">:</span>
+	<span class="k">def</span> <span class="fm">__init__</span>  <span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">data</span><span class="p">):</span> <span class="bp">self</span><span class="o">.</span><span class="n">data</span> <span class="o">=</span> <span class="n">data</span>
+<div class="viewcode-block" id="MenuItem.label"><a class="viewcode-back" href="../../../../autoapi/editor/models/editor/menu_tree/index.html#editor.models.editor.menu_tree.MenuItem.label">[docs]</a>	<span class="k">def</span> <span class="nf">label</span>           <span class="p">(</span><span class="bp">self</span><span class="p">):</span> <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;label&#39;</span>          <span class="p">]</span></div>
+<div class="viewcode-block" id="MenuItem.callback"><a class="viewcode-back" href="../../../../autoapi/editor/models/editor/menu_tree/index.html#editor.models.editor.menu_tree.MenuItem.callback">[docs]</a>	<span class="k">def</span> <span class="nf">callback</span>        <span class="p">(</span><span class="bp">self</span><span class="p">):</span> <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;callback&#39;</span>       <span class="p">]</span> <span class="k">if</span> <span class="s1">&#39;callback&#39;</span>        <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">data</span> <span class="k">else</span> <span class="kc">None</span></div>
+<div class="viewcode-block" id="MenuItem.shortcut"><a class="viewcode-back" href="../../../../autoapi/editor/models/editor/menu_tree/index.html#editor.models.editor.menu_tree.MenuItem.shortcut">[docs]</a>	<span class="k">def</span> <span class="nf">shortcut</span>        <span class="p">(</span><span class="bp">self</span><span class="p">):</span> <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;shortcut&#39;</span>       <span class="p">]</span> <span class="k">if</span> <span class="s1">&#39;shortcut&#39;</span>        <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">data</span> <span class="k">else</span> <span class="kc">None</span></div>
+<div class="viewcode-block" id="MenuItem.shortcutContext"><a class="viewcode-back" href="../../../../autoapi/editor/models/editor/menu_tree/index.html#editor.models.editor.menu_tree.MenuItem.shortcutContext">[docs]</a>	<span class="k">def</span> <span class="nf">shortcutContext</span> <span class="p">(</span><span class="bp">self</span><span class="p">):</span> <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;shortcutContext&#39;</span><span class="p">]</span> <span class="k">if</span> <span class="s1">&#39;shortcutContext&#39;</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">data</span> <span class="k">else</span> <span class="kc">None</span></div>
+<div class="viewcode-block" id="MenuItem.checkable"><a class="viewcode-back" href="../../../../autoapi/editor/models/editor/menu_tree/index.html#editor.models.editor.menu_tree.MenuItem.checkable">[docs]</a>	<span class="k">def</span> <span class="nf">checkable</span>       <span class="p">(</span><span class="bp">self</span><span class="p">):</span> <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;checkable&#39;</span>      <span class="p">]</span> <span class="k">if</span> <span class="s1">&#39;checkable&#39;</span>       <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">data</span> <span class="k">else</span> <span class="kc">False</span></div>
+<div class="viewcode-block" id="MenuItem.checked"><a class="viewcode-back" href="../../../../autoapi/editor/models/editor/menu_tree/index.html#editor.models.editor.menu_tree.MenuItem.checked">[docs]</a>	<span class="k">def</span> <span class="nf">checked</span>         <span class="p">(</span><span class="bp">self</span><span class="p">):</span> <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;checked&#39;</span>        <span class="p">]</span> <span class="k">if</span> <span class="s1">&#39;checked&#39;</span>         <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">data</span> <span class="k">else</span> <span class="kc">False</span></div>
+<div class="viewcode-block" id="MenuItem.enabled"><a class="viewcode-back" href="../../../../autoapi/editor/models/editor/menu_tree/index.html#editor.models.editor.menu_tree.MenuItem.enabled">[docs]</a>	<span class="k">def</span> <span class="nf">enabled</span>         <span class="p">(</span><span class="bp">self</span><span class="p">):</span> <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;enabled&#39;</span>        <span class="p">]</span> <span class="k">if</span> <span class="s1">&#39;enabled&#39;</span>         <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">data</span> <span class="k">else</span> <span class="kc">False</span></div>
+<div class="viewcode-block" id="MenuItem.menuRole"><a class="viewcode-back" href="../../../../autoapi/editor/models/editor/menu_tree/index.html#editor.models.editor.menu_tree.MenuItem.menuRole">[docs]</a>	<span class="k">def</span> <span class="nf">menuRole</span>        <span class="p">(</span><span class="bp">self</span><span class="p">):</span> <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;menuRole&#39;</span>       <span class="p">]</span> <span class="k">if</span> <span class="s1">&#39;menuRole&#39;</span>        <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">data</span> <span class="k">else</span> <span class="kc">None</span></div>
+<div class="viewcode-block" id="MenuItem.priority"><a class="viewcode-back" href="../../../../autoapi/editor/models/editor/menu_tree/index.html#editor.models.editor.menu_tree.MenuItem.priority">[docs]</a>	<span class="k">def</span> <span class="nf">priority</span>        <span class="p">(</span><span class="bp">self</span><span class="p">):</span> <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;priority&#39;</span>       <span class="p">]</span> <span class="k">if</span> <span class="s1">&#39;priority&#39;</span>        <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">data</span> <span class="k">else</span> <span class="kc">None</span></div>
+<div class="viewcode-block" id="MenuItem.category"><a class="viewcode-back" href="../../../../autoapi/editor/models/editor/menu_tree/index.html#editor.models.editor.menu_tree.MenuItem.category">[docs]</a>	<span class="k">def</span> <span class="nf">category</span>        <span class="p">(</span><span class="bp">self</span><span class="p">):</span> <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;category&#39;</span>       <span class="p">]</span> <span class="k">if</span> <span class="s1">&#39;category&#39;</span>        <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">data</span> <span class="k">else</span> <span class="s1">&#39;built-in&#39;</span></div>
+
+<div class="viewcode-block" id="MenuItem.createAction"><a class="viewcode-back" href="../../../../autoapi/editor/models/editor/menu_tree/index.html#editor.models.editor.menu_tree.MenuItem.createAction">[docs]</a>	<span class="k">def</span> <span class="nf">createAction</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">parent</span><span class="p">):</span>
+		<span class="n">action</span> <span class="o">=</span> <span class="n">QAction</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">label</span><span class="p">(),</span> <span class="n">parent</span><span class="p">)</span>
+		<span class="n">action</span><span class="o">.</span><span class="n">setAutoRepeat</span><span class="p">(</span><span class="kc">False</span><span class="p">)</span>
+		<span class="k">if</span> <span class="s1">&#39;callback&#39;</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="p">:</span>
+			<span class="n">action</span><span class="o">.</span><span class="n">triggered</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;callback&#39;</span><span class="p">])</span>
+		<span class="k">if</span> <span class="s1">&#39;shortcut&#39;</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="p">:</span>
+			<span class="n">action</span><span class="o">.</span><span class="n">setShortcut</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;shortcut&#39;</span><span class="p">])</span>
+			<span class="k">if</span> <span class="s1">&#39;shortcutContext&#39;</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="p">:</span> <span class="n">action</span><span class="o">.</span><span class="n">setShortcutContext</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;shortcutContext&#39;</span><span class="p">])</span>
+		<span class="k">if</span> <span class="s1">&#39;checkable&#39;</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="p">:</span>
+			<span class="n">action</span><span class="o">.</span><span class="n">setCheckable</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;checkable&#39;</span><span class="p">])</span>
+			<span class="n">action</span><span class="o">.</span><span class="n">setChecked</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">checked</span><span class="p">())</span>
+		<span class="k">if</span> <span class="s1">&#39;enabled&#39;</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="p">:</span>
+			<span class="n">action</span><span class="o">.</span><span class="n">setEnabled</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;enabled&#39;</span><span class="p">])</span>
+		<span class="k">if</span> <span class="s1">&#39;menuRole&#39;</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="p">:</span>
+			<span class="n">action</span><span class="o">.</span><span class="n">setMenuRole</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;menuRole&#39;</span><span class="p">])</span>
+		<span class="k">return</span> <span class="n">action</span></div></div>
+
+<div class="viewcode-block" id="MenuSeparator"><a class="viewcode-back" href="../../../../autoapi/editor/models/editor/menu_tree/index.html#editor.models.editor.menu_tree.MenuSeparator">[docs]</a><span class="k">class</span> <span class="nc">MenuSeparator</span><span class="p">:</span>
+	<span class="k">def</span> <span class="fm">__init__</span> <span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">data</span><span class="p">):</span> <span class="bp">self</span><span class="o">.</span><span class="n">data</span> <span class="o">=</span> <span class="n">data</span>
+<div class="viewcode-block" id="MenuSeparator.priority"><a class="viewcode-back" href="../../../../autoapi/editor/models/editor/menu_tree/index.html#editor.models.editor.menu_tree.MenuSeparator.priority">[docs]</a>	<span class="k">def</span> <span class="nf">priority</span> <span class="p">(</span><span class="bp">self</span><span class="p">):</span> <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;priority&#39;</span> <span class="p">]</span> <span class="k">if</span> <span class="s1">&#39;priority&#39;</span>  <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">data</span> <span class="k">else</span> <span class="kc">None</span></div>
+<div class="viewcode-block" id="MenuSeparator.category"><a class="viewcode-back" href="../../../../autoapi/editor/models/editor/menu_tree/index.html#editor.models.editor.menu_tree.MenuSeparator.category">[docs]</a>	<span class="k">def</span> <span class="nf">category</span> <span class="p">(</span><span class="bp">self</span><span class="p">):</span> <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;category&#39;</span> <span class="p">]</span> <span class="k">if</span> <span class="s1">&#39;category&#39;</span>  <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">data</span> <span class="k">else</span> <span class="s1">&#39;built-in&#39;</span></div>
+
+<div class="viewcode-block" id="MenuSeparator.createAction"><a class="viewcode-back" href="../../../../autoapi/editor/models/editor/menu_tree/index.html#editor.models.editor.menu_tree.MenuSeparator.createAction">[docs]</a>	<span class="k">def</span> <span class="nf">createAction</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">parent</span><span class="p">):</span>
+		<span class="n">action</span> <span class="o">=</span> <span class="n">QAction</span><span class="p">(</span><span class="n">parent</span><span class="p">)</span>
+		<span class="n">action</span><span class="o">.</span><span class="n">setSeparator</span><span class="p">(</span><span class="kc">True</span><span class="p">)</span>
+		<span class="k">return</span> <span class="n">action</span></div></div>
+
+<div class="viewcode-block" id="MenuGroup"><a class="viewcode-back" href="../../../../autoapi/editor/models/editor/menu_tree/index.html#editor.models.editor.menu_tree.MenuGroup">[docs]</a><span class="k">class</span> <span class="nc">MenuGroup</span><span class="p">:</span>
+	<span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">data</span><span class="p">):</span>
+		<span class="bp">self</span><span class="o">.</span><span class="n">data</span> <span class="o">=</span> <span class="n">data</span>
+		<span class="bp">self</span><span class="o">.</span><span class="n">children</span> <span class="o">=</span> <span class="p">[]</span>
+
+<div class="viewcode-block" id="MenuGroup.label"><a class="viewcode-back" href="../../../../autoapi/editor/models/editor/menu_tree/index.html#editor.models.editor.menu_tree.MenuGroup.label">[docs]</a>	<span class="k">def</span> <span class="nf">label</span>    <span class="p">(</span><span class="bp">self</span><span class="p">):</span> <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;label&#39;</span>    <span class="p">]</span></div>
+<div class="viewcode-block" id="MenuGroup.priority"><a class="viewcode-back" href="../../../../autoapi/editor/models/editor/menu_tree/index.html#editor.models.editor.menu_tree.MenuGroup.priority">[docs]</a>	<span class="k">def</span> <span class="nf">priority</span> <span class="p">(</span><span class="bp">self</span><span class="p">):</span> <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;priority&#39;</span> <span class="p">]</span> <span class="k">if</span> <span class="s1">&#39;priority&#39;</span>  <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">data</span> <span class="k">else</span> <span class="kc">None</span></div>
+
+<div class="viewcode-block" id="MenuGroup.find"><a class="viewcode-back" href="../../../../autoapi/editor/models/editor/menu_tree/index.html#editor.models.editor.menu_tree.MenuGroup.find">[docs]</a>	<span class="k">def</span> <span class="nf">find</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">label</span><span class="p">):</span>
+		<span class="k">for</span> <span class="n">child</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">children</span><span class="p">:</span>
+			<span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">child</span><span class="p">,</span> <span class="n">MenuSeparator</span><span class="p">):</span> <span class="k">continue</span>
+			<span class="k">if</span> <span class="n">child</span><span class="o">.</span><span class="n">label</span><span class="p">()</span> <span class="o">==</span> <span class="n">label</span><span class="p">:</span> <span class="k">return</span> <span class="n">child</span></div>
+
+<div class="viewcode-block" id="MenuGroup.createMenu"><a class="viewcode-back" href="../../../../autoapi/editor/models/editor/menu_tree/index.html#editor.models.editor.menu_tree.MenuGroup.createMenu">[docs]</a>	<span class="k">def</span> <span class="nf">createMenu</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">parent</span><span class="p">):</span>
+		<span class="n">menu</span> <span class="o">=</span> <span class="n">QMenu</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">label</span><span class="p">(),</span> <span class="n">parent</span><span class="p">)</span>
+		<span class="bp">self</span><span class="o">.</span><span class="n">children</span><span class="o">.</span><span class="n">sort</span><span class="p">(</span><span class="n">key</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">child</span><span class="p">:</span> <span class="n">child</span><span class="o">.</span><span class="n">priority</span><span class="p">())</span>
+		
+		<span class="n">prevLayer</span> <span class="o">=</span> <span class="kc">None</span>
+		<span class="k">for</span> <span class="n">child</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">children</span><span class="p">:</span>
+			<span class="n">layer</span> <span class="o">=</span> <span class="n">child</span><span class="o">.</span><span class="n">priority</span><span class="p">()</span> <span class="o">//</span> <span class="mi">100</span>
+			<span class="k">if</span> <span class="n">prevLayer</span> <span class="o">!=</span> <span class="kc">None</span> <span class="ow">and</span> <span class="n">prevLayer</span> <span class="o">&lt;</span> <span class="n">layer</span><span class="p">:</span> <span class="n">menu</span><span class="o">.</span><span class="n">addSeparator</span><span class="p">()</span>
+			<span class="n">prevLayer</span> <span class="o">=</span> <span class="n">layer</span>
+
+			<span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">child</span><span class="p">,</span> <span class="n">MenuGroup</span><span class="p">):</span>
+				<span class="n">menu</span><span class="o">.</span><span class="n">addMenu</span><span class="p">(</span><span class="n">child</span><span class="o">.</span><span class="n">createMenu</span><span class="p">(</span><span class="n">parent</span><span class="p">))</span>
+			<span class="k">else</span><span class="p">:</span>
+				<span class="n">menu</span><span class="o">.</span><span class="n">addAction</span><span class="p">(</span><span class="n">child</span><span class="o">.</span><span class="n">createAction</span><span class="p">(</span><span class="n">parent</span><span class="p">))</span>
+		<span class="k">return</span> <span class="n">menu</span></div></div>
+
+<div class="viewcode-block" id="MenuTree"><a class="viewcode-back" href="../../../../autoapi/editor/models/editor/menu_tree/index.html#editor.models.editor.menu_tree.MenuTree">[docs]</a><span class="k">class</span> <span class="nc">MenuTree</span><span class="p">:</span>
+	<span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">label</span> <span class="o">=</span> <span class="kc">None</span><span class="p">):</span>
+		<span class="bp">self</span><span class="o">.</span><span class="n">root</span> <span class="o">=</span> <span class="n">MenuGroup</span><span class="p">(</span> <span class="p">{</span><span class="s1">&#39;label&#39;</span> <span class="p">:</span> <span class="n">label</span><span class="p">}</span> <span class="p">)</span>
+		<span class="bp">self</span><span class="o">.</span><span class="n">_currMaxPriority</span> <span class="o">=</span> <span class="kc">None</span>
+
+	<span class="k">def</span> <span class="nf">_calcCurrMaxPriority</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">group</span><span class="p">):</span>
+		<span class="n">maxPriority</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="s1">&#39;-inf&#39;</span><span class="p">)</span>
+		<span class="k">for</span> <span class="n">child</span> <span class="ow">in</span> <span class="n">group</span><span class="o">.</span><span class="n">children</span><span class="p">:</span>
+			<span class="n">priority</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_calcCurrMaxPriority</span><span class="p">(</span><span class="n">child</span><span class="p">)</span> <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">child</span><span class="p">,</span> <span class="n">MenuGroup</span><span class="p">)</span> <span class="k">else</span> <span class="n">child</span><span class="o">.</span><span class="n">priority</span><span class="p">()</span>
+			<span class="k">if</span> <span class="n">priority</span> <span class="o">&gt;</span> <span class="n">maxPriority</span><span class="p">:</span> <span class="n">maxPriority</span> <span class="o">=</span> <span class="n">priority</span>
+		<span class="k">return</span> <span class="n">maxPriority</span>
+	<span class="k">def</span> <span class="nf">_autoPriority</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+		<span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_currMaxPriority</span> <span class="o">==</span> <span class="kc">None</span><span class="p">:</span>
+			<span class="k">return</span> <span class="nb">max</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_calcCurrMaxPriority</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">root</span><span class="p">))</span> <span class="o">+</span> <span class="mi">1</span>
+		<span class="k">else</span><span class="p">:</span>
+			<span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_currMaxPriority</span> <span class="o">+</span> <span class="mi">1</span>
+
+
+	<span class="c1">#####################   API   #####################</span>
+<div class="viewcode-block" id="MenuTree.addItem"><a class="viewcode-back" href="../../../../autoapi/editor/models/editor/menu_tree/index.html#editor.models.editor.menu_tree.MenuTree.addItem">[docs]</a>	<span class="k">def</span> <span class="nf">addItem</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">path</span><span class="p">,</span> <span class="n">callback</span><span class="p">,</span> <span class="n">shortcut</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">priority</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="o">**</span><span class="n">data</span><span class="p">):</span>
+		<span class="k">if</span> <span class="n">priority</span> <span class="o">==</span> <span class="kc">None</span><span class="p">:</span> <span class="n">priority</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_autoPriority</span><span class="p">()</span>
+
+		<span class="n">names</span> <span class="o">=</span> <span class="n">path</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;/&#39;</span><span class="p">)</span>
+		<span class="n">parent</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">root</span>
+		<span class="k">for</span> <span class="n">name</span> <span class="ow">in</span> <span class="n">names</span><span class="p">[:</span><span class="o">-</span><span class="mi">1</span><span class="p">]:</span>
+			<span class="n">group</span> <span class="o">=</span> <span class="n">parent</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="n">name</span><span class="p">)</span>
+			<span class="k">if</span> <span class="ow">not</span> <span class="n">group</span><span class="p">:</span>
+				<span class="n">group</span> <span class="o">=</span> <span class="n">MenuGroup</span><span class="p">({</span>
+					<span class="s1">&#39;label&#39;</span>   <span class="p">:</span> <span class="n">name</span><span class="p">,</span>
+					<span class="s1">&#39;priority&#39;</span><span class="p">:</span> <span class="n">priority</span><span class="p">,</span>
+				<span class="p">})</span>
+				<span class="n">parent</span><span class="o">.</span><span class="n">children</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">group</span><span class="p">)</span>
+			<span class="k">else</span><span class="p">:</span>
+				<span class="k">assert</span><span class="p">(</span><span class="nb">isinstance</span><span class="p">(</span><span class="n">group</span><span class="p">,</span> <span class="n">MenuGroup</span><span class="p">))</span>
+				<span class="k">if</span> <span class="n">priority</span> <span class="o">&lt;</span> <span class="n">group</span><span class="o">.</span><span class="n">priority</span><span class="p">():</span> <span class="n">group</span><span class="o">.</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;priority&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">priority</span>
+
+			<span class="n">parent</span> <span class="o">=</span> <span class="n">group</span>
+
+		<span class="n">name</span> <span class="o">=</span> <span class="n">names</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+		<span class="k">if</span> <span class="n">parent</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="n">name</span><span class="p">):</span> <span class="k">return</span> <span class="n">warn</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;menu item with same name </span><span class="se">\&#39;</span><span class="si">{</span><span class="n">path</span><span class="si">}</span><span class="se">\&#39;</span><span class="s1"> has registered, skip this.&#39;</span><span class="p">)</span>
+		
+		<span class="n">data</span><span class="p">[</span><span class="s1">&#39;label&#39;</span>   <span class="p">]</span> <span class="o">=</span> <span class="n">name</span>
+		<span class="n">data</span><span class="p">[</span><span class="s1">&#39;priority&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">priority</span>
+		<span class="k">if</span> <span class="n">callback</span><span class="p">:</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;callback&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">callback</span>
+		<span class="k">if</span> <span class="n">shortcut</span><span class="p">:</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;shortcut&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">shortcut</span>
+		<span class="n">item</span> <span class="o">=</span> <span class="n">MenuItem</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+		<span class="n">parent</span><span class="o">.</span><span class="n">children</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">item</span><span class="p">)</span>
+		<span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_currMaxPriority</span> <span class="o">==</span> <span class="kc">None</span> <span class="ow">or</span> <span class="n">priority</span> <span class="o">&gt;</span> <span class="bp">self</span><span class="o">.</span><span class="n">_currMaxPriority</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">_currMaxPriority</span> <span class="o">=</span> <span class="n">priority</span></div>
+
+<div class="viewcode-block" id="MenuTree.addSeparator"><a class="viewcode-back" href="../../../../autoapi/editor/models/editor/menu_tree/index.html#editor.models.editor.menu_tree.MenuTree.addSeparator">[docs]</a>	<span class="k">def</span> <span class="nf">addSeparator</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">groupPath</span><span class="p">,</span> <span class="n">priority</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="o">**</span><span class="n">data</span><span class="p">):</span>
+		<span class="k">if</span> <span class="n">priority</span> <span class="o">==</span> <span class="kc">None</span><span class="p">:</span> <span class="n">priority</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_autoPriority</span><span class="p">()</span>
+
+		<span class="n">parent</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">root</span>
+		<span class="k">if</span> <span class="n">groupPath</span><span class="p">:</span>
+			<span class="n">names</span> <span class="o">=</span> <span class="n">groupPath</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;/&#39;</span><span class="p">)</span>
+			<span class="k">for</span> <span class="n">name</span> <span class="ow">in</span> <span class="n">names</span><span class="p">:</span>
+				<span class="n">group</span> <span class="o">=</span> <span class="n">parent</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="n">name</span><span class="p">)</span>
+				<span class="k">if</span> <span class="ow">not</span> <span class="n">group</span><span class="p">:</span>
+					<span class="n">group</span> <span class="o">=</span> <span class="n">MenuGroup</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">priority</span><span class="p">)</span>
+					<span class="n">parent</span><span class="o">.</span><span class="n">children</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">group</span><span class="p">)</span>
+				<span class="k">else</span><span class="p">:</span>
+					<span class="k">assert</span><span class="p">(</span><span class="nb">isinstance</span><span class="p">(</span><span class="n">group</span><span class="p">,</span> <span class="n">MenuGroup</span><span class="p">))</span>
+					<span class="k">if</span> <span class="n">priority</span> <span class="o">&lt;</span> <span class="n">group</span><span class="o">.</span><span class="n">priority</span><span class="p">():</span> <span class="n">group</span><span class="o">.</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;priority&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">priority</span>
+
+				<span class="n">parent</span> <span class="o">=</span> <span class="n">group</span>
+
+		<span class="n">data</span><span class="p">[</span><span class="s1">&#39;priority&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">priority</span>
+		<span class="n">separator</span> <span class="o">=</span> <span class="n">MenuSeparator</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+		<span class="n">parent</span><span class="o">.</span><span class="n">children</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">separator</span><span class="p">)</span>
+		<span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_currMaxPriority</span> <span class="o">==</span> <span class="kc">None</span> <span class="ow">or</span> <span class="n">priority</span> <span class="o">&gt;</span> <span class="bp">self</span><span class="o">.</span><span class="n">_currMaxPriority</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">_currMaxPriority</span> <span class="o">=</span> <span class="n">priority</span></div>
+
+<div class="viewcode-block" id="MenuTree.removeCategory"><a class="viewcode-back" href="../../../../autoapi/editor/models/editor/menu_tree/index.html#editor.models.editor.menu_tree.MenuTree.removeCategory">[docs]</a>	<span class="k">def</span> <span class="nf">removeCategory</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">category</span><span class="p">,</span> <span class="n">group</span> <span class="o">=</span> <span class="kc">None</span><span class="p">):</span>
+		<span class="k">if</span> <span class="n">group</span> <span class="o">==</span> <span class="kc">None</span><span class="p">:</span> <span class="n">group</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">root</span>
+		<span class="n">count</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">group</span><span class="o">.</span><span class="n">children</span><span class="p">)</span>
+		<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">count</span><span class="p">):</span>
+			<span class="n">idx</span> <span class="o">=</span> <span class="n">count</span> <span class="o">-</span> <span class="n">i</span> <span class="o">-</span> <span class="mi">1</span>
+			<span class="n">child</span> <span class="o">=</span> <span class="n">group</span><span class="o">.</span><span class="n">children</span><span class="p">[</span><span class="n">idx</span><span class="p">]</span>
+			<span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">child</span><span class="p">,</span> <span class="n">MenuGroup</span><span class="p">):</span>
+				<span class="bp">self</span><span class="o">.</span><span class="n">removeCategory</span><span class="p">(</span><span class="n">category</span><span class="p">,</span> <span class="n">child</span><span class="p">)</span>
+				<span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">child</span><span class="o">.</span><span class="n">children</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+					<span class="k">del</span> <span class="n">group</span><span class="o">.</span><span class="n">children</span><span class="p">[</span><span class="n">idx</span><span class="p">]</span>
+			<span class="k">else</span><span class="p">:</span>
+				<span class="k">if</span> <span class="n">child</span><span class="o">.</span><span class="n">category</span><span class="p">()</span> <span class="o">==</span> <span class="n">category</span><span class="p">:</span>
+					<span class="k">del</span> <span class="n">group</span><span class="o">.</span><span class="n">children</span><span class="p">[</span><span class="n">idx</span><span class="p">]</span>
+		<span class="bp">self</span><span class="o">.</span><span class="n">_currMaxPriority</span> <span class="o">=</span> <span class="kc">None</span></div>
+
+<div class="viewcode-block" id="MenuTree.createWidget"><a class="viewcode-back" href="../../../../autoapi/editor/models/editor/menu_tree/index.html#editor.models.editor.menu_tree.MenuTree.createWidget">[docs]</a>	<span class="k">def</span> <span class="nf">createWidget</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">parent</span><span class="p">):</span>
+		<span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">root</span><span class="o">.</span><span class="n">createMenu</span><span class="p">(</span><span class="n">parent</span><span class="p">)</span></div>
+
+
+	<span class="c1">#####################  DEBUG  #####################</span>
+<div class="viewcode-block" id="MenuTree.sort"><a class="viewcode-back" href="../../../../autoapi/editor/models/editor/menu_tree/index.html#editor.models.editor.menu_tree.MenuTree.sort">[docs]</a>	<span class="k">def</span> <span class="nf">sort</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">group</span> <span class="o">=</span> <span class="kc">None</span><span class="p">):</span>
+		<span class="k">if</span> <span class="n">group</span> <span class="o">==</span> <span class="kc">None</span><span class="p">:</span> <span class="n">group</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">root</span>
+		<span class="n">group</span><span class="o">.</span><span class="n">children</span><span class="o">.</span><span class="n">sort</span><span class="p">(</span><span class="n">key</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">child</span><span class="p">:</span> <span class="n">child</span><span class="o">.</span><span class="n">priority</span><span class="p">())</span>
+		<span class="k">for</span> <span class="n">child</span> <span class="ow">in</span> <span class="n">group</span><span class="o">.</span><span class="n">children</span><span class="p">:</span>
+			<span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">child</span><span class="p">,</span> <span class="n">MenuGroup</span><span class="p">):</span>
+				<span class="bp">self</span><span class="o">.</span><span class="n">sort</span><span class="p">(</span><span class="n">child</span><span class="p">)</span></div>
+<div class="viewcode-block" id="MenuTree.dumpItem"><a class="viewcode-back" href="../../../../autoapi/editor/models/editor/menu_tree/index.html#editor.models.editor.menu_tree.MenuTree.dumpItem">[docs]</a>	<span class="k">def</span> <span class="nf">dumpItem</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">depth</span><span class="p">,</span> <span class="n">item</span><span class="p">):</span>
+		<span class="n">indent</span> <span class="o">=</span> <span class="s1">&#39;    &#39;</span> <span class="o">*</span> <span class="n">depth</span>
+		<span class="n">name</span> <span class="o">=</span> <span class="s1">&#39;----&#39;</span> <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">item</span><span class="p">,</span> <span class="n">MenuSeparator</span><span class="p">)</span> <span class="k">else</span> <span class="n">item</span><span class="o">.</span><span class="n">label</span>
+		<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;</span><span class="si">{:&lt;24}</span><span class="s1"> : </span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">indent</span> <span class="o">+</span> <span class="n">name</span><span class="p">,</span> <span class="n">item</span><span class="o">.</span><span class="n">priority</span><span class="p">()))</span>
+		<span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">item</span><span class="p">,</span> <span class="n">MenuGroup</span><span class="p">):</span>
+			<span class="k">for</span> <span class="n">child</span> <span class="ow">in</span> <span class="n">item</span><span class="o">.</span><span class="n">children</span><span class="p">:</span>
+				<span class="bp">self</span><span class="o">.</span><span class="n">dumpItem</span><span class="p">(</span><span class="n">depth</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span> <span class="n">child</span><span class="p">)</span></div>
+<div class="viewcode-block" id="MenuTree.dumpTree"><a class="viewcode-back" href="../../../../autoapi/editor/models/editor/menu_tree/index.html#editor.models.editor.menu_tree.MenuTree.dumpTree">[docs]</a>	<span class="k">def</span> <span class="nf">dumpTree</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+		<span class="k">for</span> <span class="n">child</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">root</span><span class="o">.</span><span class="n">children</span><span class="p">:</span>
+			<span class="bp">self</span><span class="o">.</span><span class="n">dumpItem</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">child</span><span class="p">)</span></div></div>
+
+
+<span class="c1">#####################  TEST  #####################</span>
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
+<div class="viewcode-block" id="t"><a class="viewcode-back" href="../../../../autoapi/editor/models/editor/menu_tree/index.html#editor.models.editor.menu_tree.t">[docs]</a>	<span class="n">t</span> <span class="o">=</span> <span class="n">MenuTree</span><span class="p">(</span><span class="s1">&#39;demo&#39;</span><span class="p">)</span></div>
+	<span class="n">t</span><span class="o">.</span><span class="n">addItem</span><span class="p">(</span><span class="s1">&#39;foo&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">,</span> <span class="n">priority</span> <span class="o">=</span> <span class="kc">None</span><span class="p">)</span>
+	<span class="n">t</span><span class="o">.</span><span class="n">addItem</span><span class="p">(</span><span class="s1">&#39;bar&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">,</span> <span class="n">priority</span> <span class="o">=</span> <span class="mi">2</span><span class="p">,</span> <span class="n">category</span> <span class="o">=</span> <span class="s1">&#39;builtin&#39;</span><span class="p">)</span>
+	<span class="n">t</span><span class="o">.</span><span class="n">addItem</span><span class="p">(</span><span class="s1">&#39;abar&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">,</span> <span class="n">priority</span> <span class="o">=</span> <span class="mi">100</span><span class="p">)</span>
+	<span class="n">t</span><span class="o">.</span><span class="n">addItem</span><span class="p">(</span><span class="s1">&#39;test&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">,</span> <span class="n">priority</span> <span class="o">=</span> <span class="kc">None</span><span class="p">)</span>
+
+	<span class="n">t</span><span class="o">.</span><span class="n">addItem</span><span class="p">(</span><span class="s1">&#39;a/test&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">,</span> <span class="n">priority</span> <span class="o">=</span> <span class="mi">13</span><span class="p">)</span>
+	<span class="n">t</span><span class="o">.</span><span class="n">addItem</span><span class="p">(</span><span class="s1">&#39;a/bar&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">,</span> <span class="n">priority</span> <span class="o">=</span> <span class="mi">11</span><span class="p">)</span>
+	<span class="n">t</span><span class="o">.</span><span class="n">addItem</span><span class="p">(</span><span class="s1">&#39;a/foo&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">,</span> <span class="n">priority</span> <span class="o">=</span> <span class="mi">10</span><span class="p">)</span>
+
+	<span class="n">t</span><span class="o">.</span><span class="n">addItem</span><span class="p">(</span><span class="s1">&#39;z/b/test&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">,</span> <span class="n">priority</span> <span class="o">=</span> <span class="mi">22</span><span class="p">)</span>
+	<span class="n">t</span><span class="o">.</span><span class="n">addItem</span><span class="p">(</span><span class="s1">&#39;z/c/bar&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">,</span> <span class="n">priority</span> <span class="o">=</span> <span class="mi">21</span><span class="p">)</span>
+	<span class="n">t</span><span class="o">.</span><span class="n">addItem</span><span class="p">(</span><span class="s1">&#39;z/c/foo&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">,</span> <span class="n">priority</span> <span class="o">=</span> <span class="mi">20</span><span class="p">)</span>
+
+	<span class="n">t</span><span class="o">.</span><span class="n">addSeparator</span><span class="p">(</span><span class="kc">None</span><span class="p">,</span> <span class="n">priority</span> <span class="o">=</span> <span class="mi">12</span><span class="p">)</span>
+	<span class="n">t</span><span class="o">.</span><span class="n">addItem</span><span class="p">(</span><span class="s1">&#39;a&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">,</span> <span class="n">priority</span> <span class="o">=</span> <span class="mi">9</span><span class="p">)</span>
+
+	<span class="n">t</span><span class="o">.</span><span class="n">addItem</span><span class="p">(</span><span class="s1">&#39;a/b/test&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">,</span> <span class="n">priority</span> <span class="o">=</span> <span class="mi">22</span><span class="p">)</span>
+	<span class="n">t</span><span class="o">.</span><span class="n">addItem</span><span class="p">(</span><span class="s1">&#39;a/c/bar&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">,</span> <span class="n">priority</span> <span class="o">=</span> <span class="mi">21</span><span class="p">)</span>
+	<span class="n">t</span><span class="o">.</span><span class="n">addItem</span><span class="p">(</span><span class="s1">&#39;a/c/foo&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">,</span> <span class="n">priority</span> <span class="o">=</span> <span class="mi">20</span><span class="p">)</span>
+
+	<span class="n">t</span><span class="o">.</span><span class="n">sort</span><span class="p">()</span>
+	<span class="n">t</span><span class="o">.</span><span class="n">removeCategory</span><span class="p">(</span><span class="kc">None</span><span class="p">)</span>
+	<span class="n">t</span><span class="o">.</span><span class="n">addItem</span><span class="p">(</span><span class="s1">&#39;a&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+	<span class="n">t</span><span class="o">.</span><span class="n">dumpTree</span><span class="p">()</span>
+
+</pre></div>
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023, kakako.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
