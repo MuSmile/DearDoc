@@ -8,6 +8,7 @@
       <link rel="stylesheet" href="../../../../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../../../../_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="../../../../_static/graphviz.css" type="text/css" />
+    <link rel="shortcut icon" href="../../../../_static/favicon.ico"/>
   <!--[if lt IE 9]>
     <script src="../../../../_static/js/html5shiv.min.js"></script>
   <![endif]-->
@@ -78,12 +79,14 @@
 <li class="toctree-l3"><a class="reference internal" href="../../models/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.models</span></code></a><ul>
 <li class="toctree-l4"><a class="reference internal" href="../../models/asset/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.models.asset</span></code></a><ul>
 <li class="toctree-l5"><a class="reference internal" href="../../models/asset/asset/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.models.asset.asset</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../models/asset/asset_db/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.models.asset.asset_db</span></code></a></li>
 <li class="toctree-l5"><a class="reference internal" href="../../models/asset/importer/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.models.asset.importer</span></code></a></li>
 <li class="toctree-l5"><a class="reference internal" href="../../models/asset/meta/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.models.asset.meta</span></code></a></li>
 </ul>
 </li>
 <li class="toctree-l4"><a class="reference internal" href="../../models/editor/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.models.editor</span></code></a><ul>
-<li class="toctree-l5"><a class="reference internal" href="../../models/editor/form/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.models.editor.form</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../models/editor/data_grid/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.models.editor.data_grid</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../models/editor/editor_prefs/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.models.editor.editor_prefs</span></code></a></li>
 <li class="toctree-l5"><a class="reference internal" href="../../models/editor/menu_tree/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.models.editor.menu_tree</span></code></a></li>
 </ul>
 </li>
@@ -153,7 +156,7 @@
 <li class="toctree-l4"><a class="reference internal" href="../../widgets/complex/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.widgets.complex</span></code></a><ul>
 <li class="toctree-l5"><a class="reference internal" href="../../widgets/complex/advanced_menu/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.widgets.complex.advanced_menu</span></code></a></li>
 <li class="toctree-l5"><a class="reference internal" href="../../widgets/complex/color_picker/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.widgets.complex.color_picker</span></code></a></li>
-<li class="toctree-l5"><a class="reference internal" href="../../widgets/complex/form_view/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.widgets.complex.form_view</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../widgets/complex/datagrid_view/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.widgets.complex.datagrid_view</span></code></a></li>
 <li class="toctree-l5"><a class="reference internal" href="../../widgets/complex/tree_stacked/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.widgets.complex.tree_stacked</span></code></a></li>
 <li class="toctree-l5"><a class="reference internal" href="../../widgets/complex/tree_view/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.widgets.complex.tree_view</span></code></a></li>
 </ul>
@@ -176,8 +179,6 @@
 <li class="toctree-l4"><a class="reference internal" href="../../widgets/toolbar/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.widgets.toolbar</span></code></a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="../../asset_db/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.asset_db</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../editor_prefs/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.editor_prefs</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../main_window/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.main_window</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../theme_manager/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.theme_manager</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../view_manager/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.view_manager</span></code></a></li>
@@ -230,87 +231,57 @@
              
   <section id="module-editor.common.logger">
 <span id="editor-common-logger"></span><h1><a class="reference internal" href="#module-editor.common.logger" title="editor.common.logger"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.common.logger</span></code></a><a class="headerlink" href="#module-editor.common.logger" title="Permalink to this heading"></a></h1>
+<p>This module provide standard log toolkit.</p>
+<p>Typical usage example:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="kn">from</span> <span class="nn">editor.common.logger</span> <span class="kn">import</span> <span class="n">log</span><span class="p">,</span> <span class="n">warn</span><span class="p">,</span> <span class="n">error</span>
+<span class="linenos"> 2</span><span class="n">log</span>  <span class="p">(</span><span class="s2">&quot;This is a debug log.&quot;</span><span class="p">)</span>
+<span class="linenos"> 3</span><span class="n">warn</span> <span class="p">(</span><span class="s2">&quot;This is a warn  log.&quot;</span><span class="p">)</span>
+<span class="linenos"> 4</span><span class="n">error</span><span class="p">(</span><span class="s2">&quot;This is a error log.&quot;</span><span class="p">)</span>
+<span class="linenos"> 5</span>
+<span class="linenos"> 6</span><span class="c1">####################################################</span>
+<span class="linenos"> 7</span><span class="kn">from</span> <span class="nn">editor.common.logger</span> <span class="kn">import</span> <span class="n">ilog</span><span class="p">,</span> <span class="n">iwarn</span><span class="p">,</span> <span class="n">ierror</span>
+<span class="linenos"> 8</span><span class="n">ilog</span>  <span class="p">(</span><span class="s2">&quot;This is a debug log to ide.&quot;</span><span class="p">)</span>
+<span class="linenos"> 9</span><span class="n">iwarn</span> <span class="p">(</span><span class="s2">&quot;This is a warn  log to ide.&quot;</span><span class="p">)</span>
+<span class="linenos">10</span><span class="n">ierror</span><span class="p">(</span><span class="s2">&quot;This is a error log to ide.&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <section id="module-contents">
 <h2>Module Contents<a class="headerlink" href="#module-contents" title="Permalink to this heading"></a></h2>
-<dl class="py class">
-<dt class="sig sig-object py" id="editor.common.logger.StdFilter">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">editor.common.logger.</span></span><span class="sig-name descname"><span class="pre">StdFilter</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../../../_modules/editor/common/logger.html#StdFilter"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#editor.common.logger.StdFilter" title="Permalink to this definition"></a></dt>
-<dd><p>Bases: <code class="xref py py-obj docutils literal notranslate"><span class="pre">logging.Filter</span></code></p>
-<p>Filter instances are used to perform arbitrary filtering of LogRecords.</p>
-<p>Loggers and Handlers can optionally use Filter instances to filter
-records as desired. The base filter class only allows events which are
-below a certain point in the logger hierarchy. For example, a filter
-initialized with “A.B” will allow events logged by loggers “A.B”,
-“A.B.C”, “A.B.C.D”, “A.B.D” etc. but not “A.BB”, “B.A.B” etc. If
-initialized with the empty string, all events are passed.</p>
-<dl class="py method">
-<dt class="sig sig-object py" id="editor.common.logger.StdFilter.filter">
-<span class="sig-name descname"><span class="pre">filter</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">record</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../../../_modules/editor/common/logger.html#StdFilter.filter"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#editor.common.logger.StdFilter.filter" title="Permalink to this definition"></a></dt>
-<dd><p>Determine if the specified record is to be logged.</p>
-<p>Returns True if the record should be logged, or False otherwise.
-If deemed appropriate, the record may be modified in-place.</p>
-</dd></dl>
-
-</dd></dl>
-
-<dl class="py function">
-<dt class="sig sig-object py" id="editor.common.logger.stdLogger">
-<span class="sig-prename descclassname"><span class="pre">editor.common.logger.</span></span><span class="sig-name descname"><span class="pre">stdLogger</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../../../_modules/editor/common/logger.html#stdLogger"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#editor.common.logger.stdLogger" title="Permalink to this definition"></a></dt>
-<dd></dd></dl>
-
-<dl class="py class">
-<dt class="sig sig-object py" id="editor.common.logger.IdeLogHandler">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">editor.common.logger.</span></span><span class="sig-name descname"><span class="pre">IdeLogHandler</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">level</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">NOTSET</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../../../_modules/editor/common/logger.html#IdeLogHandler"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#editor.common.logger.IdeLogHandler" title="Permalink to this definition"></a></dt>
-<dd><p>Bases: <code class="xref py py-obj docutils literal notranslate"><span class="pre">logging.Handler</span></code></p>
-<p>Handler instances dispatch logging events to specific destinations.</p>
-<p>The base handler class. Acts as a placeholder which defines the Handler
-interface. Handlers can optionally use Formatter instances to format
-records as desired. By default, no formatter is specified; in this case,
-the ‘raw’ message as determined by record.message is logged.</p>
-<dl class="py method">
-<dt class="sig sig-object py" id="editor.common.logger.IdeLogHandler.emit">
-<span class="sig-name descname"><span class="pre">emit</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">record</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../../../_modules/editor/common/logger.html#IdeLogHandler.emit"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#editor.common.logger.IdeLogHandler.emit" title="Permalink to this definition"></a></dt>
-<dd><p>Do whatever it takes to actually log the specified logging record.</p>
-<p>This version is intended to be implemented by subclasses and so
-raises a NotImplementedError.</p>
-</dd></dl>
-
-</dd></dl>
-
-<dl class="py function">
-<dt class="sig sig-object py" id="editor.common.logger.ideLogger">
-<span class="sig-prename descclassname"><span class="pre">editor.common.logger.</span></span><span class="sig-name descname"><span class="pre">ideLogger</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../../../_modules/editor/common/logger.html#ideLogger"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#editor.common.logger.ideLogger" title="Permalink to this definition"></a></dt>
-<dd></dd></dl>
-
 <dl class="py data">
 <dt class="sig sig-object py" id="editor.common.logger.log">
 <span class="sig-prename descclassname"><span class="pre">editor.common.logger.</span></span><span class="sig-name descname"><span class="pre">log</span></span><a class="reference internal" href="../../../../_modules/editor/common/logger.html#log"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#editor.common.logger.log" title="Permalink to this definition"></a></dt>
-<dd></dd></dl>
+<dd><p>Emit debug log via std logger</p>
+</dd></dl>
 
 <dl class="py data">
 <dt class="sig sig-object py" id="editor.common.logger.warn">
 <span class="sig-prename descclassname"><span class="pre">editor.common.logger.</span></span><span class="sig-name descname"><span class="pre">warn</span></span><a class="reference internal" href="../../../../_modules/editor/common/logger.html#warn"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#editor.common.logger.warn" title="Permalink to this definition"></a></dt>
-<dd></dd></dl>
+<dd><p>Emit warning log via std logger</p>
+</dd></dl>
 
 <dl class="py data">
 <dt class="sig sig-object py" id="editor.common.logger.error">
 <span class="sig-prename descclassname"><span class="pre">editor.common.logger.</span></span><span class="sig-name descname"><span class="pre">error</span></span><a class="reference internal" href="../../../../_modules/editor/common/logger.html#error"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#editor.common.logger.error" title="Permalink to this definition"></a></dt>
-<dd></dd></dl>
+<dd><p>Emit error log via std logger</p>
+</dd></dl>
 
 <dl class="py data">
 <dt class="sig sig-object py" id="editor.common.logger.ilog">
 <span class="sig-prename descclassname"><span class="pre">editor.common.logger.</span></span><span class="sig-name descname"><span class="pre">ilog</span></span><a class="reference internal" href="../../../../_modules/editor/common/logger.html#ilog"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#editor.common.logger.ilog" title="Permalink to this definition"></a></dt>
-<dd></dd></dl>
+<dd><p>Emit debug log via ide logger</p>
+</dd></dl>
 
 <dl class="py data">
 <dt class="sig sig-object py" id="editor.common.logger.iwarn">
 <span class="sig-prename descclassname"><span class="pre">editor.common.logger.</span></span><span class="sig-name descname"><span class="pre">iwarn</span></span><a class="reference internal" href="../../../../_modules/editor/common/logger.html#iwarn"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#editor.common.logger.iwarn" title="Permalink to this definition"></a></dt>
-<dd></dd></dl>
+<dd><p>Emit warning log via ide logger</p>
+</dd></dl>
 
 <dl class="py data">
 <dt class="sig sig-object py" id="editor.common.logger.ierror">
 <span class="sig-prename descclassname"><span class="pre">editor.common.logger.</span></span><span class="sig-name descname"><span class="pre">ierror</span></span><a class="reference internal" href="../../../../_modules/editor/common/logger.html#ierror"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#editor.common.logger.ierror" title="Permalink to this definition"></a></dt>
-<dd></dd></dl>
+<dd><p>Emit error log via ide logger</p>
+</dd></dl>
 
 </section>
 </section>

@@ -8,6 +8,7 @@
       <link rel="stylesheet" href="../../../../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../../../../_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="../../../../_static/graphviz.css" type="text/css" />
+    <link rel="shortcut icon" href="../../../../_static/favicon.ico"/>
   <!--[if lt IE 9]>
     <script src="../../../../_static/js/html5shiv.min.js"></script>
   <![endif]-->
@@ -78,12 +79,14 @@
 <li class="toctree-l3"><a class="reference internal" href="../../models/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.models</span></code></a><ul>
 <li class="toctree-l4"><a class="reference internal" href="../../models/asset/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.models.asset</span></code></a><ul>
 <li class="toctree-l5"><a class="reference internal" href="../../models/asset/asset/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.models.asset.asset</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../models/asset/asset_db/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.models.asset.asset_db</span></code></a></li>
 <li class="toctree-l5"><a class="reference internal" href="../../models/asset/importer/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.models.asset.importer</span></code></a></li>
 <li class="toctree-l5"><a class="reference internal" href="../../models/asset/meta/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.models.asset.meta</span></code></a></li>
 </ul>
 </li>
 <li class="toctree-l4"><a class="reference internal" href="../../models/editor/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.models.editor</span></code></a><ul>
-<li class="toctree-l5"><a class="reference internal" href="../../models/editor/form/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.models.editor.form</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../models/editor/data_grid/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.models.editor.data_grid</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../models/editor/editor_prefs/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.models.editor.editor_prefs</span></code></a></li>
 <li class="toctree-l5"><a class="reference internal" href="../../models/editor/menu_tree/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.models.editor.menu_tree</span></code></a></li>
 </ul>
 </li>
@@ -153,7 +156,7 @@
 <li class="toctree-l4"><a class="reference internal" href="../../widgets/complex/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.widgets.complex</span></code></a><ul>
 <li class="toctree-l5"><a class="reference internal" href="../../widgets/complex/advanced_menu/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.widgets.complex.advanced_menu</span></code></a></li>
 <li class="toctree-l5"><a class="reference internal" href="../../widgets/complex/color_picker/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.widgets.complex.color_picker</span></code></a></li>
-<li class="toctree-l5"><a class="reference internal" href="../../widgets/complex/form_view/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.widgets.complex.form_view</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../widgets/complex/datagrid_view/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.widgets.complex.datagrid_view</span></code></a></li>
 <li class="toctree-l5"><a class="reference internal" href="../../widgets/complex/tree_stacked/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.widgets.complex.tree_stacked</span></code></a></li>
 <li class="toctree-l5"><a class="reference internal" href="../../widgets/complex/tree_view/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.widgets.complex.tree_view</span></code></a></li>
 </ul>
@@ -176,8 +179,6 @@
 <li class="toctree-l4"><a class="reference internal" href="../../widgets/toolbar/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.widgets.toolbar</span></code></a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="../../asset_db/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.asset_db</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../editor_prefs/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.editor_prefs</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../main_window/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.main_window</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../theme_manager/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.theme_manager</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../view_manager/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.view_manager</span></code></a></li>
@@ -230,17 +231,117 @@
              
   <section id="module-editor.common.dispatcher">
 <span id="editor-common-dispatcher"></span><h1><a class="reference internal" href="#module-editor.common.dispatcher" title="editor.common.dispatcher"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.common.dispatcher</span></code></a><a class="headerlink" href="#module-editor.common.dispatcher" title="Permalink to this heading"></a></h1>
+<p>This module provide global signal toolkit.</p>
+<p>Typical usage example:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="kn">from</span> <span class="nn">editor.common.dispatcher</span> <span class="kn">import</span> <span class="n">dispatcher</span>
+<span class="linenos"> 2</span>
+<span class="linenos"> 3</span><span class="k">def</span> <span class="nf">listener1</span><span class="p">():</span> <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;listener1&#39;</span><span class="p">)</span>
+<span class="linenos"> 4</span><span class="k">def</span> <span class="nf">listener2</span><span class="p">(</span><span class="n">data</span><span class="p">):</span> <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;listener2: </span><span class="si">{</span><span class="n">data</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+<span class="linenos"> 5</span><span class="k">def</span> <span class="nf">listener3</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">sender</span><span class="p">):</span> <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;listener3: </span><span class="si">{</span><span class="n">data</span><span class="si">}</span><span class="s1">, </span><span class="si">{</span><span class="n">sender</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+<span class="linenos"> 6</span>
+<span class="linenos"> 7</span><span class="n">dispatcher</span><span class="o">.</span><span class="n">connectSignal</span><span class="p">(</span><span class="s1">&#39;foo&#39;</span><span class="p">,</span> <span class="n">listener1</span><span class="p">)</span>
+<span class="linenos"> 8</span><span class="n">dispatcher</span><span class="o">.</span><span class="n">connectSignal</span><span class="p">(</span><span class="s1">&#39;foo&#39;</span><span class="p">,</span> <span class="n">listener2</span><span class="p">)</span>
+<span class="linenos"> 9</span><span class="n">dispatcher</span><span class="o">.</span><span class="n">disconnectSignal</span><span class="p">(</span><span class="s1">&#39;foo&#39;</span><span class="p">,</span> <span class="n">listener2</span><span class="p">)</span>
+<span class="linenos">10</span><span class="n">dispatcher</span><span class="o">.</span><span class="n">connectSignal</span><span class="p">(</span><span class="s1">&#39;bar&#39;</span><span class="p">,</span> <span class="n">listener2</span><span class="p">)</span>
+<span class="linenos">11</span><span class="n">dispatcher</span><span class="o">.</span><span class="n">connectSignal</span><span class="p">(</span><span class="s1">&#39;bar&#39;</span><span class="p">,</span> <span class="n">listener3</span><span class="p">)</span>
+<span class="linenos">12</span>
+<span class="linenos">13</span><span class="n">sender</span> <span class="o">=</span> <span class="mi">1</span> <span class="c1"># can be any type, sender is just a general identity</span>
+<span class="linenos">14</span><span class="n">dispatcher</span><span class="o">.</span><span class="n">emitSignal</span><span class="p">(</span><span class="s1">&#39;foo&#39;</span><span class="p">,</span> <span class="s1">&#39;test_data&#39;</span><span class="p">,</span> <span class="n">sender</span><span class="p">)</span>
+<span class="linenos">15</span><span class="n">dispatcher</span><span class="o">.</span><span class="n">emitSignal</span><span class="p">(</span><span class="s1">&#39;bar&#39;</span><span class="p">,</span> <span class="s1">&#39;test_data&#39;</span><span class="p">,</span> <span class="n">sender</span><span class="p">)</span>
+</pre></div>
+</div>
 <section id="module-contents">
 <h2>Module Contents<a class="headerlink" href="#module-contents" title="Permalink to this heading"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="editor.common.dispatcher.Dispatcher">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">editor.common.dispatcher.</span></span><span class="sig-name descname"><span class="pre">Dispatcher</span></span><a class="reference internal" href="../../../../_modules/editor/common/dispatcher.html#Dispatcher"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#editor.common.dispatcher.Dispatcher" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-obj docutils literal notranslate"><span class="pre">PySide6.QtCore.QObject</span></code></p>
+<p>Handle general global signal stuff.</p>
+<p>In most situation, this <code class="docutils literal notranslate"><span class="pre">Dispatcher</span></code> class do not need be instanced by user.
+The built-in <code class="docutils literal notranslate"><span class="pre">dispatcher</span></code> instance is fully meet the needs.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="editor.common.dispatcher.Dispatcher.sig">
+<span class="sig-name descname"><span class="pre">sig</span></span><a class="reference internal" href="../../../../_modules/editor/common/dispatcher.html#Dispatcher.sig"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#editor.common.dispatcher.Dispatcher.sig" title="Permalink to this definition"></a></dt>
+<dd><p>A qt signal attribute, all functions are built on this.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>PySide6.QtCore.Signal(str, any, any)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="editor.common.dispatcher.Dispatcher.listenerTable">
+<span class="sig-name descname"><span class="pre">listenerTable</span></span><a class="reference internal" href="../../../../_modules/editor/common/dispatcher.html#Dispatcher.listenerTable"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#editor.common.dispatcher.Dispatcher.listenerTable" title="Permalink to this definition"></a></dt>
+<dd><p>All connected listerners table.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>dict[str, list[function]]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="editor.common.dispatcher.Dispatcher.connectSignal">
+<span class="sig-name descname"><span class="pre">connectSignal</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">msg</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">listener</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../../../_modules/editor/common/dispatcher.html#Dispatcher.connectSignal"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#editor.common.dispatcher.Dispatcher.connectSignal" title="Permalink to this definition"></a></dt>
+<dd><p>Register a listenter of certain message.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>msg</strong> (<em>str</em>) – Message to listener.</p></li>
+<li><p><strong>listener</strong> (<em>function</em>) – Called when listenered message emitted.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="editor.common.dispatcher.Dispatcher.disconnectSignal">
+<span class="sig-name descname"><span class="pre">disconnectSignal</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">msg</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">listener</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../../../_modules/editor/common/dispatcher.html#Dispatcher.disconnectSignal"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#editor.common.dispatcher.Dispatcher.disconnectSignal" title="Permalink to this definition"></a></dt>
+<dd><p>Unregister a listenter of certain message.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>msg</strong> (<em>str</em>) – Message to remove from.</p></li>
+<li><p><strong>listener</strong> (<em>function</em>) – Listener to remove.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="editor.common.dispatcher.Dispatcher.emitSignal">
+<span class="sig-name descname"><span class="pre">emitSignal</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">msg</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">data</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sender</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../../../_modules/editor/common/dispatcher.html#Dispatcher.emitSignal"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#editor.common.dispatcher.Dispatcher.emitSignal" title="Permalink to this definition"></a></dt>
+<dd><p>Emit a sinal, will trigger all registered listeners.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>msg</strong> (<em>str</em>) – Message to emit.</p></li>
+<li><p><strong>data</strong> (<em>any</em>) – Data to emit with.</p></li>
+<li><p><strong>sender</strong> (<em>any</em>) – Indicate emit’s sender.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="editor.common.dispatcher.Dispatcher.clear">
+<span class="sig-name descname"><span class="pre">clear</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../../../_modules/editor/common/dispatcher.html#Dispatcher.clear"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#editor.common.dispatcher.Dispatcher.clear" title="Permalink to this definition"></a></dt>
+<dd><p>Clear all listeners of all messages.</p>
+</dd></dl>
+
+</dd></dl>
+
 <dl class="py data">
 <dt class="sig sig-object py" id="editor.common.dispatcher.dispatcher">
 <span class="sig-prename descclassname"><span class="pre">editor.common.dispatcher.</span></span><span class="sig-name descname"><span class="pre">dispatcher</span></span><a class="reference internal" href="../../../../_modules/editor/common/dispatcher.html#dispatcher"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#editor.common.dispatcher.dispatcher" title="Permalink to this definition"></a></dt>
-<dd></dd></dl>
-
-<dl class="py data">
-<dt class="sig sig-object py" id="editor.common.dispatcher.listener">
-<span class="sig-prename descclassname"><span class="pre">editor.common.dispatcher.</span></span><span class="sig-name descname"><span class="pre">listener</span></span><a class="reference internal" href="../../../../_modules/editor/common/dispatcher.html#listener"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#editor.common.dispatcher.listener" title="Permalink to this definition"></a></dt>
-<dd></dd></dl>
+<dd><p>Built-in <code class="docutils literal notranslate"><span class="pre">Dispatcher</span></code> instance.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference internal" href="#editor.common.dispatcher.Dispatcher" title="editor.common.dispatcher.Dispatcher">Dispatcher</a></p>
+</dd>
+</dl>
+</dd></dl>
 
 </section>
 </section>

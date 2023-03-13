@@ -8,6 +8,7 @@
       <link rel="stylesheet" href="../../../../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../../../../_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="../../../../_static/graphviz.css" type="text/css" />
+    <link rel="shortcut icon" href="../../../../_static/favicon.ico"/>
   <!--[if lt IE 9]>
     <script src="../../../../_static/js/html5shiv.min.js"></script>
   <![endif]-->
@@ -78,12 +79,14 @@
 <li class="toctree-l3"><a class="reference internal" href="../../models/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.models</span></code></a><ul>
 <li class="toctree-l4"><a class="reference internal" href="../../models/asset/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.models.asset</span></code></a><ul>
 <li class="toctree-l5"><a class="reference internal" href="../../models/asset/asset/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.models.asset.asset</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../models/asset/asset_db/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.models.asset.asset_db</span></code></a></li>
 <li class="toctree-l5"><a class="reference internal" href="../../models/asset/importer/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.models.asset.importer</span></code></a></li>
 <li class="toctree-l5"><a class="reference internal" href="../../models/asset/meta/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.models.asset.meta</span></code></a></li>
 </ul>
 </li>
 <li class="toctree-l4"><a class="reference internal" href="../../models/editor/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.models.editor</span></code></a><ul>
-<li class="toctree-l5"><a class="reference internal" href="../../models/editor/form/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.models.editor.form</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../models/editor/data_grid/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.models.editor.data_grid</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../models/editor/editor_prefs/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.models.editor.editor_prefs</span></code></a></li>
 <li class="toctree-l5"><a class="reference internal" href="../../models/editor/menu_tree/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.models.editor.menu_tree</span></code></a></li>
 </ul>
 </li>
@@ -153,7 +156,7 @@
 <li class="toctree-l4"><a class="reference internal" href="../../widgets/complex/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.widgets.complex</span></code></a><ul>
 <li class="toctree-l5"><a class="reference internal" href="../../widgets/complex/advanced_menu/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.widgets.complex.advanced_menu</span></code></a></li>
 <li class="toctree-l5"><a class="reference internal" href="../../widgets/complex/color_picker/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.widgets.complex.color_picker</span></code></a></li>
-<li class="toctree-l5"><a class="reference internal" href="../../widgets/complex/form_view/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.widgets.complex.form_view</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../widgets/complex/datagrid_view/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.widgets.complex.datagrid_view</span></code></a></li>
 <li class="toctree-l5"><a class="reference internal" href="../../widgets/complex/tree_stacked/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.widgets.complex.tree_stacked</span></code></a></li>
 <li class="toctree-l5"><a class="reference internal" href="../../widgets/complex/tree_view/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.widgets.complex.tree_view</span></code></a></li>
 </ul>
@@ -176,8 +179,6 @@
 <li class="toctree-l4"><a class="reference internal" href="../../widgets/toolbar/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.widgets.toolbar</span></code></a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="../../asset_db/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.asset_db</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../editor_prefs/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.editor_prefs</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../main_window/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.main_window</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../theme_manager/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.theme_manager</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../view_manager/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.view_manager</span></code></a></li>
@@ -230,32 +231,68 @@
              
   <section id="module-editor.common.util">
 <span id="editor-common-util"></span><h1><a class="reference internal" href="#module-editor.common.util" title="editor.common.util"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.common.util</span></code></a><a class="headerlink" href="#module-editor.common.util" title="Permalink to this heading"></a></h1>
+<p>This module provide uncategorized misc toolkit.</p>
 <section id="module-contents">
 <h2>Module Contents<a class="headerlink" href="#module-contents" title="Permalink to this heading"></a></h2>
 <dl class="py function">
 <dt class="sig sig-object py" id="editor.common.util.getIde">
 <span class="sig-prename descclassname"><span class="pre">editor.common.util.</span></span><span class="sig-name descname"><span class="pre">getIde</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../../../_modules/editor/common/util.html#getIde"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#editor.common.util.getIde" title="Permalink to this definition"></a></dt>
-<dd></dd></dl>
+<dd><p>Get DearEditor ide instance.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The instance of Ide/QApplication.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>QApplication</p>
+</dd>
+</dl>
+</dd></dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="editor.common.util.getMainWindow">
 <span class="sig-prename descclassname"><span class="pre">editor.common.util.</span></span><span class="sig-name descname"><span class="pre">getMainWindow</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../../../_modules/editor/common/util.html#getMainWindow"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#editor.common.util.getMainWindow" title="Permalink to this definition"></a></dt>
-<dd></dd></dl>
+<dd><p>Get DearEditor ide main window instance.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The instance of ide’s main window.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>QMainWindow</p>
+</dd>
+</dl>
+</dd></dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="editor.common.util.restartApp">
 <span class="sig-prename descclassname"><span class="pre">editor.common.util.</span></span><span class="sig-name descname"><span class="pre">restartApp</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../../../_modules/editor/common/util.html#restartApp"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#editor.common.util.restartApp" title="Permalink to this definition"></a></dt>
-<dd></dd></dl>
+<dd><p>Restart DearEditor ide.</p>
+</dd></dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="editor.common.util.quitApp">
 <span class="sig-prename descclassname"><span class="pre">editor.common.util.</span></span><span class="sig-name descname"><span class="pre">quitApp</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../../../_modules/editor/common/util.html#quitApp"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#editor.common.util.quitApp" title="Permalink to this definition"></a></dt>
-<dd></dd></dl>
+<dd><p>Exit DearEditor ide.</p>
+</dd></dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="editor.common.util.isParentOfWidget">
 <span class="sig-prename descclassname"><span class="pre">editor.common.util.</span></span><span class="sig-name descname"><span class="pre">isParentOfWidget</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">test</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">wgt</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../../../_modules/editor/common/util.html#isParentOfWidget"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#editor.common.util.isParentOfWidget" title="Permalink to this definition"></a></dt>
-<dd></dd></dl>
+<dd><p>Check a given qt widget is parent of another.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>test</strong> (<em>QWidget</em>) – Given widget to check.</p></li>
+<li><p><strong>wgt</strong> (<em>QWidget</em>) – Given widget to check against.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Weather given qt widget is parent of another or not.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>bool</p>
+</dd>
+</dl>
+</dd></dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="editor.common.util.createTestMenu">

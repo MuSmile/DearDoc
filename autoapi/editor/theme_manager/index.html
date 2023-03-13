@@ -8,6 +8,7 @@
       <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="../../../_static/graphviz.css" type="text/css" />
+    <link rel="shortcut icon" href="../../../_static/favicon.ico"/>
   <!--[if lt IE 9]>
     <script src="../../../_static/js/html5shiv.min.js"></script>
   <![endif]-->
@@ -78,12 +79,14 @@
 <li class="toctree-l3"><a class="reference internal" href="../models/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.models</span></code></a><ul>
 <li class="toctree-l4"><a class="reference internal" href="../models/asset/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.models.asset</span></code></a><ul>
 <li class="toctree-l5"><a class="reference internal" href="../models/asset/asset/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.models.asset.asset</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="../models/asset/asset_db/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.models.asset.asset_db</span></code></a></li>
 <li class="toctree-l5"><a class="reference internal" href="../models/asset/importer/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.models.asset.importer</span></code></a></li>
 <li class="toctree-l5"><a class="reference internal" href="../models/asset/meta/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.models.asset.meta</span></code></a></li>
 </ul>
 </li>
 <li class="toctree-l4"><a class="reference internal" href="../models/editor/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.models.editor</span></code></a><ul>
-<li class="toctree-l5"><a class="reference internal" href="../models/editor/form/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.models.editor.form</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="../models/editor/data_grid/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.models.editor.data_grid</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="../models/editor/editor_prefs/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.models.editor.editor_prefs</span></code></a></li>
 <li class="toctree-l5"><a class="reference internal" href="../models/editor/menu_tree/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.models.editor.menu_tree</span></code></a></li>
 </ul>
 </li>
@@ -153,7 +156,7 @@
 <li class="toctree-l4"><a class="reference internal" href="../widgets/complex/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.widgets.complex</span></code></a><ul>
 <li class="toctree-l5"><a class="reference internal" href="../widgets/complex/advanced_menu/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.widgets.complex.advanced_menu</span></code></a></li>
 <li class="toctree-l5"><a class="reference internal" href="../widgets/complex/color_picker/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.widgets.complex.color_picker</span></code></a></li>
-<li class="toctree-l5"><a class="reference internal" href="../widgets/complex/form_view/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.widgets.complex.form_view</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="../widgets/complex/datagrid_view/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.widgets.complex.datagrid_view</span></code></a></li>
 <li class="toctree-l5"><a class="reference internal" href="../widgets/complex/tree_stacked/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.widgets.complex.tree_stacked</span></code></a></li>
 <li class="toctree-l5"><a class="reference internal" href="../widgets/complex/tree_view/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.widgets.complex.tree_view</span></code></a></li>
 </ul>
@@ -176,8 +179,6 @@
 <li class="toctree-l4"><a class="reference internal" href="../widgets/toolbar/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.widgets.toolbar</span></code></a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="../asset_db/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.asset_db</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="../editor_prefs/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.editor_prefs</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="../main_window/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.main_window</span></code></a></li>
 <li class="toctree-l3 current"><a class="current reference internal" href="#"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.theme_manager</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="../view_manager/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.view_manager</span></code></a></li>
@@ -229,32 +230,82 @@
              
   <section id="module-editor.theme_manager">
 <span id="editor-theme-manager"></span><h1><a class="reference internal" href="#module-editor.theme_manager" title="editor.theme_manager"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.theme_manager</span></code></a><a class="headerlink" href="#module-editor.theme_manager" title="Permalink to this heading"></a></h1>
+<p>This module provide theme manage functions.</p>
+<p>Typical usage example:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="kn">from</span> <span class="nn">editor</span> <span class="kn">import</span> <span class="n">theme_manager</span>
+<span class="linenos">2</span><span class="n">theme_manager</span><span class="o">.</span><span class="n">loadTheme</span><span class="p">(</span><span class="s1">&#39;dark&#39;</span><span class="p">)</span>
+<span class="linenos">3</span><span class="n">theme_manager</span><span class="o">.</span><span class="n">setupThemeWatcher</span><span class="p">()</span>
+</pre></div>
+</div>
 <section id="module-contents">
 <h2>Module Contents<a class="headerlink" href="#module-contents" title="Permalink to this heading"></a></h2>
 <dl class="py function">
 <dt class="sig sig-object py" id="editor.theme_manager.listThemes">
 <span class="sig-prename descclassname"><span class="pre">editor.theme_manager.</span></span><span class="sig-name descname"><span class="pre">listThemes</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/editor/theme_manager.html#listThemes"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#editor.theme_manager.listThemes" title="Permalink to this definition"></a></dt>
-<dd></dd></dl>
+<dd><p>List all available themes.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>All available themes.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>list[str]</p>
+</dd>
+</dl>
+</dd></dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="editor.theme_manager.activeTheme">
 <span class="sig-prename descclassname"><span class="pre">editor.theme_manager.</span></span><span class="sig-name descname"><span class="pre">activeTheme</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/editor/theme_manager.html#activeTheme"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#editor.theme_manager.activeTheme" title="Permalink to this definition"></a></dt>
-<dd></dd></dl>
+<dd><p>Get current active theme.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Active theme name.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="editor.theme_manager.activeThemeFolder">
 <span class="sig-prename descclassname"><span class="pre">editor.theme_manager.</span></span><span class="sig-name descname"><span class="pre">activeThemeFolder</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/editor/theme_manager.html#activeThemeFolder"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#editor.theme_manager.activeThemeFolder" title="Permalink to this definition"></a></dt>
-<dd></dd></dl>
+<dd><p>Get current active theme source folder.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Active theme folder path.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="editor.theme_manager.loadTheme">
 <span class="sig-prename descclassname"><span class="pre">editor.theme_manager.</span></span><span class="sig-name descname"><span class="pre">loadTheme</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">reset</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/editor/theme_manager.html#loadTheme"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#editor.theme_manager.loadTheme" title="Permalink to this definition"></a></dt>
-<dd></dd></dl>
+<dd><p>Load theme by certain name.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>name</strong> (<em>str</em>) – Theme name to load.</p></li>
+<li><p><strong>reset</strong> (<em>bool</em>) – Reset exsiting style state. (Mainly used by theme watcher for hot-reloading usage.)</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="editor.theme_manager.setupThemeWatcher">
 <span class="sig-prename descclassname"><span class="pre">editor.theme_manager.</span></span><span class="sig-name descname"><span class="pre">setupThemeWatcher</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/editor/theme_manager.html#setupThemeWatcher"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#editor.theme_manager.setupThemeWatcher" title="Permalink to this definition"></a></dt>
-<dd></dd></dl>
+<dd><p>Setup theme watcher on all themes.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="editor.theme_manager.disposeThemeWatcher">
+<span class="sig-prename descclassname"><span class="pre">editor.theme_manager.</span></span><span class="sig-name descname"><span class="pre">disposeThemeWatcher</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/editor/theme_manager.html#disposeThemeWatcher"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#editor.theme_manager.disposeThemeWatcher" title="Permalink to this definition"></a></dt>
+<dd><p>Shutdown current theme watcher</p>
+</dd></dl>
 
 </section>
 </section>

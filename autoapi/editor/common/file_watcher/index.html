@@ -8,6 +8,7 @@
       <link rel="stylesheet" href="../../../../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../../../../_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="../../../../_static/graphviz.css" type="text/css" />
+    <link rel="shortcut icon" href="../../../../_static/favicon.ico"/>
   <!--[if lt IE 9]>
     <script src="../../../../_static/js/html5shiv.min.js"></script>
   <![endif]-->
@@ -78,12 +79,14 @@
 <li class="toctree-l3"><a class="reference internal" href="../../models/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.models</span></code></a><ul>
 <li class="toctree-l4"><a class="reference internal" href="../../models/asset/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.models.asset</span></code></a><ul>
 <li class="toctree-l5"><a class="reference internal" href="../../models/asset/asset/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.models.asset.asset</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../models/asset/asset_db/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.models.asset.asset_db</span></code></a></li>
 <li class="toctree-l5"><a class="reference internal" href="../../models/asset/importer/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.models.asset.importer</span></code></a></li>
 <li class="toctree-l5"><a class="reference internal" href="../../models/asset/meta/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.models.asset.meta</span></code></a></li>
 </ul>
 </li>
 <li class="toctree-l4"><a class="reference internal" href="../../models/editor/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.models.editor</span></code></a><ul>
-<li class="toctree-l5"><a class="reference internal" href="../../models/editor/form/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.models.editor.form</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../models/editor/data_grid/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.models.editor.data_grid</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../models/editor/editor_prefs/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.models.editor.editor_prefs</span></code></a></li>
 <li class="toctree-l5"><a class="reference internal" href="../../models/editor/menu_tree/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.models.editor.menu_tree</span></code></a></li>
 </ul>
 </li>
@@ -153,7 +156,7 @@
 <li class="toctree-l4"><a class="reference internal" href="../../widgets/complex/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.widgets.complex</span></code></a><ul>
 <li class="toctree-l5"><a class="reference internal" href="../../widgets/complex/advanced_menu/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.widgets.complex.advanced_menu</span></code></a></li>
 <li class="toctree-l5"><a class="reference internal" href="../../widgets/complex/color_picker/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.widgets.complex.color_picker</span></code></a></li>
-<li class="toctree-l5"><a class="reference internal" href="../../widgets/complex/form_view/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.widgets.complex.form_view</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../widgets/complex/datagrid_view/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.widgets.complex.datagrid_view</span></code></a></li>
 <li class="toctree-l5"><a class="reference internal" href="../../widgets/complex/tree_stacked/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.widgets.complex.tree_stacked</span></code></a></li>
 <li class="toctree-l5"><a class="reference internal" href="../../widgets/complex/tree_view/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.widgets.complex.tree_view</span></code></a></li>
 </ul>
@@ -176,8 +179,6 @@
 <li class="toctree-l4"><a class="reference internal" href="../../widgets/toolbar/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.widgets.toolbar</span></code></a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="../../asset_db/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.asset_db</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../editor_prefs/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.editor_prefs</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../main_window/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.main_window</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../theme_manager/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.theme_manager</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../view_manager/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.view_manager</span></code></a></li>
@@ -230,41 +231,103 @@
              
   <section id="module-editor.common.file_watcher">
 <span id="editor-common-file-watcher"></span><h1><a class="reference internal" href="#module-editor.common.file_watcher" title="editor.common.file_watcher"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.common.file_watcher</span></code></a><a class="headerlink" href="#module-editor.common.file_watcher" title="Permalink to this heading"></a></h1>
+<p>This module provide file watcher toolkit.</p>
+<p>Whole module is built on a python package named <a class="reference external" href="https://github.com/gorakhargosh/watchdog">watchdog</a>.</p>
 <section id="module-contents">
 <h2>Module Contents<a class="headerlink" href="#module-contents" title="Permalink to this heading"></a></h2>
 <dl class="py class">
 <dt class="sig sig-object py" id="editor.common.file_watcher.PatternWatcher">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">editor.common.file_watcher.</span></span><span class="sig-name descname"><span class="pre">PatternWatcher</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">patterns</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ignorePatterns</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ignoreDirectories</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">caseSensitive</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">onCreated</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">onDeleted</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">onModified</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">onMoved</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../../../_modules/editor/common/file_watcher.html#PatternWatcher"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#editor.common.file_watcher.PatternWatcher" title="Permalink to this definition"></a></dt>
 <dd><p>Bases: <code class="xref py py-obj docutils literal notranslate"><span class="pre">PySide6.QtCore.QObject</span></code></p>
+<p>Watch files match given patterns.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>patterns</strong> (<em>list</em><em>[</em><em>str</em><em>]</em>) – Patterns to allow matching event paths.</p></li>
+<li><p><strong>ignorePatterns</strong> (<em>list</em><em>[</em><em>str</em><em>]</em>) – Patterns to ignore matching event paths.</p></li>
+<li><p><strong>ignoreDirectories</strong> (<em>bool</em>) – <code class="docutils literal notranslate"><span class="pre">True</span></code> if directories should be ignored; <code class="docutils literal notranslate"><span class="pre">False</span></code> otherwise.</p></li>
+<li><p><strong>caseSensitive</strong> (<em>bool</em>) – <code class="docutils literal notranslate"><span class="pre">True</span></code> if path names should be matched sensitive to case; <code class="docutils literal notranslate"><span class="pre">False</span></code> otherwise.</p></li>
+<li><p><strong>onCreated</strong> (<em>function</em>) – Called when a file or directory is created.</p></li>
+<li><p><strong>onDeleted</strong> (<em>function</em>) – Called when a file or directory is deleted.</p></li>
+<li><p><strong>onModified</strong> (<em>function</em>) – Called when a file or directory is modified.</p></li>
+<li><p><strong>onMoved</strong> (<em>function</em>) – Called when a file or directory is moved or renamed.</p></li>
+</ul>
+</dd>
+</dl>
 <dl class="py attribute">
 <dt class="sig sig-object py" id="editor.common.file_watcher.PatternWatcher.sigCreated">
 <span class="sig-name descname"><span class="pre">sigCreated</span></span><a class="reference internal" href="../../../../_modules/editor/common/file_watcher.html#PatternWatcher.sigCreated"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#editor.common.file_watcher.PatternWatcher.sigCreated" title="Permalink to this definition"></a></dt>
-<dd></dd></dl>
+<dd><p>Signal when a file or directory is created.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>PySide6.QtCore.Signal(FileSystemEvent)</p>
+</dd>
+</dl>
+</dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="editor.common.file_watcher.PatternWatcher.sigDeleted">
 <span class="sig-name descname"><span class="pre">sigDeleted</span></span><a class="reference internal" href="../../../../_modules/editor/common/file_watcher.html#PatternWatcher.sigDeleted"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#editor.common.file_watcher.PatternWatcher.sigDeleted" title="Permalink to this definition"></a></dt>
-<dd></dd></dl>
+<dd><p>Signal when a file or directory is deleted.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>PySide6.QtCore.Signal(FileSystemEvent)</p>
+</dd>
+</dl>
+</dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="editor.common.file_watcher.PatternWatcher.sigModified">
 <span class="sig-name descname"><span class="pre">sigModified</span></span><a class="reference internal" href="../../../../_modules/editor/common/file_watcher.html#PatternWatcher.sigModified"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#editor.common.file_watcher.PatternWatcher.sigModified" title="Permalink to this definition"></a></dt>
-<dd></dd></dl>
+<dd><p>Signal when a file or directory is modified.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>PySide6.QtCore.Signal(FileSystemEvent)</p>
+</dd>
+</dl>
+</dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="editor.common.file_watcher.PatternWatcher.sigMoved">
 <span class="sig-name descname"><span class="pre">sigMoved</span></span><a class="reference internal" href="../../../../_modules/editor/common/file_watcher.html#PatternWatcher.sigMoved"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#editor.common.file_watcher.PatternWatcher.sigMoved" title="Permalink to this definition"></a></dt>
-<dd></dd></dl>
+<dd><p>Signal when a file or directory is moved or renamed.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>PySide6.QtCore.Signal(FileSystemEvent)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="editor.common.file_watcher.PatternWatcher.handler">
+<span class="sig-name descname"><span class="pre">handler</span></span><a class="reference internal" href="../../../../_modules/editor/common/file_watcher.html#PatternWatcher.handler"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#editor.common.file_watcher.PatternWatcher.handler" title="Permalink to this definition"></a></dt>
+<dd><p>Internal <code class="docutils literal notranslate"><span class="pre">PatternMatchingEventHandler</span></code> instance.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>PatternMatchingEventHandler</p>
+</dd>
+</dl>
+</dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="editor.common.file_watcher.PatternWatcher.start">
 <span class="sig-name descname"><span class="pre">start</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">path</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">recursive</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../../../_modules/editor/common/file_watcher.html#PatternWatcher.start"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#editor.common.file_watcher.PatternWatcher.start" title="Permalink to this definition"></a></dt>
-<dd></dd></dl>
+<dd><p>Schedules watching a path and calls appropriate methods specified in the given event handler in response to file system events.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>path</strong> (<em>str</em>) – Directory path that will be monitored.</p></li>
+<li><p><strong>recursive</strong> (<em>bool</em>) – <code class="docutils literal notranslate"><span class="pre">True</span></code> if events will be emitted for sub-directories traversed recursively; <code class="docutils literal notranslate"><span class="pre">False</span></code> otherwise.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="editor.common.file_watcher.PatternWatcher.stop">
 <span class="sig-name descname"><span class="pre">stop</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../../../_modules/editor/common/file_watcher.html#PatternWatcher.stop"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#editor.common.file_watcher.PatternWatcher.stop" title="Permalink to this definition"></a></dt>
-<dd></dd></dl>
+<dd><p>Unschedules this watch.</p>
+</dd></dl>
 
 </dd></dl>
 
@@ -272,42 +335,103 @@
 <dt class="sig sig-object py" id="editor.common.file_watcher.RegexWatcher">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">editor.common.file_watcher.</span></span><span class="sig-name descname"><span class="pre">RegexWatcher</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">regexes</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">['.*']</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ignoreRegexes</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">[]</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ignoreDirectories</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">caseSensitive</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">onCreated</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">onDeleted</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">onModified</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">onMoved</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../../../_modules/editor/common/file_watcher.html#RegexWatcher"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#editor.common.file_watcher.RegexWatcher" title="Permalink to this definition"></a></dt>
 <dd><p>Bases: <code class="xref py py-obj docutils literal notranslate"><span class="pre">PySide6.QtCore.QObject</span></code></p>
+<p>Watch files match given regexes.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>regexes</strong> (<em>list</em><em>[</em><em>str</em><em>]</em>) – Regexes to allow matching event paths.</p></li>
+<li><p><strong>ignoreRegexes</strong> (<em>list</em><em>[</em><em>str</em><em>]</em>) – Regexes to ignore matching event paths.</p></li>
+<li><p><strong>ignoreDirectories</strong> (<em>bool</em>) – <code class="docutils literal notranslate"><span class="pre">True</span></code> if directories should be ignored; <code class="docutils literal notranslate"><span class="pre">False</span></code> otherwise.</p></li>
+<li><p><strong>caseSensitive</strong> (<em>bool</em>) – <code class="docutils literal notranslate"><span class="pre">True</span></code> if path names should be matched sensitive to case; <code class="docutils literal notranslate"><span class="pre">False</span></code> otherwise.</p></li>
+<li><p><strong>onCreated</strong> (<em>function</em>) – Called when a file or directory is created.</p></li>
+<li><p><strong>onDeleted</strong> (<em>function</em>) – Called when a file or directory is deleted.</p></li>
+<li><p><strong>onModified</strong> (<em>function</em>) – Called when a file or directory is modified.</p></li>
+<li><p><strong>onMoved</strong> (<em>function</em>) – Called when a file or directory is moved or renamed.</p></li>
+</ul>
+</dd>
+</dl>
 <dl class="py attribute">
 <dt class="sig sig-object py" id="editor.common.file_watcher.RegexWatcher.sigCreated">
 <span class="sig-name descname"><span class="pre">sigCreated</span></span><a class="reference internal" href="../../../../_modules/editor/common/file_watcher.html#RegexWatcher.sigCreated"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#editor.common.file_watcher.RegexWatcher.sigCreated" title="Permalink to this definition"></a></dt>
-<dd></dd></dl>
+<dd><p>Signal when a file or directory is created.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>PySide6.QtCore.Signal(FileSystemEvent)</p>
+</dd>
+</dl>
+</dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="editor.common.file_watcher.RegexWatcher.sigDeleted">
 <span class="sig-name descname"><span class="pre">sigDeleted</span></span><a class="reference internal" href="../../../../_modules/editor/common/file_watcher.html#RegexWatcher.sigDeleted"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#editor.common.file_watcher.RegexWatcher.sigDeleted" title="Permalink to this definition"></a></dt>
-<dd></dd></dl>
+<dd><p>Signal when a file or directory is deleted.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>PySide6.QtCore.Signal(FileSystemEvent)</p>
+</dd>
+</dl>
+</dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="editor.common.file_watcher.RegexWatcher.sigModified">
 <span class="sig-name descname"><span class="pre">sigModified</span></span><a class="reference internal" href="../../../../_modules/editor/common/file_watcher.html#RegexWatcher.sigModified"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#editor.common.file_watcher.RegexWatcher.sigModified" title="Permalink to this definition"></a></dt>
-<dd></dd></dl>
+<dd><p>Signal when a file or directory is modified.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>PySide6.QtCore.Signal(FileSystemEvent)</p>
+</dd>
+</dl>
+</dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="editor.common.file_watcher.RegexWatcher.sigMoved">
 <span class="sig-name descname"><span class="pre">sigMoved</span></span><a class="reference internal" href="../../../../_modules/editor/common/file_watcher.html#RegexWatcher.sigMoved"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#editor.common.file_watcher.RegexWatcher.sigMoved" title="Permalink to this definition"></a></dt>
-<dd></dd></dl>
+<dd><p>Signal when a file or directory is moved or renamed.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>PySide6.QtCore.Signal(FileSystemEvent)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="editor.common.file_watcher.RegexWatcher.handler">
+<span class="sig-name descname"><span class="pre">handler</span></span><a class="reference internal" href="../../../../_modules/editor/common/file_watcher.html#RegexWatcher.handler"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#editor.common.file_watcher.RegexWatcher.handler" title="Permalink to this definition"></a></dt>
+<dd><p>Internal <code class="docutils literal notranslate"><span class="pre">RegexMatchingEventHandler</span></code> instance.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>RegexMatchingEventHandler</p>
+</dd>
+</dl>
+</dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="editor.common.file_watcher.RegexWatcher.start">
 <span class="sig-name descname"><span class="pre">start</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">path</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">recursive</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../../../_modules/editor/common/file_watcher.html#RegexWatcher.start"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#editor.common.file_watcher.RegexWatcher.start" title="Permalink to this definition"></a></dt>
-<dd></dd></dl>
+<dd><p>Schedules watching a path and calls appropriate methods specified in the given event handler in response to file system events.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>path</strong> (<em>str</em>) – Directory path that will be monitored.</p></li>
+<li><p><strong>recursive</strong> (<em>bool</em>) – <code class="docutils literal notranslate"><span class="pre">True</span></code> if events will be emitted for sub-directories traversed recursively; <code class="docutils literal notranslate"><span class="pre">False</span></code> otherwise.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="editor.common.file_watcher.RegexWatcher.stop">
 <span class="sig-name descname"><span class="pre">stop</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../../../_modules/editor/common/file_watcher.html#RegexWatcher.stop"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#editor.common.file_watcher.RegexWatcher.stop" title="Permalink to this definition"></a></dt>
-<dd></dd></dl>
+<dd><p>Unschedules this watch.</p>
+</dd></dl>
 
 </dd></dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="editor.common.file_watcher.stopAllWatches">
 <span class="sig-prename descclassname"><span class="pre">editor.common.file_watcher.</span></span><span class="sig-name descname"><span class="pre">stopAllWatches</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../../../_modules/editor/common/file_watcher.html#stopAllWatches"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#editor.common.file_watcher.stopAllWatches" title="Permalink to this definition"></a></dt>
-<dd></dd></dl>
+<dd><p>Unschedules all watches and detaches all associated event handlers.</p>
+</dd></dl>
 
 </section>
 </section>

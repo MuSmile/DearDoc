@@ -7,6 +7,7 @@
       <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="_static/graphviz.css" type="text/css" />
+    <link rel="shortcut icon" href="_static/favicon.ico"/>
   <!--[if lt IE 9]>
     <script src="_static/js/html5shiv.min.js"></script>
   <![endif]-->
@@ -75,12 +76,14 @@
 <li class="toctree-l3"><a class="reference internal" href="autoapi/editor/models/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.models</span></code></a><ul>
 <li class="toctree-l4"><a class="reference internal" href="autoapi/editor/models/asset/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.models.asset</span></code></a><ul>
 <li class="toctree-l5"><a class="reference internal" href="autoapi/editor/models/asset/asset/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.models.asset.asset</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="autoapi/editor/models/asset/asset_db/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.models.asset.asset_db</span></code></a></li>
 <li class="toctree-l5"><a class="reference internal" href="autoapi/editor/models/asset/importer/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.models.asset.importer</span></code></a></li>
 <li class="toctree-l5"><a class="reference internal" href="autoapi/editor/models/asset/meta/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.models.asset.meta</span></code></a></li>
 </ul>
 </li>
 <li class="toctree-l4"><a class="reference internal" href="autoapi/editor/models/editor/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.models.editor</span></code></a><ul>
-<li class="toctree-l5"><a class="reference internal" href="autoapi/editor/models/editor/form/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.models.editor.form</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="autoapi/editor/models/editor/data_grid/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.models.editor.data_grid</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="autoapi/editor/models/editor/editor_prefs/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.models.editor.editor_prefs</span></code></a></li>
 <li class="toctree-l5"><a class="reference internal" href="autoapi/editor/models/editor/menu_tree/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.models.editor.menu_tree</span></code></a></li>
 </ul>
 </li>
@@ -150,7 +153,7 @@
 <li class="toctree-l4"><a class="reference internal" href="autoapi/editor/widgets/complex/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.widgets.complex</span></code></a><ul>
 <li class="toctree-l5"><a class="reference internal" href="autoapi/editor/widgets/complex/advanced_menu/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.widgets.complex.advanced_menu</span></code></a></li>
 <li class="toctree-l5"><a class="reference internal" href="autoapi/editor/widgets/complex/color_picker/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.widgets.complex.color_picker</span></code></a></li>
-<li class="toctree-l5"><a class="reference internal" href="autoapi/editor/widgets/complex/form_view/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.widgets.complex.form_view</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="autoapi/editor/widgets/complex/datagrid_view/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.widgets.complex.datagrid_view</span></code></a></li>
 <li class="toctree-l5"><a class="reference internal" href="autoapi/editor/widgets/complex/tree_stacked/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.widgets.complex.tree_stacked</span></code></a></li>
 <li class="toctree-l5"><a class="reference internal" href="autoapi/editor/widgets/complex/tree_view/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.widgets.complex.tree_view</span></code></a></li>
 </ul>
@@ -173,8 +176,6 @@
 <li class="toctree-l4"><a class="reference internal" href="autoapi/editor/widgets/toolbar/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.widgets.toolbar</span></code></a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="autoapi/editor/asset_db/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.asset_db</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="autoapi/editor/editor_prefs/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.editor_prefs</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="autoapi/editor/main_window/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.main_window</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="autoapi/editor/theme_manager/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.theme_manager</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="autoapi/editor/view_manager/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.view_manager</span></code></a></li>
@@ -316,7 +317,7 @@
         <li><a href="autoapi/editor/widgets/misc/waiting_spinner/index.html#editor.widgets.misc.waiting_spinner.app">(in module editor.widgets.misc.waiting_spinner)</a>
 </li>
       </ul></li>
-      <li><a href="autoapi/editor/asset_db/index.html#editor.asset_db.AssetDatabase">AssetDatabase (in module editor.asset_db)</a>
+      <li><a href="autoapi/editor/models/asset/asset_db/index.html#editor.models.asset.asset_db.AssetDatabase">AssetDatabase (in module editor.models.asset.asset_db)</a>
 </li>
   </ul></td>
 </tr></table>
@@ -382,6 +383,8 @@
 </li>
       <li><a href="autoapi/editor/common/math/index.html#editor.common.math.clamp">clamp() (in module editor.common.math)</a>
 </li>
+      <li><a href="autoapi/editor/common/dispatcher/index.html#editor.common.dispatcher.Dispatcher.clear">clear() (editor.common.dispatcher.Dispatcher method)</a>
+</li>
       <li><a href="autoapi/editor/widgets/statusbar/index.html#editor.widgets.statusbar.StatusBar.clearOutputMsg">clearOutputMsg() (editor.widgets.statusbar.StatusBar method)</a>
 </li>
       <li><a href="autoapi/editor/widgets/statusbar/index.html#editor.widgets.statusbar.StatusBar.clearProgressMsg">clearProgressMsg() (editor.widgets.statusbar.StatusBar method)</a>
@@ -421,15 +424,17 @@
       <li><a href="autoapi/editor/common/database/index.html#editor.common.database.Database.connect">connect() (editor.common.database.Database method)</a>
 
       <ul>
-        <li><a href="autoapi/editor/editor_prefs/index.html#editor.editor_prefs.Preference.connect">(editor.editor_prefs.Preference method)</a>
+        <li><a href="autoapi/editor/models/editor/editor_prefs/index.html#editor.models.editor.editor_prefs.Preference.connect">(editor.models.editor.editor_prefs.Preference method)</a>
 </li>
       </ul></li>
-      <li><a href="autoapi/editor/views/console/index.html#editor.views.console.ConsoleView">ConsoleView (class in editor.views.console)</a>
+      <li><a href="autoapi/editor/common/dispatcher/index.html#editor.common.dispatcher.Dispatcher.connectSignal">connectSignal() (editor.common.dispatcher.Dispatcher method)</a>
 </li>
-      <li><a href="autoapi/editor/widgets/complex/tree_view/index.html#editor.widgets.complex.tree_view.TreeView.copySelection">copySelection() (editor.widgets.complex.tree_view.TreeView method)</a>
+      <li><a href="autoapi/editor/views/console/index.html#editor.views.console.ConsoleView">ConsoleView (class in editor.views.console)</a>
 </li>
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="autoapi/editor/widgets/complex/tree_view/index.html#editor.widgets.complex.tree_view.TreeView.copySelection">copySelection() (editor.widgets.complex.tree_view.TreeView method)</a>
+</li>
       <li><a href="autoapi/editor/common/math/index.html#editor.common.math.cosd">cosd() (in module editor.common.math)</a>
 </li>
       <li><a href="autoapi/editor/widgets/misc/flow_layout/index.html#editor.widgets.misc.flow_layout.FlowLayout.count">count() (editor.widgets.misc.flow_layout.FlowLayout method)</a>
@@ -520,7 +525,13 @@
       </ul></li>
       <li><a href="autoapi/editor/common/math/index.html#editor.common.math.dirDiff">dirDiff() (in module editor.common.math)</a>
 </li>
+      <li><a href="autoapi/editor/common/dispatcher/index.html#editor.common.dispatcher.Dispatcher.disconnectSignal">disconnectSignal() (editor.common.dispatcher.Dispatcher method)</a>
+</li>
+      <li><a href="autoapi/editor/common/dispatcher/index.html#editor.common.dispatcher.Dispatcher">Dispatcher (class in editor.common.dispatcher)</a>
+</li>
       <li><a href="autoapi/editor/common/dispatcher/index.html#editor.common.dispatcher.dispatcher">dispatcher (in module editor.common.dispatcher)</a>
+</li>
+      <li><a href="autoapi/editor/theme_manager/index.html#editor.theme_manager.disposeThemeWatcher">disposeThemeWatcher() (in module editor.theme_manager)</a>
 </li>
       <li><a href="autoapi/editor/view_manager/index.html#editor.view_manager.dockManager">dockManager() (in module editor.view_manager)</a>
 </li>
@@ -536,12 +547,12 @@
 </li>
       <li><a href="autoapi/editor/widgets/complex/tree_view/index.html#editor.widgets.complex.tree_view.TreeView.dragEnterEvent">dragEnterEvent() (editor.widgets.complex.tree_view.TreeView method)</a>
 </li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="autoapi/editor/widgets/complex/tree_view/index.html#editor.widgets.complex.tree_view.TreeView.dragLeaveEvent">dragLeaveEvent() (editor.widgets.complex.tree_view.TreeView method)</a>
 </li>
       <li><a href="autoapi/editor/widgets/complex/tree_view/index.html#editor.widgets.complex.tree_view.TreeView.dragMoveEvent">dragMoveEvent() (editor.widgets.complex.tree_view.TreeView method)</a>
 </li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="autoapi/editor/widgets/complex/tree_view/index.html#editor.widgets.complex.tree_view.TreeItemDelegate.drawBackground">drawBackground() (editor.widgets.complex.tree_view.TreeItemDelegate method)</a>
 </li>
       <li><a href="autoapi/editor/widgets/complex/tree_view/index.html#editor.widgets.complex.tree_view.TreeItemDelegate.drawBranchArrow">drawBranchArrow() (editor.widgets.complex.tree_view.TreeItemDelegate method)</a>
@@ -654,13 +665,6 @@
 </li>
       </ul></li>
       <li>
-    editor.asset_db
-
-      <ul>
-        <li><a href="autoapi/editor/asset_db/index.html#module-editor.asset_db">module</a>
-</li>
-      </ul></li>
-      <li>
     editor.common
 
       <ul>
@@ -731,13 +735,6 @@
 </li>
       </ul></li>
       <li>
-    editor.editor_prefs
-
-      <ul>
-        <li><a href="autoapi/editor/editor_prefs/index.html#module-editor.editor_prefs">module</a>
-</li>
-      </ul></li>
-      <li>
     editor.main_window
 
       <ul>
@@ -766,6 +763,13 @@
 </li>
       </ul></li>
       <li>
+    editor.models.asset.asset_db
+
+      <ul>
+        <li><a href="autoapi/editor/models/asset/asset_db/index.html#module-editor.models.asset.asset_db">module</a>
+</li>
+      </ul></li>
+      <li>
     editor.models.asset.importer
 
       <ul>
@@ -787,10 +791,17 @@
 </li>
       </ul></li>
       <li>
-    editor.models.editor.form
+    editor.models.editor.data_grid
 
       <ul>
-        <li><a href="autoapi/editor/models/editor/form/index.html#module-editor.models.editor.form">module</a>
+        <li><a href="autoapi/editor/models/editor/data_grid/index.html#module-editor.models.editor.data_grid">module</a>
+</li>
+      </ul></li>
+      <li>
+    editor.models.editor.editor_prefs
+
+      <ul>
+        <li><a href="autoapi/editor/models/editor/editor_prefs/index.html#module-editor.models.editor.editor_prefs">module</a>
 </li>
       </ul></li>
       <li>
@@ -1139,10 +1150,10 @@
 </li>
       </ul></li>
       <li>
-    editor.widgets.complex.form_view
+    editor.widgets.complex.datagrid_view
 
       <ul>
-        <li><a href="autoapi/editor/widgets/complex/form_view/index.html#module-editor.widgets.complex.form_view">module</a>
+        <li><a href="autoapi/editor/widgets/complex/datagrid_view/index.html#module-editor.widgets.complex.datagrid_view">module</a>
 </li>
       </ul></li>
       <li>
@@ -1243,9 +1254,9 @@
         <li><a href="autoapi/editor/widgets/toolbar/index.html#module-editor.widgets.toolbar">module</a>
 </li>
       </ul></li>
-      <li><a href="autoapi/editor/editor_prefs/index.html#editor.editor_prefs.EditorPrefs">EditorPrefs (in module editor.editor_prefs)</a>
+      <li><a href="autoapi/editor/models/editor/editor_prefs/index.html#editor.models.editor.editor_prefs.EditorPrefs">EditorPrefs (in module editor.models.editor.editor_prefs)</a>
 </li>
-      <li><a href="autoapi/editor/common/logger/index.html#editor.common.logger.IdeLogHandler.emit">emit() (editor.common.logger.IdeLogHandler method)</a>
+      <li><a href="autoapi/editor/common/dispatcher/index.html#editor.common.dispatcher.Dispatcher.emitSignal">emitSignal() (editor.common.dispatcher.Dispatcher method)</a>
 </li>
       <li><a href="autoapi/editor/models/editor/menu_tree/index.html#editor.models.editor.menu_tree.MenuItem.enabled">enabled() (editor.models.editor.menu_tree.MenuItem method)</a>
 </li>
@@ -1308,8 +1319,6 @@
       <li><a href="autoapi/editor/widgets/complex/tree_view/index.html#editor.widgets.complex.tree_view.PingAnimPhase.Fade">Fade (editor.widgets.complex.tree_view.PingAnimPhase attribute)</a>
 </li>
       <li><a href="autoapi/editor/widgets/misc/toast/index.html#editor.widgets.misc.toast.Toast.fadeToast">fadeToast() (editor.widgets.misc.toast.Toast method)</a>
-</li>
-      <li><a href="autoapi/editor/common/logger/index.html#editor.common.logger.StdFilter.filter">filter() (editor.common.logger.StdFilter method)</a>
 </li>
       <li><a href="autoapi/editor/models/editor/menu_tree/index.html#editor.models.editor.menu_tree.MenuGroup.find">find() (editor.models.editor.menu_tree.MenuGroup method)</a>
 </li>
@@ -1391,14 +1400,20 @@
 <h2 id="H">H</h2>
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="autoapi/editor/common/file_watcher/index.html#editor.common.file_watcher.PatternWatcher.handler">handler (editor.common.file_watcher.PatternWatcher attribute)</a>
+
+      <ul>
+        <li><a href="autoapi/editor/common/file_watcher/index.html#editor.common.file_watcher.RegexWatcher.handler">(editor.common.file_watcher.RegexWatcher attribute)</a>
+</li>
+      </ul></li>
       <li><a href="autoapi/editor/widgets/misc/flow_layout/index.html#editor.widgets.misc.flow_layout.FlowLayout.hasHeightForWidth">hasHeightForWidth() (editor.widgets.misc.flow_layout.FlowLayout method)</a>
 </li>
       <li><a href="autoapi/editor/common/database/index.html#editor.common.database.Database.hasTable">hasTable() (editor.common.database.Database method)</a>
 </li>
-      <li><a href="autoapi/editor/widgets/misc/flow_layout/index.html#editor.widgets.misc.flow_layout.FlowLayout.heightForWidth">heightForWidth() (editor.widgets.misc.flow_layout.FlowLayout method)</a>
-</li>
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="autoapi/editor/widgets/misc/flow_layout/index.html#editor.widgets.misc.flow_layout.FlowLayout.heightForWidth">heightForWidth() (editor.widgets.misc.flow_layout.FlowLayout method)</a>
+</li>
       <li><a href="autoapi/tools/hello/index.html#tools.hello.hello">hello() (in module tools.hello)</a>
 </li>
       <li><a href="autoapi/editor/views/hierarchy/index.html#editor.views.hierarchy.HierarchyView">HierarchyView (class in editor.views.hierarchy)</a>
@@ -1417,10 +1432,6 @@
 </li>
       <li><a href="autoapi/tools/ide/index.html#tools.ide.Ide">Ide (class in tools.ide)</a>
 </li>
-      <li><a href="autoapi/editor/common/logger/index.html#editor.common.logger.ideLogger">ideLogger() (in module editor.common.logger)</a>
-</li>
-      <li><a href="autoapi/editor/common/logger/index.html#editor.common.logger.IdeLogHandler">IdeLogHandler (class in editor.common.logger)</a>
-</li>
       <li><a href="autoapi/editor/widgets/complex/tree_view/index.html#editor.widgets.complex.tree_view.PingAnimPhase.Idle">Idle (editor.widgets.complex.tree_view.PingAnimPhase attribute)</a>
 </li>
       <li><a href="autoapi/editor/common/logger/index.html#editor.common.logger.ierror">ierror (in module editor.common.logger)</a>
@@ -1431,10 +1442,10 @@
 </li>
       <li><a href="autoapi/editor/common/logger/index.html#editor.common.logger.ilog">ilog (in module editor.common.logger)</a>
 </li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="autoapi/editor/views/scene/index.html#editor.views.scene.OpenGLWidget.initializeGL">initializeGL() (editor.views.scene.OpenGLWidget method)</a>
 </li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="autoapi/editor/views/inspector/index.html#editor.views.inspector.InspectorView">InspectorView (class in editor.views.inspector)</a>
 </li>
       <li><a href="autoapi/editor/widgets/complex/color_picker/index.html#editor.widgets.complex.color_picker.ColorPicker.Instanced">Instanced (editor.widgets.complex.color_picker.ColorPicker attribute)</a>
@@ -1504,7 +1515,7 @@
   <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="autoapi/editor/widgets/basic/line_edit/index.html#editor.widgets.basic.line_edit.LineEdit">LineEdit (class in editor.widgets.basic.line_edit)</a>
 </li>
-      <li><a href="autoapi/editor/common/dispatcher/index.html#editor.common.dispatcher.listener">listener (in module editor.common.dispatcher)</a>
+      <li><a href="autoapi/editor/common/dispatcher/index.html#editor.common.dispatcher.Dispatcher.listenerTable">listenerTable (editor.common.dispatcher.Dispatcher attribute)</a>
 </li>
       <li><a href="autoapi/editor/view_manager/index.html#editor.view_manager.listLayouts">listLayouts() (in module editor.view_manager)</a>
 </li>
@@ -1572,8 +1583,6 @@
       <ul>
         <li><a href="autoapi/editor/index.html#module-editor">editor</a>
 </li>
-        <li><a href="autoapi/editor/asset_db/index.html#module-editor.asset_db">editor.asset_db</a>
-</li>
         <li><a href="autoapi/editor/common/index.html#module-editor.common">editor.common</a>
 </li>
         <li><a href="autoapi/editor/common/database/index.html#module-editor.common.database">editor.common.database</a>
@@ -1594,8 +1603,6 @@
 </li>
         <li><a href="autoapi/editor/common/util/index.html#module-editor.common.util">editor.common.util</a>
 </li>
-        <li><a href="autoapi/editor/editor_prefs/index.html#module-editor.editor_prefs">editor.editor_prefs</a>
-</li>
         <li><a href="autoapi/editor/main_window/index.html#module-editor.main_window">editor.main_window</a>
 </li>
         <li><a href="autoapi/editor/models/index.html#module-editor.models">editor.models</a>
@@ -1604,13 +1611,17 @@
 </li>
         <li><a href="autoapi/editor/models/asset/asset/index.html#module-editor.models.asset.asset">editor.models.asset.asset</a>
 </li>
+        <li><a href="autoapi/editor/models/asset/asset_db/index.html#module-editor.models.asset.asset_db">editor.models.asset.asset_db</a>
+</li>
         <li><a href="autoapi/editor/models/asset/importer/index.html#module-editor.models.asset.importer">editor.models.asset.importer</a>
 </li>
         <li><a href="autoapi/editor/models/asset/meta/index.html#module-editor.models.asset.meta">editor.models.asset.meta</a>
 </li>
         <li><a href="autoapi/editor/models/editor/index.html#module-editor.models.editor">editor.models.editor</a>
 </li>
-        <li><a href="autoapi/editor/models/editor/form/index.html#module-editor.models.editor.form">editor.models.editor.form</a>
+        <li><a href="autoapi/editor/models/editor/data_grid/index.html#module-editor.models.editor.data_grid">editor.models.editor.data_grid</a>
+</li>
+        <li><a href="autoapi/editor/models/editor/editor_prefs/index.html#module-editor.models.editor.editor_prefs">editor.models.editor.editor_prefs</a>
 </li>
         <li><a href="autoapi/editor/models/editor/menu_tree/index.html#module-editor.models.editor.menu_tree">editor.models.editor.menu_tree</a>
 </li>
@@ -1710,7 +1721,7 @@
 </li>
         <li><a href="autoapi/editor/widgets/complex/color_picker/index.html#module-editor.widgets.complex.color_picker">editor.widgets.complex.color_picker</a>
 </li>
-        <li><a href="autoapi/editor/widgets/complex/form_view/index.html#module-editor.widgets.complex.form_view">editor.widgets.complex.form_view</a>
+        <li><a href="autoapi/editor/widgets/complex/datagrid_view/index.html#module-editor.widgets.complex.datagrid_view">editor.widgets.complex.datagrid_view</a>
 </li>
         <li><a href="autoapi/editor/widgets/complex/tree_stacked/index.html#module-editor.widgets.complex.tree_stacked">editor.widgets.complex.tree_stacked</a>
 </li>
@@ -1939,7 +1950,7 @@
 </li>
       <li><a href="autoapi/editor/widgets/basic/button/index.html#editor.widgets.basic.button.PopupToolButton">PopupToolButton (class in editor.widgets.basic.button)</a>
 </li>
-      <li><a href="autoapi/editor/editor_prefs/index.html#editor.editor_prefs.Preference">Preference (class in editor.editor_prefs)</a>
+      <li><a href="autoapi/editor/models/editor/editor_prefs/index.html#editor.models.editor.editor_prefs.Preference">Preference (class in editor.models.editor.editor_prefs)</a>
 </li>
       <li><a href="autoapi/editor/views/preference/index.html#editor.views.preference.PreferenceView">PreferenceView (class in editor.views.preference)</a>
 </li>
@@ -2133,10 +2144,12 @@
 </li>
       <li><a href="autoapi/editor/widgets/statusbar/index.html#editor.widgets.statusbar.StatusBar.showOutputMsg">showOutputMsg() (editor.widgets.statusbar.StatusBar method)</a>
 </li>
-      <li><a href="autoapi/editor/widgets/statusbar/index.html#editor.widgets.statusbar.StatusBar.showProgressMsg">showProgressMsg() (editor.widgets.statusbar.StatusBar method)</a>
-</li>
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="autoapi/editor/widgets/statusbar/index.html#editor.widgets.statusbar.StatusBar.showProgressMsg">showProgressMsg() (editor.widgets.statusbar.StatusBar method)</a>
+</li>
+      <li><a href="autoapi/editor/common/dispatcher/index.html#editor.common.dispatcher.Dispatcher.sig">sig (editor.common.dispatcher.Dispatcher attribute)</a>
+</li>
       <li><a href="autoapi/editor/common/file_watcher/index.html#editor.common.file_watcher.PatternWatcher.sigCreated">sigCreated (editor.common.file_watcher.PatternWatcher attribute)</a>
 
       <ul>
@@ -2206,10 +2219,6 @@
       <li><a href="autoapi/editor/widgets/complex/tree_view/index.html#editor.widgets.complex.tree_view.TreeItemPingOverlay.startPing">startPing() (editor.widgets.complex.tree_view.TreeItemPingOverlay method)</a>
 </li>
       <li><a href="autoapi/editor/widgets/statusbar/index.html#editor.widgets.statusbar.StatusBar">StatusBar (class in editor.widgets.statusbar)</a>
-</li>
-      <li><a href="autoapi/editor/common/logger/index.html#editor.common.logger.StdFilter">StdFilter (class in editor.common.logger)</a>
-</li>
-      <li><a href="autoapi/editor/common/logger/index.html#editor.common.logger.stdLogger">stdLogger() (in module editor.common.logger)</a>
 </li>
       <li><a href="autoapi/editor/common/file_watcher/index.html#editor.common.file_watcher.PatternWatcher.stop">stop() (editor.common.file_watcher.PatternWatcher method)</a>
 

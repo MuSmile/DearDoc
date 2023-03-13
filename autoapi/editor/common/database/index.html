@@ -8,6 +8,7 @@
       <link rel="stylesheet" href="../../../../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../../../../_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="../../../../_static/graphviz.css" type="text/css" />
+    <link rel="shortcut icon" href="../../../../_static/favicon.ico"/>
   <!--[if lt IE 9]>
     <script src="../../../../_static/js/html5shiv.min.js"></script>
   <![endif]-->
@@ -78,12 +79,14 @@
 <li class="toctree-l3"><a class="reference internal" href="../../models/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.models</span></code></a><ul>
 <li class="toctree-l4"><a class="reference internal" href="../../models/asset/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.models.asset</span></code></a><ul>
 <li class="toctree-l5"><a class="reference internal" href="../../models/asset/asset/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.models.asset.asset</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../models/asset/asset_db/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.models.asset.asset_db</span></code></a></li>
 <li class="toctree-l5"><a class="reference internal" href="../../models/asset/importer/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.models.asset.importer</span></code></a></li>
 <li class="toctree-l5"><a class="reference internal" href="../../models/asset/meta/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.models.asset.meta</span></code></a></li>
 </ul>
 </li>
 <li class="toctree-l4"><a class="reference internal" href="../../models/editor/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.models.editor</span></code></a><ul>
-<li class="toctree-l5"><a class="reference internal" href="../../models/editor/form/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.models.editor.form</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../models/editor/data_grid/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.models.editor.data_grid</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../models/editor/editor_prefs/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.models.editor.editor_prefs</span></code></a></li>
 <li class="toctree-l5"><a class="reference internal" href="../../models/editor/menu_tree/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.models.editor.menu_tree</span></code></a></li>
 </ul>
 </li>
@@ -153,7 +156,7 @@
 <li class="toctree-l4"><a class="reference internal" href="../../widgets/complex/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.widgets.complex</span></code></a><ul>
 <li class="toctree-l5"><a class="reference internal" href="../../widgets/complex/advanced_menu/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.widgets.complex.advanced_menu</span></code></a></li>
 <li class="toctree-l5"><a class="reference internal" href="../../widgets/complex/color_picker/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.widgets.complex.color_picker</span></code></a></li>
-<li class="toctree-l5"><a class="reference internal" href="../../widgets/complex/form_view/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.widgets.complex.form_view</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../widgets/complex/datagrid_view/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.widgets.complex.datagrid_view</span></code></a></li>
 <li class="toctree-l5"><a class="reference internal" href="../../widgets/complex/tree_stacked/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.widgets.complex.tree_stacked</span></code></a></li>
 <li class="toctree-l5"><a class="reference internal" href="../../widgets/complex/tree_view/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.widgets.complex.tree_view</span></code></a></li>
 </ul>
@@ -176,8 +179,6 @@
 <li class="toctree-l4"><a class="reference internal" href="../../widgets/toolbar/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.widgets.toolbar</span></code></a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="../../asset_db/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.asset_db</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../editor_prefs/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.editor_prefs</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../main_window/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.main_window</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../theme_manager/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.theme_manager</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../view_manager/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.view_manager</span></code></a></li>
@@ -230,95 +231,273 @@
              
   <section id="module-editor.common.database">
 <span id="editor-common-database"></span><h1><a class="reference internal" href="#module-editor.common.database" title="editor.common.database"><code class="xref py py-mod docutils literal notranslate"><span class="pre">editor.common.database</span></code></a><a class="headerlink" href="#module-editor.common.database" title="Permalink to this heading"></a></h1>
+<p>This module provide database manipulating toolkit.</p>
+<p>Typical usage example:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="n">db</span> <span class="o">=</span> <span class="n">Database</span><span class="p">()</span>
+<span class="linenos">2</span><span class="n">db</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="s1">&#39;some/path/to/sample.db&#39;</span><span class="p">)</span>
+<span class="linenos">3</span><span class="n">db</span><span class="o">.</span><span class="n">affirmTable</span><span class="p">(</span><span class="s1">&#39;foo&#39;</span><span class="p">)</span>
+<span class="linenos">4</span><span class="n">db</span><span class="o">.</span><span class="n">setBool</span><span class="p">(</span><span class="s1">&#39;bool_test&#39;</span><span class="p">,</span> <span class="kc">True</span><span class="p">,</span> <span class="s1">&#39;foo&#39;</span><span class="p">)</span>
+<span class="linenos">5</span><span class="n">db</span><span class="o">.</span><span class="n">setObject</span><span class="p">(</span><span class="s1">&#39;obj_test&#39;</span><span class="p">,</span> <span class="p">{</span><span class="s1">&#39;hello&#39;</span><span class="p">:</span><span class="s1">&#39;world&#39;</span><span class="p">},</span> <span class="s1">&#39;foo&#39;</span><span class="p">)</span>
+<span class="linenos">6</span><span class="n">obj</span> <span class="o">=</span> <span class="n">db</span><span class="o">.</span><span class="n">getObject</span><span class="p">(</span><span class="s1">&#39;obj_test&#39;</span><span class="p">,</span> <span class="s1">&#39;foo&#39;</span><span class="p">)</span>
+<span class="linenos">7</span><span class="nb">print</span><span class="p">(</span><span class="n">obj</span><span class="p">)</span>
+<span class="linenos">8</span><span class="c1"># db.clear(&#39;foo&#39;)</span>
+<span class="linenos">9</span><span class="n">db</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+</pre></div>
+</div>
 <section id="module-contents">
 <h2>Module Contents<a class="headerlink" href="#module-contents" title="Permalink to this heading"></a></h2>
 <dl class="py class">
 <dt class="sig sig-object py" id="editor.common.database.Database">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">editor.common.database.</span></span><span class="sig-name descname"><span class="pre">Database</span></span><a class="reference internal" href="../../../../_modules/editor/common/database.html#Database"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#editor.common.database.Database" title="Permalink to this definition"></a></dt>
-<dd><dl class="py method">
+<dd><p>Represent a database object powered by sqlite3.</p>
+<p>Provide basic interface of database manipulating,
+including a set of setters, getters, and other useful utils.</p>
+<dl class="py method">
 <dt class="sig sig-object py" id="editor.common.database.Database.connect">
 <span class="sig-name descname"><span class="pre">connect</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">path</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../../../_modules/editor/common/database.html#Database.connect"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#editor.common.database.Database.connect" title="Permalink to this definition"></a></dt>
-<dd></dd></dl>
+<dd><p>Load database of specified path.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>path</strong> (<em>str</em>) – Source database path.</p>
+</dd>
+</dl>
+</dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="editor.common.database.Database.close">
 <span class="sig-name descname"><span class="pre">close</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../../../_modules/editor/common/database.html#Database.close"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#editor.common.database.Database.close" title="Permalink to this definition"></a></dt>
-<dd></dd></dl>
+<dd><p>Close a connected database.</p>
+</dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="editor.common.database.Database.doSql">
 <span class="sig-name descname"><span class="pre">doSql</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">cmd</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">commit</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../../../_modules/editor/common/database.html#Database.doSql"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#editor.common.database.Database.doSql" title="Permalink to this definition"></a></dt>
-<dd></dd></dl>
+<dd><p>Execute specified sql command.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>cmd</strong> (<em>str</em>) – Specified command to execute.</p></li>
+<li><p><strong>commit</strong> (<em>bool</em>) – Commit database operation.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="editor.common.database.Database.createTable">
 <span class="sig-name descname"><span class="pre">createTable</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">table</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../../../_modules/editor/common/database.html#Database.createTable"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#editor.common.database.Database.createTable" title="Permalink to this definition"></a></dt>
-<dd></dd></dl>
+<dd><p>Create a database with specified name.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>table</strong> (<em>str</em>) – Table name to create.</p>
+</dd>
+</dl>
+</dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="editor.common.database.Database.hasTable">
 <span class="sig-name descname"><span class="pre">hasTable</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">table</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../../../_modules/editor/common/database.html#Database.hasTable"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#editor.common.database.Database.hasTable" title="Permalink to this definition"></a></dt>
-<dd></dd></dl>
+<dd><p>Check if has certain database table.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>table</strong> (<em>str</em>) – Table name to check.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Contains certain table or not.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>bool</p>
+</dd>
+</dl>
+</dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="editor.common.database.Database.affirmTable">
 <span class="sig-name descname"><span class="pre">affirmTable</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">table</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../../../_modules/editor/common/database.html#Database.affirmTable"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#editor.common.database.Database.affirmTable" title="Permalink to this definition"></a></dt>
-<dd></dd></dl>
+<dd><p>Affirm a certain database table.</p>
+<p>If table not exist, will create a new one.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>table</strong> (<em>str</em>) – Table name to affirm.</p>
+</dd>
+</dl>
+</dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="editor.common.database.Database.dropTable">
 <span class="sig-name descname"><span class="pre">dropTable</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">table</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../../../_modules/editor/common/database.html#Database.dropTable"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#editor.common.database.Database.dropTable" title="Permalink to this definition"></a></dt>
-<dd></dd></dl>
+<dd><p>Drop a certain database table.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>table</strong> (<em>str</em>) – Table name to drop.</p>
+</dd>
+</dl>
+</dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="editor.common.database.Database.clearTable">
 <span class="sig-name descname"><span class="pre">clearTable</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">table</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../../../_modules/editor/common/database.html#Database.clearTable"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#editor.common.database.Database.clearTable" title="Permalink to this definition"></a></dt>
-<dd></dd></dl>
+<dd><p>Clear a certain database table’s content.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>table</strong> (<em>str</em>) – Table name to clear.</p>
+</dd>
+</dl>
+</dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="editor.common.database.Database.remove">
 <span class="sig-name descname"><span class="pre">remove</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">table</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../../../_modules/editor/common/database.html#Database.remove"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#editor.common.database.Database.remove" title="Permalink to this definition"></a></dt>
-<dd></dd></dl>
+<dd><p>Remove an entry in certain database table.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>name</strong> (<em>str</em>) – Entry primary key to remove.</p></li>
+<li><p><strong>table</strong> (<em>str</em>) – Table name to operate.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="editor.common.database.Database.set">
 <span class="sig-name descname"><span class="pre">set</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">data</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">table</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../../../_modules/editor/common/database.html#Database.set"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#editor.common.database.Database.set" title="Permalink to this definition"></a></dt>
-<dd></dd></dl>
+<dd><p>Set an entry data in certain database table.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>name</strong> (<em>str</em>) – Entry primary key to set.</p></li>
+<li><p><strong>data</strong> (<em>any</em>) – Data to set, will be implicit converted str.</p></li>
+<li><p><strong>table</strong> (<em>str</em>) – Table name to operate.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="editor.common.database.Database.setBool">
 <span class="sig-name descname"><span class="pre">setBool</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">data</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">table</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../../../_modules/editor/common/database.html#Database.setBool"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#editor.common.database.Database.setBool" title="Permalink to this definition"></a></dt>
-<dd></dd></dl>
+<dd><p>Set an boolean data in certain database table.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>name</strong> (<em>str</em>) – Entry primary key to set.</p></li>
+<li><p><strong>data</strong> (<em>bool</em>) – Boolean data to set.</p></li>
+<li><p><strong>table</strong> (<em>str</em>) – Table name to operate.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="editor.common.database.Database.setQVariant">
-<span class="sig-name descname"><span class="pre">setQVariant</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">var</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">table</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../../../_modules/editor/common/database.html#Database.setQVariant"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#editor.common.database.Database.setQVariant" title="Permalink to this definition"></a></dt>
-<dd></dd></dl>
+<span class="sig-name descname"><span class="pre">setQVariant</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">data</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">table</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../../../_modules/editor/common/database.html#Database.setQVariant"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#editor.common.database.Database.setQVariant" title="Permalink to this definition"></a></dt>
+<dd><p>Set an QVariant variable in certain database table.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>name</strong> (<em>str</em>) – Entry primary key to set.</p></li>
+<li><p><strong>Data</strong> (<em>QVariant</em>) – QVariant data to set.</p></li>
+<li><p><strong>table</strong> (<em>str</em>) – Table name to operate.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="editor.common.database.Database.setObject">
 <span class="sig-name descname"><span class="pre">setObject</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">obj</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">table</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../../../_modules/editor/common/database.html#Database.setObject"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#editor.common.database.Database.setObject" title="Permalink to this definition"></a></dt>
-<dd></dd></dl>
+<dd><p>Set an object in certain database table.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>name</strong> (<em>str</em>) – Entry primary key to set.</p></li>
+<li><p><strong>obj</strong> (<em>object</em>) – Object data to set, will be serialized into json string.</p></li>
+<li><p><strong>table</strong> (<em>str</em>) – Table name to operate.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="editor.common.database.Database.get">
 <span class="sig-name descname"><span class="pre">get</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">table</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../../../_modules/editor/common/database.html#Database.get"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#editor.common.database.Database.get" title="Permalink to this definition"></a></dt>
-<dd></dd></dl>
+<dd><p>Get an entry data in certain database table.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>name</strong> (<em>str</em>) – Entry primary key to get.</p></li>
+<li><p><strong>table</strong> (<em>str</em>) – Table name to get.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Found entry data.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="editor.common.database.Database.getBool">
 <span class="sig-name descname"><span class="pre">getBool</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">table</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../../../_modules/editor/common/database.html#Database.getBool"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#editor.common.database.Database.getBool" title="Permalink to this definition"></a></dt>
-<dd></dd></dl>
+<dd><p>Get an boolean data in certain database table.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>name</strong> (<em>str</em>) – Fntry primary key to get.</p></li>
+<li><p><strong>table</strong> (<em>str</em>) – Fable name to get.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Found entry data.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>bool</p>
+</dd>
+</dl>
+</dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="editor.common.database.Database.getQVariant">
 <span class="sig-name descname"><span class="pre">getQVariant</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">table</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../../../_modules/editor/common/database.html#Database.getQVariant"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#editor.common.database.Database.getQVariant" title="Permalink to this definition"></a></dt>
-<dd></dd></dl>
+<dd><p>Get an QVariant data in certain database table.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>name</strong> (<em>str</em>) – Entry primary key to get.</p></li>
+<li><p><strong>table</strong> (<em>str</em>) – Table name to get.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Found entry data.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>QVariant</p>
+</dd>
+</dl>
+</dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="editor.common.database.Database.getObject">
 <span class="sig-name descname"><span class="pre">getObject</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">table</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../../../_modules/editor/common/database.html#Database.getObject"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#editor.common.database.Database.getObject" title="Permalink to this definition"></a></dt>
-<dd></dd></dl>
+<dd><p>Get an object data in certain database table.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>name</strong> (<em>str</em>) – Entry primary key to get.</p></li>
+<li><p><strong>table</strong> (<em>str</em>) – Table name to get.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Found entry data.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>object</p>
+</dd>
+</dl>
+</dd></dl>
 
 </dd></dl>
 
